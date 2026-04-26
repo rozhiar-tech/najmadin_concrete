@@ -64,6 +64,8 @@ const translations = {
     "home.hero.panel3.body": "100% locally manufactured output backed by technical support.",
     "home.story.eyebrow": "Why Najmadin Concrete",
     "home.story.title": "Industrial Strength. Local Precision.",
+    "home.story.visual1": "Industrial Strength.",
+    "home.story.visual2": "Local Precision.",
     "home.story.body":
       "Founded in 2002, Najmadin Concrete has grown into one of Iraq's leading ready-mix concrete and aggregate suppliers. Our reputation is built on dependable quality, on-time delivery, and the technical capability to support projects from urban centers to remote sites.",
     "home.story.quote":
@@ -320,6 +322,8 @@ const translations = {
     "home.hero.panel3.body": "إنتاج محلي بالكامل مدعوم بإسناد فني منظم.",
     "home.story.eyebrow": "لماذا نجمدين كونكريت",
     "home.story.title": "قوة صناعية. دقة محلية.",
+    "home.story.visual1": "قوة صناعية.",
+    "home.story.visual2": "دقة محلية.",
     "home.story.body":
       "منذ تأسيسها عام 2002، نمت نجمدين كونكريت لتصبح إحدى الشركات الرائدة في العراق في مجال الخرسانة الجاهزة والركام. سمعتنا مبنية على الجودة الموثوقة والتسليم في الوقت المحدد والقدرة الفنية على دعم المشاريع من المراكز الحضرية إلى المواقع النائية.",
     "home.story.quote":
@@ -575,6 +579,8 @@ const translations = {
     "home.hero.panel3.body": "بەرهەمی تەواو ناوخۆیی بە پشتگیری فنی ڕێکخراو.",
     "home.story.eyebrow": "بۆچی نەجمەدین کۆنکریت",
     "home.story.title": "هێزی پیشەسازی. وردیی ناوخۆ.",
+    "home.story.visual1": "هێزی پیشەسازی.",
+    "home.story.visual2": "وردیی ناوخۆ.",
     "home.story.body":
       "لە ساڵی 2002ەوە، نەجمەدین کۆنکریت گەشەی کردووە بۆ ئەوەی ببێتە یەکێک لە سەرکردەکانی عێراق لە بوارەکانی کۆنکریتی ئامادە و رێگمات. ناوبانگمان لەسەر کوالێتی پشتپێبەستوو و گەیاندنی لەکاتی خۆیدا و توانای فنییە کە پشتیوانی پڕۆژەکان دەکات.",
     "home.story.quote":
@@ -857,6 +863,15 @@ const setupNavigation = () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navPanel = document.querySelector(".nav-panel");
   const currentPage = document.body.dataset.page;
+  const closeNav = () => {
+    if (!navToggle || !navPanel) {
+      return;
+    }
+
+    navToggle.setAttribute("aria-expanded", "false");
+    navPanel.classList.remove("is-open");
+    document.body.classList.remove("nav-is-open");
+  };
 
   const updateHeader = () => {
     if (header) {
@@ -874,28 +889,25 @@ const setupNavigation = () => {
   if (navToggle && navPanel) {
     navToggle.addEventListener("click", () => {
       const expanded = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", String(!expanded));
-      navPanel.classList.toggle("is-open", !expanded);
+      const nextState = !expanded;
+      navToggle.setAttribute("aria-expanded", String(nextState));
+      navPanel.classList.toggle("is-open", nextState);
+      document.body.classList.toggle("nav-is-open", nextState);
     });
 
     document.querySelectorAll(".nav-link").forEach((link) => {
-      link.addEventListener("click", () => {
-        navToggle.setAttribute("aria-expanded", "false");
-        navPanel.classList.remove("is-open");
-      });
+      link.addEventListener("click", closeNav);
     });
 
     document.addEventListener("click", (event) => {
       if (!navPanel.contains(event.target) && !navToggle.contains(event.target)) {
-        navToggle.setAttribute("aria-expanded", "false");
-        navPanel.classList.remove("is-open");
+        closeNav();
       }
     });
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 860) {
-        navToggle.setAttribute("aria-expanded", "false");
-        navPanel.classList.remove("is-open");
+        closeNav();
       }
     });
   }
@@ -972,8 +984,10 @@ const setupTilt = () => {
   }
 
   document.querySelectorAll("[data-tilt]").forEach((card) => {
+    const baseTransform = card.dataset.tiltBase || "";
+
     const reset = () => {
-      card.style.transform = "";
+      card.style.transform = baseTransform;
     };
 
     card.addEventListener("mousemove", (event) => {
@@ -983,11 +997,13 @@ const setupTilt = () => {
       const rotateY = ((x / rect.width) - 0.5) * 8;
       const rotateX = (0.5 - (y / rect.height)) * 8;
       card.style.transform =
-        "translateY(-8px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)";
+        baseTransform +
+        " translateY(-8px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)";
     });
 
     card.addEventListener("mouseleave", reset);
     card.addEventListener("blur", reset, true);
+    reset();
   });
 };
 
@@ -1012,6 +1028,406 @@ const setupParallax = () => {
 
   update();
   window.addEventListener("scroll", update, { passive: true });
+};
+
+const setupHomeMotion = () => {
+  if (document.body.dataset.page !== "home") {
+    return;
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const preloader = document.querySelector("[data-home-preloader]");
+  const dismissPreloader = () => {
+    document.body.classList.add("is-ready");
+
+    if (!preloader || preloader.classList.contains("is-dismissed")) {
+      return;
+    }
+
+    preloader.classList.add("is-dismissed");
+    window.setTimeout(() => {
+      preloader.setAttribute("aria-hidden", "true");
+    }, 900);
+  };
+
+  if (preloader) {
+    if (reducedMotion) {
+      window.requestAnimationFrame(dismissPreloader);
+    } else if (document.readyState === "complete") {
+      window.setTimeout(dismissPreloader, 220);
+    } else {
+      window.addEventListener("load", () => {
+        window.setTimeout(dismissPreloader, 260);
+      }, { once: true });
+      window.setTimeout(dismissPreloader, 1400);
+    }
+  } else {
+    document.body.classList.add("is-ready");
+  }
+
+  const serviceItems = document.querySelectorAll("[data-service-target]");
+  const servicePanels = document.querySelectorAll("[data-service-image]");
+  if (serviceItems.length && servicePanels.length) {
+    const activateService = (target) => {
+      serviceItems.forEach((item) => {
+        const active = item.dataset.serviceTarget === target;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+
+      servicePanels.forEach((panel) => {
+        panel.classList.toggle("is-active", panel.dataset.serviceImage === target);
+      });
+    };
+
+    serviceItems.forEach((item) => {
+      const target = item.dataset.serviceTarget;
+      item.setAttribute("aria-pressed", String(item.classList.contains("is-active")));
+      item.addEventListener("mouseenter", () => activateService(target));
+      item.addEventListener("focus", () => activateService(target));
+      item.addEventListener("click", () => activateService(target));
+    });
+
+    activateService(
+      Array.from(serviceItems).find((item) => item.classList.contains("is-active"))?.dataset
+        .serviceTarget || serviceItems[0].dataset.serviceTarget
+    );
+  }
+
+  const driftItems = document.querySelectorAll("[data-home-shift]");
+  if (driftItems.length && !reducedMotion) {
+    let ticking = false;
+
+    const updateDrift = () => {
+      const scrollY = window.scrollY;
+      driftItems.forEach((item) => {
+        const factor = Number(item.dataset.homeShift || 0);
+        item.style.setProperty("--home-drift", (scrollY * factor).toFixed(2) + "px");
+      });
+      ticking = false;
+    };
+
+    updateDrift();
+    window.addEventListener("scroll", () => {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateDrift);
+    }, { passive: true });
+  }
+
+  if (reducedMotion || window.matchMedia("(pointer: coarse)").matches) {
+    return;
+  }
+
+  const scene = document.querySelector("[data-home-scene]");
+  if (!scene) {
+    return;
+  }
+
+  const layers = scene.querySelectorAll("[data-home-depth]");
+  if (!layers.length) {
+    return;
+  }
+
+  const resetLayers = () => {
+    layers.forEach((layer) => {
+      layer.style.setProperty("--pointer-x", "0px");
+      layer.style.setProperty("--pointer-y", "0px");
+    });
+  };
+
+  scene.addEventListener("mousemove", (event) => {
+    const rect = scene.getBoundingClientRect();
+    const offsetX = ((event.clientX - rect.left) / rect.width) - 0.5;
+    const offsetY = ((event.clientY - rect.top) / rect.height) - 0.5;
+
+    layers.forEach((layer) => {
+      const depth = Number(layer.dataset.homeDepth || 0);
+      layer.style.setProperty("--pointer-x", (offsetX * depth * 1.9).toFixed(2) + "px");
+      layer.style.setProperty("--pointer-y", (offsetY * depth * 1.3).toFixed(2) + "px");
+    });
+  });
+
+  scene.addEventListener("mouseleave", resetLayers);
+  scene.addEventListener("blur", resetLayers, true);
+};
+
+const setupPageReady = () => {
+  const markReady = () => {
+    document.body.classList.add("is-page-ready");
+  };
+
+  window.requestAnimationFrame(markReady);
+  window.setTimeout(markReady, 480);
+};
+
+const setupSurfaceSync = () => {
+  const surfaces = Array.from(document.querySelectorAll("[data-surface]"));
+  if (!surfaces.length) {
+    return;
+  }
+
+  const update = () => {
+    const probe = Math.min(108, window.innerHeight * 0.14);
+    let activeSurface = "dark";
+
+    surfaces.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= probe && rect.bottom > probe) {
+        activeSurface = section.dataset.surface || "dark";
+      }
+    });
+
+    document.body.classList.toggle("surface-light", activeSurface === "light");
+  };
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+};
+
+const setupCustomCursor = () => {
+  if (
+    window.matchMedia("(pointer: coarse)").matches ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  const cursor = document.querySelector(".motion-cursor");
+  if (!cursor) {
+    return;
+  }
+
+  const interactiveSelector = [
+    "a",
+    "button",
+    "input",
+    "textarea",
+    "select",
+    "summary",
+    "[data-orb-item]",
+    ".project-card",
+    ".client-showcase-card",
+    ".logo-card",
+    ".card",
+    ".info-card",
+    ".faq-item"
+  ].join(", ");
+  const dot = cursor.querySelector(".motion-cursor__dot");
+  const ring = cursor.querySelector(".motion-cursor__ring");
+  let pointerX = window.innerWidth / 2;
+  let pointerY = window.innerHeight / 2;
+  let ringX = pointerX;
+  let ringY = pointerY;
+
+  document.body.classList.add("has-motion-cursor");
+
+  const render = () => {
+    ringX += (pointerX - ringX) * 0.18;
+    ringY += (pointerY - ringY) * 0.18;
+
+    if (dot) {
+      dot.style.transform =
+        "translate3d(" + pointerX.toFixed(2) + "px, " + pointerY.toFixed(2) +
+        "px, 0) translate(-50%, -50%)";
+    }
+
+    if (ring) {
+      ring.style.transform =
+        "translate3d(" + ringX.toFixed(2) + "px, " + ringY.toFixed(2) +
+        "px, 0) translate(-50%, -50%)";
+    }
+
+    window.requestAnimationFrame(render);
+  };
+
+  window.requestAnimationFrame(render);
+
+  window.addEventListener("pointermove", (event) => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    cursor.classList.add("is-visible");
+  }, { passive: true });
+
+  document.addEventListener("mouseover", (event) => {
+    cursor.classList.toggle("is-active", Boolean(event.target.closest(interactiveSelector)));
+  });
+
+  document.addEventListener("mouseout", (event) => {
+    if (event.relatedTarget?.closest(interactiveSelector)) {
+      return;
+    }
+
+    cursor.classList.remove("is-active");
+  });
+
+  window.addEventListener("pointerdown", () => {
+    cursor.classList.add("is-pressed");
+  });
+
+  window.addEventListener("pointerup", () => {
+    cursor.classList.remove("is-pressed");
+  });
+};
+
+const setupScrollMotion = () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  const items = Array.from(document.querySelectorAll("[data-scroll-shift]"));
+  if (!items.length) {
+    return;
+  }
+
+  let ticking = false;
+
+  const update = () => {
+    const viewportHeight = window.innerHeight;
+
+    items.forEach((item) => {
+      const speed = Number(item.dataset.scrollShift || 0);
+      const rect = item.getBoundingClientRect();
+      const progress = ((viewportHeight - rect.top) / (viewportHeight + rect.height)) - 0.5;
+      item.style.setProperty("--scroll-lift", (progress * speed * 220).toFixed(2) + "px");
+    });
+
+    ticking = false;
+  };
+
+  update();
+
+  window.addEventListener("scroll", () => {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(update);
+  }, { passive: true });
+
+  window.addEventListener("resize", update);
+};
+
+const setupEditorialSlider = () => {
+  if (document.body.dataset.page !== "home") {
+    return;
+  }
+
+  const section = document.querySelector("[data-editorial-slider]");
+  const pan = section?.querySelector("[data-editorial-pan]");
+  const track = section?.querySelector("[data-editorial-track]");
+  const slides = Array.from(section?.querySelectorAll("[data-editorial-slide]") || []);
+  const compactQuery = window.matchMedia("(max-width: 1180px)");
+  const reducedQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (!section || !pan || !track || !slides.length) {
+    return;
+  }
+
+  let ticking = false;
+  let travel = 0;
+
+  const setActive = (index) => {
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === index);
+    });
+  };
+
+  const reset = () => {
+    section.style.setProperty("--editorial-progress", "0");
+    section.style.setProperty("--editorial-shift", "0px");
+    section.style.setProperty("--editorial-scroll-span", "0px");
+    setActive(0);
+  };
+
+  const update = () => {
+    if (compactQuery.matches || reducedQuery.matches) {
+      reset();
+      ticking = false;
+      return;
+    }
+
+    const rect = section.getBoundingClientRect();
+    const scrollSpan = Math.max(section.offsetHeight - window.innerHeight, 1);
+    const progress = Math.min(Math.max((-rect.top) / scrollSpan, 0), 1);
+    const activeIndex = Math.min(
+      slides.length - 1,
+      Math.round(progress * Math.max(slides.length - 1, 1))
+    );
+
+    section.style.setProperty("--editorial-progress", progress.toFixed(4));
+    section.style.setProperty("--editorial-shift", (travel * progress).toFixed(2) + "px");
+    setActive(activeIndex);
+    ticking = false;
+  };
+
+  const measure = () => {
+    if (compactQuery.matches || reducedQuery.matches) {
+      reset();
+      return;
+    }
+
+    travel = Math.max(track.scrollWidth - pan.clientWidth, 0);
+    section.style.setProperty(
+      "--editorial-scroll-span",
+      (travel + window.innerHeight * 0.82).toFixed(2) + "px"
+    );
+    update();
+  };
+
+  const requestUpdate = () => {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(update);
+  };
+
+  measure();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", measure);
+  window.addEventListener("load", measure, { once: true });
+
+  if (typeof compactQuery.addEventListener === "function") {
+    compactQuery.addEventListener("change", measure);
+    reducedQuery.addEventListener("change", measure);
+  } else {
+    compactQuery.addListener(measure);
+    reducedQuery.addListener(measure);
+  }
+};
+
+const setupOrbGallery = () => {
+  document.querySelectorAll("[data-orb-gallery]").forEach((gallery) => {
+    const items = Array.from(gallery.querySelectorAll("[data-orb-item]"));
+    if (!items.length) {
+      return;
+    }
+
+    const activate = (target) => {
+      items.forEach((item) => {
+        item.classList.toggle("is-active", item === target);
+      });
+    };
+
+    items.forEach((item) => {
+      if (!item.hasAttribute("tabindex")) {
+        item.setAttribute("tabindex", "0");
+      }
+
+      item.addEventListener("mouseenter", () => activate(item));
+      item.addEventListener("focus", () => activate(item));
+      item.addEventListener("click", () => activate(item));
+    });
+
+    activate(gallery.querySelector("[data-orb-item].is-active") || items[0]);
+  });
 };
 
 const setupContactForm = () => {
@@ -1054,9 +1470,16 @@ const setupContactForm = () => {
 document.addEventListener("DOMContentLoaded", () => {
   setupLanguageSwitcher();
   setupNavigation();
+  setupPageReady();
+  setupSurfaceSync();
+  setupCustomCursor();
   setupReveal();
   setupCounters();
   setupTilt();
   setupParallax();
+  setupScrollMotion();
+  setupEditorialSlider();
+  setupHomeMotion();
+  setupOrbGallery();
   setupContactForm();
 });

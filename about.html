@@ -19,6 +19,11 @@
   </head>
   <body class="page page-about" data-page="about">
     <div class="site-shell">
+      <div class="motion-cursor" aria-hidden="true">
+        <span class="motion-cursor__dot"></span>
+        <span class="motion-cursor__ring"></span>
+      </div>
+
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
@@ -39,6 +44,7 @@
               <button type="button" data-lang="ar" aria-pressed="false">AR</button>
               <button type="button" data-lang="ku" aria-pressed="false">KU</button>
             </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
             <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
               <span></span>
             </button>
@@ -57,26 +63,28 @@
       </header>
 
       <main class="page-main">
-        <section class="page-hero section-cut">
-          <div class="container section-head reveal is-visible">
+        <section class="page-hero section-cut page-hero-cinematic" data-surface="dark">
+          <div class="container section-head reveal-title" data-scroll-shift="0.16">
             <span class="eyebrow" data-i18n="about.hero.eyebrow">About Najmadin Concrete</span>
             <h1 class="display" data-i18n="about.hero.title">A Company Built On Trust, Quality, And Delivery</h1>
             <p data-i18n="about.hero.body">
               Najmadin Concrete combines long-term industry experience, trained professionals, advanced mixing systems, and disciplined logistics to serve the construction sector with confidence.
             </p>
           </div>
+          <a class="page-hero-scroll" href="#about-story" aria-label="Next section"><span></span></a>
         </section>
+        <div class="hero-void" aria-hidden="true"></div>
 
-        <section class="section section-dark section-texture">
+        <section class="section section-dark section-texture" id="about-story" data-surface="dark">
           <div class="container">
             <div class="story-grid">
-              <article class="story-media reveal">
-                <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Concrete architecture" />
+              <article class="story-media reveal reveal-left poster-frame" data-scroll-shift="-0.1">
+                <img src="assets/images/4%20(1).jpg" alt="" />
                 <div class="story-quote">
                   <p class="display" data-i18n="about.story.quote">Built to last, like the structures we create.</p>
                 </div>
               </article>
-              <article class="story-panel reveal" data-delay="1">
+              <article class="story-panel reveal reveal-right" data-delay="1" data-scroll-shift="0.08">
                 <span class="eyebrow" data-i18n="about.story.eyebrow">Our Story</span>
                 <h2 class="display" style="font-size: clamp(2.6rem, 5vw, 4.5rem)" data-i18n="about.story.title">More Than Two Decades Of Proven Performance</h2>
                 <div class="stack">
@@ -95,9 +103,9 @@
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut section-light" data-surface="light">
           <div class="container">
-            <div class="section-head reveal">
+            <div class="section-head reveal reveal-title">
               <span class="eyebrow" data-i18n="about.values.eyebrow">Core Values</span>
               <h2 class="display" data-i18n="about.values.title">The Standards That Shape Our Work</h2>
               <p data-i18n="about.values.body">
@@ -105,7 +113,7 @@
               </p>
             </div>
             <div class="cards-3">
-              <article class="card reveal" data-tilt>
+              <article class="card reveal reveal-zoom" data-tilt>
                 <span class="card-icon" aria-hidden="true">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M9 4H15V8L18 12V18H6V12L9 8V4Z" stroke="currentColor" stroke-width="1.8"></path>
@@ -115,7 +123,7 @@
                 <h3 class="display" data-i18n="about.values.card1.title">Innovation &amp; Quality</h3>
                 <p data-i18n="about.values.card1.body">Latest production technology and disciplined controls ensure durable, consistent performance.</p>
               </article>
-              <article class="card reveal" data-delay="1" data-tilt>
+              <article class="card reveal reveal-zoom" data-delay="1" data-tilt>
                 <span class="card-icon" aria-hidden="true">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <circle cx="12" cy="12" r="7" stroke="currentColor" stroke-width="1.8"></circle>
@@ -125,7 +133,7 @@
                 <h3 class="display" data-i18n="about.values.card2.title">On-Time Delivery</h3>
                 <p data-i18n="about.values.card2.body">Our logistics teams are organized to reach sites on schedule, including difficult routes and remote conditions.</p>
               </article>
-              <article class="card reveal" data-delay="2" data-tilt>
+              <article class="card reveal reveal-zoom" data-delay="2" data-tilt>
                 <span class="card-icon" aria-hidden="true">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M5 17L10 12L13 15L19 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -139,7 +147,7 @@
           </div>
         </section>
 
-        <section class="section section-cut section-blue section-texture">
+        <section class="section section-cut section-blue section-texture" data-surface="dark">
           <div class="container">
             <div class="split-grid">
               <article class="story-panel reveal">
@@ -162,7 +170,7 @@
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut section-light" data-surface="light">
           <div class="container">
             <div class="section-head reveal">
               <span class="eyebrow" data-i18n="about.ops.eyebrow">Operational Strength</span>

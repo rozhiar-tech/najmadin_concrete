@@ -19,6 +19,23 @@
   </head>
   <body class="page page-home" data-page="home">
     <div class="site-shell">
+      <div class="motion-cursor" aria-hidden="true">
+        <span class="motion-cursor__dot"></span>
+        <span class="motion-cursor__ring"></span>
+      </div>
+
+      <div class="home-preloader" data-home-preloader aria-hidden="true">
+        <div class="home-preloader__sheet">
+          <p class="eyebrow home-preloader__eyebrow" data-i18n="home.hero.eyebrow">
+            Leading Concrete Supplier In The Kurdistan Region Of Iraq
+          </p>
+          <div class="home-preloader__title">
+            <span class="display" data-i18n="brand.title">Najmadin</span>
+            <span class="display" data-i18n="brand.subtitle">Concrete</span>
+          </div>
+        </div>
+      </div>
+
       <header class="site-header" id="top">
         <div class="container header-row">
           <a
@@ -56,6 +73,10 @@
                 KU
               </button>
             </div>
+
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry"
+              >Send Inquiry</a
+            >
 
             <button
               class="nav-toggle"
@@ -123,410 +144,316 @@
                   >
                 </li>
               </ul>
+              <figure class="home-nav-preview poster-frame" aria-hidden="true">
+                <img src="assets/images/33%20(1).jpg" alt="" />
+              </figure>
             </nav>
           </div>
         </div>
       </header>
 
-      <main class="page-main">
-        <section class="page-hero section-cut">
-          <div class="container hero-grid">
-            <div class="hero-copy reveal is-visible">
-              <span class="eyebrow" data-i18n="home.hero.eyebrow"
-                >Leading Concrete Supplier In The Kurdistan Region Of Iraq</span
+      <main class="page-main home-page-main">
+        <section class="section section-cut home-entrance" data-home-scene data-surface="dark">
+          <div class="home-entrance-media" aria-hidden="true">
+            <figure class="home-entrance-media-main" data-home-depth="9">
+              <img
+                src="assets/images/IMG_2445%20(1).JPG"
+                alt="Najmadin Concrete fleet"
+              />
+            </figure>
+          </div>
+
+          <div class="container-wide home-entrance-shell">
+            <article class="home-entrance-copy">
+              <span
+                class="eyebrow reveal is-visible"
+                data-i18n="home.hero.eyebrow"
               >
-              <h1 class="display hero-title" data-i18n="home.hero.title">
+                Leading Concrete Supplier In The Kurdistan Region Of Iraq
+              </span>
+              <h1
+                class="display home-entrance-title reveal is-visible"
+                data-i18n="home.hero.title"
+              >
                 Building Iraq's Future Since 2002
               </h1>
-              <p class="hero-text" data-i18n="home.hero.body">
+              <p
+                class="display home-entrance-subtitle reveal is-visible"
+                data-delay="1"
+                data-i18n="home.story.title"
+              >
+                Industrial Strength. Local Precision.
+              </p>
+              <p
+                class="home-entrance-body reveal is-visible"
+                data-delay="2"
+                data-i18n="home.hero.body"
+              >
                 Najmadin Concrete delivers ready-mix concrete, aggregates,
                 technical support, and dependable site logistics for ambitious
                 developments across the region.
               </p>
-              <div class="hero-actions">
-                <a
-                  class="button button-primary"
-                  href="projects.html"
-                  data-i18n="button.projects"
-                  >View Projects</a
-                >
-                <a
-                  class="button button-secondary"
-                  href="contact.html"
-                  data-i18n="button.contact"
-                  >Contact Us</a
-                >
+            </article>
+
+            <div class="home-entrance-footer reveal is-visible" data-delay="2">
+              <div class="home-entrance-stats">
+                <article class="home-entrance-stat">
+                  <div class="metric-number display" data-count="20" data-suffix="+">
+                    0
+                  </div>
+                  <div class="metric-label" data-i18n="common.stats.years">
+                    Years In Business Since 2002
+                  </div>
+                </article>
+                <article class="home-entrance-stat">
+                  <div class="metric-number display" data-count="200" data-suffix="+">
+                    0
+                  </div>
+                  <div class="metric-label" data-i18n="common.stats.people">
+                    Trained Professionals
+                  </div>
+                </article>
+                <article class="home-entrance-stat">
+                  <div class="metric-number display" data-count="15" data-suffix="+">
+                    0
+                  </div>
+                  <div class="metric-label" data-i18n="common.stats.clients">
+                    Major Clients
+                  </div>
+                </article>
               </div>
-              <div class="chip-row" style="margin-top: 1rem">
-                <span class="chip" data-i18n="home.hero.badge1"
-                  >20+ Years Of Proven Excellence</span
-                >
-                <span class="chip" data-i18n="home.hero.badge2"
-                  >200+ Trained Professionals</span
-                >
-                <span class="chip" data-i18n="home.hero.badge3"
-                  >Remote Site Delivery</span
-                >
+
+              <a class="home-entrance-next" href="#home-story" aria-label="Next section">
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section section-cut home-editorial"
+          id="home-story"
+          data-surface="dark"
+          data-editorial-slider
+        >
+          <div class="container-wide home-editorial-stage">
+            <div class="home-editorial-progress" aria-hidden="true">
+              <span class="home-editorial-progress-label" data-i18n="home.story.scroll">
+                Scroll to move
+              </span>
+              <span class="home-editorial-progress-bar">
+                <span data-editorial-progress-bar></span>
+              </span>
+            </div>
+
+            <div class="home-editorial-pan" data-editorial-pan>
+              <div class="home-editorial-canvas" data-editorial-track>
+                <article class="home-editorial-card is-active" data-editorial-slide>
+                  <figure class="home-editorial-card-media">
+                    <img src="assets/images/33%20(1).jpg" alt="" />
+                  </figure>
+                  <div class="home-editorial-card-copy">
+                    <span class="eyebrow" data-i18n="home.story.eyebrow">
+                      Why Najmadin Concrete
+                    </span>
+                    <span class="home-editorial-card-count">01</span>
+                    <h2 class="display home-editorial-card-title" data-i18n="home.story.card1.title">
+                      Trusted Placement
+                    </h2>
+                    <p class="home-editorial-card-text" data-i18n="home.story.quote">
+                      Concrete is more than a mixture. It is a durable solution that
+                      keeps us connected to every client we serve.
+                    </p>
+                  </div>
+                  <p class="display home-editorial-card-mark" data-i18n="home.story.card1.title">
+                    Trusted Placement
+                  </p>
+                </article>
+
+                <article class="home-editorial-card" data-editorial-slide>
+                  <figure class="home-editorial-card-media">
+                    <img src="assets/images/1%20(2).jpg" alt="" />
+                  </figure>
+                  <div class="home-editorial-card-copy">
+                    <span class="eyebrow" data-i18n="home.story.eyebrow">
+                      Why Najmadin Concrete
+                    </span>
+                    <span class="home-editorial-card-count">02</span>
+                    <h2 class="display home-editorial-card-title" data-i18n="home.story.card2.title">
+                      Certified Delivery
+                    </h2>
+                    <p class="home-editorial-card-text" data-i18n="home.story.card2.body">
+                      On-time logistics built for demanding pours and tight project schedules.
+                    </p>
+                  </div>
+                  <p class="display home-editorial-card-mark" data-i18n="home.story.card2.title">
+                    Certified Delivery
+                  </p>
+                </article>
+
+                <article class="home-editorial-card" data-editorial-slide>
+                  <figure class="home-editorial-card-media">
+                    <img src="assets/images/22.jpg" alt="" />
+                  </figure>
+                  <div class="home-editorial-card-copy">
+                    <span class="eyebrow" data-i18n="home.story.eyebrow">
+                      Why Najmadin Concrete
+                    </span>
+                    <span class="home-editorial-card-count">03</span>
+                    <h2 class="display home-editorial-card-title" data-i18n="home.story.card3.title">
+                      Remote Reach
+                    </h2>
+                    <p class="home-editorial-card-text" data-i18n="home.story.card3.body">
+                      Support from urban centers to remote sites with dependable coordination
+                      and supply.
+                    </p>
+                  </div>
+                  <p class="display home-editorial-card-mark" data-i18n="home.story.card3.title">
+                    Remote Reach
+                  </p>
+                </article>
+
+                <article class="home-editorial-card" data-editorial-slide>
+                  <figure class="home-editorial-card-media">
+                    <img src="assets/images/3%20(2).jpg" alt="" />
+                  </figure>
+                  <div class="home-editorial-card-copy">
+                    <span class="eyebrow" data-i18n="home.story.eyebrow">
+                      Why Najmadin Concrete
+                    </span>
+                    <span class="home-editorial-card-count">04</span>
+                    <h2 class="display home-editorial-card-title" data-i18n="home.story.card4.title">
+                      Industrial Scale
+                    </h2>
+                    <p class="home-editorial-card-text" data-i18n="home.story.card4.body">
+                      Locally produced concrete, disciplined quality control, and grades up to
+                      100 N/mm2.
+                    </p>
+                  </div>
+                  <p class="display home-editorial-card-mark" data-i18n="home.story.card4.title">
+                    Industrial Scale
+                  </p>
+                </article>
               </div>
             </div>
-
-            <div class="hero-stage reveal is-visible">
-              <div
-                class="beam beam-a"
-                data-parallax="0.16"
-                data-base-transform="translate(-7rem, 5rem) rotate(84deg) skewX(-18deg)"
-              ></div>
-              <div
-                class="beam beam-b"
-                data-parallax="0.1"
-                data-base-transform="translate(0.8rem, -2.3rem) rotate(-14deg) skewX(-8deg)"
-              ></div>
-              <div
-                class="beam beam-c"
-                data-parallax="0.13"
-                data-base-transform="translate(7.8rem, 2.7rem) rotate(18deg) skewX(-10deg)"
-              ></div>
-
-              <aside
-                class="hero-panel"
-                data-parallax="0.08"
-                data-base-transform=""
-              >
-                <h2 class="display" data-i18n="home.hero.panel_title">
-                  Built For High-Demand Sites
-                </h2>
-                <div class="mini-list">
-                  <article class="mini-item">
-                    <span class="icon-badge" aria-hidden="true">
-                      <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          d="M9 4H15V8L18 12V18H6V12L9 8V4Z"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                        ></path>
-                        <path
-                          d="M9 8H15"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                        ></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <strong data-i18n="home.hero.panel1.title"
-                        >Advanced Mixing Precision</strong
-                      >
-                      <span data-i18n="home.hero.panel1.body"
-                        >Consistency and performance designed into every
-                        batch.</span
-                      >
-                    </div>
-                  </article>
-                  <article class="mini-item">
-                    <span class="icon-badge" aria-hidden="true">
-                      <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          d="M4 8H17L20 12V17H4V8Z"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                        ></path>
-                        <circle
-                          cx="8"
-                          cy="17"
-                          r="2"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                        ></circle>
-                        <circle
-                          cx="17"
-                          cy="17"
-                          r="2"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                        ></circle>
-                      </svg>
-                    </span>
-                    <div>
-                      <strong data-i18n="home.hero.panel2.title"
-                        >Reliable Logistics</strong
-                      >
-                      <span data-i18n="home.hero.panel2.body"
-                        >Delivery coordination that protects demanding
-                        schedules.</span
-                      >
-                    </div>
-                  </article>
-                  <article class="mini-item">
-                    <span class="icon-badge" aria-hidden="true">
-                      <svg
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                      >
-                        <path
-                          d="M6 18V8L12 4L18 8V18H6Z"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                        ></path>
-                        <path
-                          d="M9 12H15"
-                          stroke="currentColor"
-                          stroke-width="1.8"
-                          stroke-linecap="round"
-                        ></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <strong data-i18n="home.hero.panel3.title"
-                        >Local Industrial Strength</strong
-                      >
-                      <span data-i18n="home.hero.panel3.body"
-                        >100% locally manufactured output backed by technical
-                        support.</span
-                      >
-                    </div>
-                  </article>
-                </div>
-              </aside>
-            </div>
           </div>
         </section>
 
-        <section class="section section-dark section-texture">
-          <div class="container">
-            <div class="metric-grid">
-              <article class="metric-card reveal">
-                <div
-                  class="metric-number display"
-                  data-count="20"
-                  data-suffix="+"
-                >
-                  0
-                </div>
-                <div class="metric-label" data-i18n="common.stats.years">
-                  Years In Business Since 2002
-                </div>
-              </article>
-              <article class="metric-card reveal" data-delay="1">
-                <div
-                  class="metric-number display"
-                  data-count="200"
-                  data-suffix="+"
-                >
-                  0
-                </div>
-                <div class="metric-label" data-i18n="common.stats.people">
-                  Trained Professionals
-                </div>
-              </article>
-              <article class="metric-card reveal" data-delay="2">
-                <div
-                  class="metric-number display"
-                  data-count="100"
-                  data-prefix="15 - "
-                >
-                  0
-                </div>
-                <div class="metric-label" data-i18n="common.stats.grades">
-                  Concrete Grades Up To 100 N/mm2
-                </div>
-              </article>
-              <article class="metric-card reveal" data-delay="3">
-                <div
-                  class="metric-number display"
-                  data-count="15"
-                  data-suffix="+"
-                >
-                  0
-                </div>
-                <div class="metric-label" data-i18n="common.stats.clients">
-                  Major Clients
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-cut">
-          <div class="container">
-            <div class="story-grid">
-              <article class="story-panel reveal">
-                <span class="eyebrow" data-i18n="home.story.eyebrow"
-                  >Why Najmadin Concrete</span
-                >
-                <h2
-                  class="display"
-                  style="font-size: clamp(2.6rem, 5vw, 4.6rem)"
-                  data-i18n="home.story.title"
-                >
-                  Industrial Strength. Local Precision.
-                </h2>
-                <p class="body-copy" data-i18n="home.story.body">
-                  Founded in 2002, Najmadin Concrete has grown into one of
-                  Iraq's leading ready-mix concrete and aggregate suppliers. Our
-                  reputation is built on dependable quality, on-time delivery,
-                  and the technical capability to support projects from urban
-                  centers to remote sites.
-                </p>
-                <p
-                  class="display"
-                  style="font-size: clamp(2rem, 4vw, 3.3rem); margin-top: 1rem"
-                  data-i18n="home.story.quote"
-                >
-                  Concrete is more than a mixture. It is a durable solution that
-                  keeps us connected to every client we serve.
-                </p>
-              </article>
-              <article class="story-media reveal" data-delay="1">
-                <img
-                  src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
-                  alt="Concrete structure detail"
-                />
-                <div class="story-quote">
-                  <span class="section-note" data-i18n="common.location_region"
-                    >Kurdistan Region, Iraq</span
-                  >
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section section-cut section-blue section-texture">
-          <div class="container">
-            <div class="section-head reveal">
-              <span class="eyebrow" data-i18n="home.services.eyebrow"
-                >Featured Services</span
-              >
+        <section class="section section-cut home-service-lab" data-surface="dark">
+          <div class="container-wide home-service-lab-grid">
+            <article class="home-service-lab-copy reveal">
+              <span class="eyebrow" data-i18n="home.services.eyebrow">
+                Featured Services
+              </span>
               <h2 class="display" data-i18n="home.services.title">
                 What We Deliver
               </h2>
-              <p data-i18n="home.services.body">
+              <p class="body-copy" data-i18n="home.services.body">
                 From structural-grade ready-mix to aggregate supply and
                 technical guidance, our teams support performance from the plant
                 to the project site.
               </p>
-            </div>
 
-            <div class="cards-3">
-              <article class="card reveal" data-tilt>
-                <span class="card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M4 18L12 5L20 18H4Z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    ></path>
-                    <path
-                      d="M9 14H15"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </span>
-                <h3 class="display" data-i18n="home.services.card1.title">
-                  Ready-Mix Concrete
-                </h3>
-                <p data-i18n="home.services.card1.body">
-                  All grades from 15 N/mm2 to 100 N/mm2 with disciplined
-                  production control.
-                </p>
-              </article>
-              <article class="card reveal" data-delay="1" data-tilt>
-                <span class="card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <circle
-                      cx="8"
-                      cy="15"
-                      r="3.2"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    ></circle>
-                    <circle
-                      cx="16"
-                      cy="9"
-                      r="3.2"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    ></circle>
-                    <path
-                      d="M11 13L13 11"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                </span>
-                <h3 class="display" data-i18n="home.services.card2.title">
-                  Aggregates &amp; Gravel
-                </h3>
-                <p data-i18n="home.services.card2.body">
-                  Stable upstream material supply that supports consistency and
-                  delivery speed.
-                </p>
-              </article>
-              <article class="card reveal" data-delay="2" data-tilt>
-                <span class="card-icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M4 8H17L20 12V17H4V8Z"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    ></path>
-                    <circle
-                      cx="8"
-                      cy="17"
-                      r="2"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    ></circle>
-                    <circle
-                      cx="17"
-                      cy="17"
-                      r="2"
-                      stroke="currentColor"
-                      stroke-width="1.8"
-                    ></circle>
-                  </svg>
-                </span>
-                <h3 class="display" data-i18n="home.services.card3.title">
-                  Remote Site Delivery
-                </h3>
-                <p data-i18n="home.services.card3.body">
-                  Logistics capability built for hard-to-reach locations and
-                  demanding schedules.
-                </p>
-              </article>
-            </div>
+              <div class="home-service-list">
+                <button
+                  class="home-service-item is-active"
+                  type="button"
+                  data-service-target="ready"
+                >
+                  <span class="home-service-index">01</span>
+                  <span
+                    class="home-service-name display"
+                    data-i18n="home.services.card1.title"
+                    >Ready-Mix Concrete</span
+                  >
+                  <span
+                    class="home-service-text"
+                    data-i18n="home.services.card1.body"
+                    >All grades from 15 N/mm2 to 100 N/mm2 with disciplined
+                    production control.</span
+                  >
+                </button>
+                <button
+                  class="home-service-item"
+                  type="button"
+                  data-service-target="aggregate"
+                >
+                  <span class="home-service-index">02</span>
+                  <span
+                    class="home-service-name display"
+                    data-i18n="home.services.card2.title"
+                    >Aggregates &amp; Gravel</span
+                  >
+                  <span
+                    class="home-service-text"
+                    data-i18n="home.services.card2.body"
+                    >Stable upstream material supply that supports consistency
+                    and delivery speed.</span
+                  >
+                </button>
+                <button
+                  class="home-service-item"
+                  type="button"
+                  data-service-target="remote"
+                >
+                  <span class="home-service-index">03</span>
+                  <span
+                    class="home-service-name display"
+                    data-i18n="home.services.card3.title"
+                    >Remote Site Delivery</span
+                  >
+                  <span
+                    class="home-service-text"
+                    data-i18n="home.services.card3.body"
+                    >Logistics capability built for hard-to-reach locations and
+                    demanding schedules.</span
+                  >
+                </button>
+              </div>
 
-            <div class="cta-actions" style="margin-top: 1.5rem">
-              <a
-                class="button button-secondary"
-                href="services.html"
-                data-i18n="button.services"
-                >Our Services</a
+              <div class="service-standard-strip reveal" data-delay="1">
+                <p class="section-note" data-i18n="services.standards">
+                  Compliant with ASTM · ACI · BS · IS · EN international and
+                  national standards
+                </p>
+                <a
+                  class="button button-secondary"
+                  href="services.html"
+                  data-i18n="button.services"
+                  >Our Services</a
+                >
+              </div>
+            </article>
+
+            <div class="home-service-visual reveal" data-delay="1">
+              <figure
+                class="home-service-panel poster-frame is-active"
+                data-service-image="ready"
               >
+                <img src="assets/images/22.jpg" alt="" />
+              </figure>
+              <figure
+                class="home-service-panel poster-frame"
+                data-service-image="aggregate"
+              >
+                <img src="assets/images/33%20(1).jpg" alt="" />
+              </figure>
+              <figure
+                class="home-service-panel poster-frame"
+                data-service-image="remote"
+              >
+                <img src="assets/images/3%20(2).jpg" alt="" />
+              </figure>
             </div>
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut home-project-journal" data-surface="dark">
           <div class="container-wide">
-            <div class="section-head reveal">
-              <span class="eyebrow" data-i18n="home.projects.eyebrow"
-                >Featured Projects</span
-              >
+            <div class="section-head reveal home-journal-head">
+              <span class="eyebrow" data-i18n="home.projects.eyebrow">
+                Featured Projects
+              </span>
               <h2 class="display" data-i18n="home.projects.title">
                 Concrete Behind Landmark Development
               </h2>
@@ -536,44 +463,43 @@
               </p>
             </div>
 
-            <div class="project-grid">
-              <article class="project-card feature reveal">
-                <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
-                  alt="Kurd Tower project image"
-                />
-                <div class="project-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.flagship"
-                    >Flagship High-Rise</span
-                  >
+            <div class="home-journal-grid">
+              <article class="home-journal-feature reveal">
+                <figure class="home-journal-feature-media poster-frame">
+                  <img src="assets/images/33%20(1).jpg" alt="" />
+                </figure>
+                <div class="home-journal-feature-copy">
+                  <span class="kicker" data-i18n="projects.kicker.flagship">
+                    Flagship High-Rise
+                  </span>
                   <h3 class="display">Kurd Tower</h3>
                   <p data-i18n="common.location_region">
                     Kurdistan Region, Iraq
                   </p>
                 </div>
               </article>
-              <article class="project-card medium reveal" data-delay="1">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                  alt="Grand Boulevard project image"
-                />
-                <div class="project-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.urban"
-                    >Urban Development</span
-                  >
+
+              <article class="home-journal-card reveal" data-delay="1">
+                <figure class="poster-frame">
+                  <img src="assets/images/22.jpg" alt="" />
+                </figure>
+                <div class="home-journal-card-copy">
+                  <span class="kicker" data-i18n="projects.kicker.urban">
+                    Urban Development
+                  </span>
                   <h3 class="display">Grand Boulevard</h3>
                   <p>Najm Park</p>
                 </div>
               </article>
-              <article class="project-card medium reveal" data-delay="2">
-                <img
-                  src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                  alt="Shary Aram project image"
-                />
-                <div class="project-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.residential"
-                    >Residential</span
-                  >
+
+              <article class="home-journal-card reveal" data-delay="2">
+                <figure class="poster-frame">
+                  <img src="assets/images/3%20(2).jpg" alt="" />
+                </figure>
+                <div class="home-journal-card-copy">
+                  <span class="kicker" data-i18n="projects.kicker.residential">
+                    Residential
+                  </span>
                   <h3 class="display">Shary Aram</h3>
                   <p data-i18n="common.location_region">
                     Kurdistan Region, Iraq
@@ -582,7 +508,7 @@
               </article>
             </div>
 
-            <div class="cta-actions" style="margin-top: 1.5rem">
+            <div class="cta-actions reveal" data-delay="1">
               <a
                 class="button button-secondary"
                 href="projects.html"
@@ -593,65 +519,43 @@
           </div>
         </section>
 
-        <section class="section section-cut section-dark section-texture">
-          <div class="container">
-            <div class="section-head reveal">
-              <span class="eyebrow" data-i18n="home.clients.eyebrow"
-                >Selected Clients</span
-              >
+        <section class="section section-cut home-trust-band" data-surface="dark">
+          <div class="container-wide home-trust-grid">
+            <figure class="home-trust-image poster-frame reveal">
+              <img src="assets/images/4%20(1).jpg" alt="" />
+            </figure>
+
+            <article class="home-trust-copy reveal" data-delay="1">
+              <span class="eyebrow" data-i18n="home.clients.eyebrow">
+                Selected Clients
+              </span>
               <h2 class="display" data-i18n="home.clients.title">
                 Trusted By Leading Developers
               </h2>
-              <p data-i18n="home.clients.body">
+              <p class="body-copy" data-i18n="home.clients.body">
                 Our client relationships reflect long-term trust, operational
                 consistency, and confidence in our delivery capability.
               </p>
-            </div>
-
-            <div class="logo-grid">
-              <article class="logo-card reveal">
+              <div class="client-ribbon-grid">
                 <span>Najmadin Group</span>
-              </article>
-              <article class="logo-card reveal" data-delay="1">
                 <span>Idea Construction Chemicals</span>
-              </article>
-              <article class="logo-card reveal" data-delay="2">
                 <span>Miran City</span>
-              </article>
-              <article class="logo-card reveal" data-delay="3">
                 <span>Dania City</span>
-              </article>
-              <article class="logo-card reveal">
                 <span>Qaiwan Plus Mall</span>
-              </article>
-              <article class="logo-card reveal" data-delay="1">
                 <span>Ramada Sulaymaniyah</span>
-              </article>
-            </div>
+              </div>
+            </article>
 
-            <div class="cta-actions" style="margin-top: 1.5rem">
-              <a
-                class="button button-secondary"
-                href="clients.html"
-                data-i18n="button.all_clients"
-                >See All Clients</a
-              >
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="cta-banner reveal">
-              <span class="eyebrow" data-i18n="button.inquiry"
-                >Send Inquiry</span
-              >
+            <aside class="home-trust-cta reveal" data-delay="2">
+              <span class="eyebrow" data-i18n="button.inquiry">
+                Send Inquiry
+              </span>
               <h2 class="display" data-i18n="home.cta.title">
                 Need A Concrete Partner For Your Next Build?
               </h2>
               <p data-i18n="home.cta.body">
-                Tell us about your site, required grades, timeline, and delivery
-                conditions. Our team will guide the next step.
+                Tell us about your site, required grades, timeline, and
+                delivery conditions. Our team will guide the next step.
               </p>
               <div class="cta-actions">
                 <a
@@ -662,12 +566,12 @@
                 >
                 <a
                   class="button button-secondary"
-                  href="services.html"
-                  data-i18n="button.services"
-                  >Our Services</a
+                  href="clients.html"
+                  data-i18n="button.all_clients"
+                  >See All Clients</a
                 >
               </div>
-            </div>
+            </aside>
           </div>
         </section>
       </main>

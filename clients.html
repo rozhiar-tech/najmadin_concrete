@@ -19,6 +19,11 @@
   </head>
   <body class="page page-clients" data-page="clients">
     <div class="site-shell">
+      <div class="motion-cursor" aria-hidden="true">
+        <span class="motion-cursor__dot"></span>
+        <span class="motion-cursor__ring"></span>
+      </div>
+
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
@@ -39,6 +44,7 @@
               <button type="button" data-lang="ar" aria-pressed="false">AR</button>
               <button type="button" data-lang="ku" aria-pressed="false">KU</button>
             </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
             <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
               <span></span>
             </button>
@@ -57,43 +63,39 @@
       </header>
 
       <main class="page-main">
-        <section class="page-hero section-cut">
-          <div class="container section-head reveal is-visible">
+        <section class="page-hero section-cut page-hero-cinematic" data-surface="dark">
+          <div class="container section-head reveal-title" data-scroll-shift="0.16">
             <span class="eyebrow" data-i18n="clients.hero.eyebrow">Clients</span>
             <h1 class="display" data-i18n="clients.hero.title">Trusted By Developers, Brands, And Institutions</h1>
             <p data-i18n="clients.hero.body">
               Our client base reflects long-term confidence in our quality, dependability, and ability to perform under demanding project conditions.
             </p>
           </div>
+          <a class="page-hero-scroll" href="#clients-showcase" aria-label="Next section"><span></span></a>
         </section>
+        <div class="hero-void" aria-hidden="true"></div>
 
-        <section class="section section-dark section-texture">
+        <section class="section section-light clients-showcase-section" id="clients-showcase" data-surface="light">
           <div class="container">
-            <div class="section-head reveal">
+            <div class="section-head reveal reveal-title">
               <span class="eyebrow" data-i18n="clients.wall.eyebrow">Client Wall</span>
               <h2 class="display" data-i18n="clients.wall.title">A Portfolio Built On Repeat Trust</h2>
               <p data-i18n="clients.wall.body">
                 Najmadin Concrete supports major names in residential, hospitality, healthcare, and mixed-use development.
               </p>
             </div>
-            <div class="logo-grid">
-              <article class="logo-card reveal"><span>Najmadin Group</span></article>
-              <article class="logo-card reveal" data-delay="1"><span>Idea Construction Chemicals</span></article>
-              <article class="logo-card reveal" data-delay="2"><span>Miran City</span></article>
-              <article class="logo-card reveal" data-delay="3"><span>Dania City</span></article>
-              <article class="logo-card reveal"><span>Qaiwan Plus Mall</span></article>
-              <article class="logo-card reveal" data-delay="1"><span>Ramada Sulaymaniyah</span></article>
-              <article class="logo-card reveal" data-delay="2"><span>Slemani Heights</span></article>
-              <article class="logo-card reveal" data-delay="3"><span>Smart Health Tower</span></article>
-              <article class="logo-card reveal"><span>ABC Towers</span></article>
-              <article class="logo-card reveal" data-delay="1"><span>Grand Boulevard Najm Park</span></article>
-              <article class="logo-card reveal" data-delay="2"><span>Shary Aram</span></article>
-              <article class="logo-card reveal" data-delay="3"><span>City Star</span></article>
+            <div class="client-showcase-grid">
+              <article class="client-showcase-card reveal reveal-zoom"><img src="assets/images/1%20(2).jpg" alt=""><div class="client-showcase-copy"><span class="kicker">Development</span><h3 class="display">Najmadin Group</h3></div></article>
+              <article class="client-showcase-card reveal reveal-zoom" data-delay="1"><img src="assets/images/2%20(1).jpg" alt=""><div class="client-showcase-copy"><span class="kicker">Materials</span><h3 class="display">Idea Construction Chemicals</h3></div></article>
+              <article class="client-showcase-card reveal reveal-zoom" data-delay="2"><img src="assets/images/3%20(1).jpg" alt=""><div class="client-showcase-copy"><span class="kicker">Mixed Use</span><h3 class="display">Miran City</h3></div></article>
+              <article class="client-showcase-card reveal reveal-zoom" data-delay="3"><img src="assets/images/4%20(1).jpg" alt=""><div class="client-showcase-copy"><span class="kicker">Urban Housing</span><h3 class="display">Dania City</h3></div></article>
+              <article class="client-showcase-card reveal reveal-zoom"><img src="assets/images/778.jpg" alt=""><div class="client-showcase-copy"><span class="kicker">Commercial</span><h3 class="display">Qaiwan Plus Mall</h3></div></article>
+              <article class="client-showcase-card reveal reveal-zoom" data-delay="1"><img src="assets/images/hf_20260421_135732_4fbf2e10-b34c-4c29-90f4-9b428ac0da48.png" alt=""><div class="client-showcase-copy"><span class="kicker">Hospitality</span><h3 class="display">Ramada Sulaymaniyah</h3></div></article>
             </div>
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut section-dark section-texture" data-surface="dark">
           <div class="container">
             <div class="section-head reveal">
               <span class="eyebrow" data-i18n="clients.sectors.eyebrow">Where We Work</span>
@@ -110,7 +112,7 @@
           </div>
         </section>
 
-        <section class="section section-cut section-blue section-texture">
+        <section class="section section-cut section-light clients-proof-section" data-surface="light">
           <div class="container">
             <div class="section-head reveal">
               <span class="eyebrow" data-i18n="clients.proof.eyebrow">Proof Points</span>

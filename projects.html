@@ -19,6 +19,11 @@
   </head>
   <body class="page page-projects" data-page="projects">
     <div class="site-shell">
+      <div class="motion-cursor" aria-hidden="true">
+        <span class="motion-cursor__dot"></span>
+        <span class="motion-cursor__ring"></span>
+      </div>
+
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
@@ -39,6 +44,7 @@
               <button type="button" data-lang="ar" aria-pressed="false">AR</button>
               <button type="button" data-lang="ku" aria-pressed="false">KU</button>
             </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
             <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
               <span></span>
             </button>
@@ -57,19 +63,21 @@
       </header>
 
       <main class="page-main">
-        <section class="page-hero section-cut">
-          <div class="container section-head reveal is-visible">
+        <section class="page-hero section-cut page-hero-cinematic" data-surface="dark">
+          <div class="container section-head reveal-title" data-scroll-shift="0.16">
             <span class="eyebrow" data-i18n="projects.hero.eyebrow">Projects</span>
             <h1 class="display" data-i18n="projects.hero.title">Landmark Work Across The Region</h1>
             <p data-i18n="projects.hero.body">
               Najmadin Concrete contributes to major developments with dependable supply, technical coordination, and product consistency where performance matters most.
             </p>
           </div>
+          <a class="page-hero-scroll" href="#projects-showcase" aria-label="Next section"><span></span></a>
         </section>
+        <div class="hero-void" aria-hidden="true"></div>
 
-        <section class="section section-dark section-texture">
+        <section class="section section-light projects-showcase-section" id="projects-showcase" data-surface="light">
           <div class="container-wide">
-            <div class="section-head reveal">
+            <div class="section-head reveal reveal-title">
               <span class="eyebrow" data-i18n="projects.grid.eyebrow">Project Showcase</span>
               <h2 class="display" data-i18n="projects.grid.title">Selected Developments</h2>
               <p data-i18n="projects.grid.body">
@@ -78,22 +86,22 @@
             </div>
 
             <div class="project-grid">
-              <article class="project-card feature reveal"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Kurd Tower"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.flagship">Flagship High-Rise</span><h3 class="display">Kurd Tower</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal" data-delay="1"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Grand Boulevard"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Grand Boulevard</h3><p>Najm Park</p></div></article>
-              <article class="project-card medium reveal" data-delay="2"><img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Shary Aram"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.residential">Residential</span><h3 class="display">Shary Aram</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal"><img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Miran City"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.mixed">Mixed Use</span><h3 class="display">Miran City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal" data-delay="1"><img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Dania City"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Dania City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal" data-delay="2"><img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Ramada Sulaymaniyah"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.hospitality">Hospitality</span><h3 class="display">Ramada Sulaymaniyah</h3><p>Salim Street</p></div></article>
-              <article class="project-card medium reveal"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Goizha City III"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.expansion">Residential Expansion</span><h3 class="display">Goizha City III</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal" data-delay="1"><img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pioneer"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.commercial">Commercial</span><h3 class="display">Pioneer</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal" data-delay="2"><img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Shari Zaytun"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.housing">Urban Housing</span><h3 class="display">Shari Zaytun</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card feature reveal reveal-zoom poster-frame"><img src="assets/images/1%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.flagship">Flagship High-Rise</span><h3 class="display">Kurd Tower</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/images/1%20(2).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Grand Boulevard</h3><p>Najm Park</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/images/2%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.residential">Residential</span><h3 class="display">Shary Aram</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame"><img src="assets/images/3%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.mixed">Mixed Use</span><h3 class="display">Miran City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/images/3%20(2).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Dania City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/images/4%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.hospitality">Hospitality</span><h3 class="display">Ramada Sulaymaniyah</h3><p>Salim Street</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame"><img src="assets/images/22.jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.expansion">Residential Expansion</span><h3 class="display">Goizha City III</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/images/33%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.commercial">Commercial</span><h3 class="display">Pioneer</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/images/778.jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.housing">Urban Housing</span><h3 class="display">Shari Zaytun</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
             </div>
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut section-dark section-texture" data-surface="dark">
           <div class="container">
-            <div class="section-head reveal">
+            <div class="section-head reveal reveal-title">
               <span class="eyebrow" data-i18n="projects.excellence.eyebrow">Why It Matters</span>
               <h2 class="display" data-i18n="projects.excellence.title">Execution Strength Behind Every Delivery</h2>
               <p data-i18n="projects.excellence.body">
@@ -102,31 +110,31 @@
             </div>
 
             <div class="feature-stack">
-              <article class="feature-row reveal">
+              <article class="feature-row reveal reveal-left" data-scroll-shift="-0.08">
                 <div class="feature-copy">
                   <h3 class="display" data-i18n="projects.ex1.title">Specialized Technical Teams</h3>
                   <p data-i18n="projects.ex1.body">We translate structural requirements into dependable production outcomes backed by operational discipline.</p>
                 </div>
-                <figure class="feature-image">
-                  <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Technical planning" />
+                <figure class="feature-image poster-frame">
+                  <img src="assets/images/hf_20260401_222455_1656fbbf-3091-4c91-b098-c41ab9f0949e.png" alt="" />
                 </figure>
               </article>
-              <article class="feature-row reveal" data-delay="1">
+              <article class="feature-row reveal reveal-right" data-delay="1" data-scroll-shift="0.08">
                 <div class="feature-copy">
                   <h3 class="display" data-i18n="projects.ex2.title">Continuous Improvement Across Departments</h3>
                   <p data-i18n="projects.ex2.body">From production to logistics and client communication, systems are constantly refined to improve performance.</p>
                 </div>
-                <figure class="feature-image">
-                  <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Construction operation" />
+                <figure class="feature-image poster-frame">
+                  <img src="assets/images/hf_20260421_135732_4fbf2e10-b34c-4c29-90f4-9b428ac0da48.png" alt="" />
                 </figure>
               </article>
-              <article class="feature-row reveal" data-delay="2">
+              <article class="feature-row reveal reveal-left" data-delay="2" data-scroll-shift="-0.08">
                 <div class="feature-copy">
                   <h3 class="display" data-i18n="projects.ex3.title">Strategic Delivery Capability</h3>
                   <p data-i18n="projects.ex3.body">We align quality, responsiveness, and capacity with the needs of each project and each phase of work.</p>
                 </div>
-                <figure class="feature-image">
-                  <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Construction site" />
+                <figure class="feature-image poster-frame">
+                  <img src="assets/images/33%20(1).jpg" alt="" />
                 </figure>
               </article>
             </div>

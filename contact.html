@@ -19,6 +19,11 @@
   </head>
   <body class="page page-contact" data-page="contact">
     <div class="site-shell">
+      <div class="motion-cursor" aria-hidden="true">
+        <span class="motion-cursor__dot"></span>
+        <span class="motion-cursor__ring"></span>
+      </div>
+
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
@@ -39,6 +44,7 @@
               <button type="button" data-lang="ar" aria-pressed="false">AR</button>
               <button type="button" data-lang="ku" aria-pressed="false">KU</button>
             </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
             <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
               <span></span>
             </button>
@@ -57,20 +63,22 @@
       </header>
 
       <main class="page-main">
-        <section class="page-hero section-cut">
-          <div class="container section-head reveal is-visible">
+        <section class="page-hero section-cut page-hero-cinematic" data-surface="dark">
+          <div class="container section-head reveal-title" data-scroll-shift="0.16">
             <span class="eyebrow" data-i18n="contact.hero.eyebrow">Contact</span>
             <h1 class="display" data-i18n="contact.hero.title">Let's Build Together</h1>
             <p data-i18n="contact.hero.body">
               Share your project scope, site location, grade requirements, and timeline. Najmadin Concrete will help define the next step.
             </p>
           </div>
+          <a class="page-hero-scroll" href="#contact-form-section" aria-label="Next section"><span></span></a>
         </section>
+        <div class="hero-void" aria-hidden="true"></div>
 
-        <section class="section section-dark section-texture">
+        <section class="section section-light contact-form-section" id="contact-form-section" data-surface="light">
           <div class="container">
             <div class="contact-layout">
-              <article class="card reveal">
+              <article class="card reveal reveal-left">
                 <span class="eyebrow" data-i18n="contact.form.eyebrow">Project Inquiry</span>
                 <h2 class="display" style="font-size: clamp(2.5rem, 5vw, 4.2rem)" data-i18n="contact.form.title">Start The Conversation</h2>
                 <p class="body-copy" data-i18n="contact.form.body">
@@ -104,15 +112,18 @@
               </article>
 
               <div class="stack">
-                <article class="info-card reveal" data-delay="1">
+                <figure class="contact-poster poster-frame reveal reveal-zoom" data-delay="1">
+                  <img src="assets/images/IMG_2444.JPG" alt="" />
+                </figure>
+                <article class="info-card reveal reveal-right" data-delay="1">
                   <span class="eyebrow" data-i18n="contact.info.location_label">Location</span>
                   <p data-i18n="common.location_city">Sulaymaniyah, Kurdistan Region, Iraq</p>
                 </article>
-                <article class="info-card reveal" data-delay="2">
+                <article class="info-card reveal reveal-right" data-delay="2">
                   <span class="eyebrow" data-i18n="contact.info.phone_label">Phone</span>
                   <p><a href="tel:+9647700000000">+964 770 000 0000</a></p>
                 </article>
-                <article class="info-card reveal" data-delay="3">
+                <article class="info-card reveal reveal-right" data-delay="3">
                   <span class="eyebrow" data-i18n="contact.info.email_label">Email</span>
                   <p><a href="mailto:info@najmadinconcrete.com">info@najmadinconcrete.com</a></p>
                 </article>
@@ -121,7 +132,7 @@
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut section-dark section-texture" data-surface="dark">
           <div class="container">
             <div class="section-head reveal">
               <span class="eyebrow" data-i18n="contact.faq.eyebrow">FAQ</span>

@@ -19,6 +19,11 @@
   </head>
   <body class="page page-services" data-page="services">
     <div class="site-shell">
+      <div class="motion-cursor" aria-hidden="true">
+        <span class="motion-cursor__dot"></span>
+        <span class="motion-cursor__ring"></span>
+      </div>
+
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
@@ -39,6 +44,7 @@
               <button type="button" data-lang="ar" aria-pressed="false">AR</button>
               <button type="button" data-lang="ku" aria-pressed="false">KU</button>
             </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
             <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
               <span></span>
             </button>
@@ -57,19 +63,81 @@
       </header>
 
       <main class="page-main">
-        <section class="page-hero section-cut">
-          <div class="container section-head reveal is-visible">
+        <section class="page-hero section-cut page-hero-cinematic" data-surface="dark">
+          <div class="container section-head reveal-title" data-scroll-shift="0.16">
             <span class="eyebrow" data-i18n="services.hero.eyebrow">Services</span>
             <h1 class="display" data-i18n="services.hero.title">Complete Concrete Supply Solutions</h1>
             <p data-i18n="services.hero.body">
               Najmadin Concrete supports projects with ready-mix production, material supply, technical guidance, and dependable logistics from plant to site.
             </p>
           </div>
+          <a class="page-hero-scroll" href="#services-motion" aria-label="Next section"><span></span></a>
+        </section>
+        <div class="hero-void" aria-hidden="true"></div>
+
+        <section class="section section-dark services-orbital" id="services-motion" data-surface="dark">
+          <div class="container-wide services-orbital-grid">
+            <div class="services-orbital-copy reveal reveal-title">
+              <span class="eyebrow" data-i18n="services.grid.eyebrow">What We Offer</span>
+              <h2 class="display" data-i18n="home.services.title">What We Deliver</h2>
+              <p class="body-copy" data-i18n="services.grid.body">
+                Our service model is built to reduce friction across the concrete supply chain while protecting quality and schedule performance.
+              </p>
+            </div>
+
+            <div class="services-orbital-gallery" data-orb-gallery>
+              <article class="service-orb reveal reveal-zoom is-active" data-orb-item>
+                <div class="service-orb__media">
+                  <img src="assets/images/22.jpg" alt="" />
+                </div>
+                <div class="service-orb__ring">
+                  <span class="service-orb__plus" aria-hidden="true"></span>
+                </div>
+                <h3 class="display" data-i18n="services.card1.title">Ready-Mix Concrete</h3>
+              </article>
+              <article class="service-orb reveal reveal-zoom" data-delay="1" data-orb-item>
+                <div class="service-orb__media">
+                  <img src="assets/images/33%20(1).jpg" alt="" />
+                </div>
+                <div class="service-orb__ring">
+                  <span class="service-orb__plus" aria-hidden="true"></span>
+                </div>
+                <h3 class="display" data-i18n="services.card2.title">Aggregates &amp; Gravel Supply</h3>
+              </article>
+              <article class="service-orb reveal reveal-zoom" data-delay="2" data-orb-item>
+                <div class="service-orb__media">
+                  <img src="assets/images/3%20(2).jpg" alt="" />
+                </div>
+                <div class="service-orb__ring">
+                  <span class="service-orb__plus" aria-hidden="true"></span>
+                </div>
+                <h3 class="display" data-i18n="services.card3.title">Remote Site Delivery</h3>
+              </article>
+              <article class="service-orb reveal reveal-zoom" data-delay="3" data-orb-item>
+                <div class="service-orb__media">
+                  <img src="assets/images/hf_20260401_222455_1656fbbf-3091-4c91-b098-c41ab9f0949e.png" alt="" />
+                </div>
+                <div class="service-orb__ring">
+                  <span class="service-orb__plus" aria-hidden="true"></span>
+                </div>
+                <h3 class="display" data-i18n="services.card4.title">Custom Mix Design</h3>
+              </article>
+              <article class="service-orb reveal reveal-zoom" data-delay="4" data-orb-item>
+                <div class="service-orb__media">
+                  <img src="assets/images/hf_20260421_135732_4fbf2e10-b34c-4c29-90f4-9b428ac0da48.png" alt="" />
+                </div>
+                <div class="service-orb__ring">
+                  <span class="service-orb__plus" aria-hidden="true"></span>
+                </div>
+                <h3 class="display" data-i18n="services.card6.title">Technical Consultation</h3>
+              </article>
+            </div>
+          </div>
         </section>
 
-        <section class="section section-dark section-texture">
+        <section class="section section-light services-grid-section" data-surface="light">
           <div class="container">
-            <div class="section-head reveal">
+            <div class="section-head reveal reveal-title">
               <span class="eyebrow" data-i18n="services.grid.eyebrow">What We Offer</span>
               <h2 class="display" data-i18n="services.grid.title">Production, Supply, And Technical Support In One System</h2>
               <p data-i18n="services.grid.body">
@@ -77,12 +145,12 @@
               </p>
             </div>
             <div class="cards-3">
-              <article class="card reveal" data-tilt><span class="card-icon" aria-hidden="true">01</span><h3 class="display" data-i18n="services.card1.title">Ready-Mix Concrete</h3><p data-i18n="services.card1.body">All grades from 15 N/mm2 to 100 N/mm2 with controlled production and 28-day strength discipline.</p></article>
-              <article class="card reveal" data-delay="1" data-tilt><span class="card-icon" aria-hidden="true">02</span><h3 class="display" data-i18n="services.card2.title">Aggregates &amp; Gravel Supply</h3><p data-i18n="services.card2.body">Consistent aggregate sourcing that supports mix quality and stable operations.</p></article>
-              <article class="card reveal" data-delay="2" data-tilt><span class="card-icon" aria-hidden="true">03</span><h3 class="display" data-i18n="services.card3.title">Remote Site Delivery</h3><p data-i18n="services.card3.body">Reliable site logistics for hard-to-reach locations and demanding project conditions.</p></article>
-              <article class="card reveal" data-tilt><span class="card-icon" aria-hidden="true">04</span><h3 class="display" data-i18n="services.card4.title">Custom Mix Design</h3><p data-i18n="services.card4.body">Tailored mix solutions aligned with structural, environmental, and site-specific needs.</p></article>
-              <article class="card reveal" data-delay="1" data-tilt><span class="card-icon" aria-hidden="true">05</span><h3 class="display" data-i18n="services.card5.title">Quality-Controlled Production</h3><p data-i18n="services.card5.body">100% locally manufactured output supported by disciplined process checks and repeatability.</p></article>
-              <article class="card reveal" data-delay="2" data-tilt><span class="card-icon" aria-hidden="true">06</span><h3 class="display" data-i18n="services.card6.title">Technical Consultation</h3><p data-i18n="services.card6.body">Specialized advice from teams who understand site performance, concrete behavior, and delivery constraints.</p></article>
+              <article class="card reveal reveal-zoom" data-tilt><span class="card-icon" aria-hidden="true">01</span><h3 class="display" data-i18n="services.card1.title">Ready-Mix Concrete</h3><p data-i18n="services.card1.body">All grades from 15 N/mm2 to 100 N/mm2 with controlled production and 28-day strength discipline.</p></article>
+              <article class="card reveal reveal-zoom" data-delay="1" data-tilt><span class="card-icon" aria-hidden="true">02</span><h3 class="display" data-i18n="services.card2.title">Aggregates &amp; Gravel Supply</h3><p data-i18n="services.card2.body">Consistent aggregate sourcing that supports mix quality and stable operations.</p></article>
+              <article class="card reveal reveal-zoom" data-delay="2" data-tilt><span class="card-icon" aria-hidden="true">03</span><h3 class="display" data-i18n="services.card3.title">Remote Site Delivery</h3><p data-i18n="services.card3.body">Reliable site logistics for hard-to-reach locations and demanding project conditions.</p></article>
+              <article class="card reveal reveal-zoom" data-tilt><span class="card-icon" aria-hidden="true">04</span><h3 class="display" data-i18n="services.card4.title">Custom Mix Design</h3><p data-i18n="services.card4.body">Tailored mix solutions aligned with structural, environmental, and site-specific needs.</p></article>
+              <article class="card reveal reveal-zoom" data-delay="1" data-tilt><span class="card-icon" aria-hidden="true">05</span><h3 class="display" data-i18n="services.card5.title">Quality-Controlled Production</h3><p data-i18n="services.card5.body">100% locally manufactured output supported by disciplined process checks and repeatability.</p></article>
+              <article class="card reveal reveal-zoom" data-delay="2" data-tilt><span class="card-icon" aria-hidden="true">06</span><h3 class="display" data-i18n="services.card6.title">Technical Consultation</h3><p data-i18n="services.card6.body">Specialized advice from teams who understand site performance, concrete behavior, and delivery constraints.</p></article>
             </div>
             <div class="cta-banner reveal" style="margin-top: 1.4rem; padding: 1rem 1.3rem">
               <p class="section-note" data-i18n="services.standards">Compliant with ASTM · ACI · BS · IS · EN international and national standards</p>
@@ -90,7 +158,7 @@
           </div>
         </section>
 
-        <section class="section section-cut">
+        <section class="section section-cut section-dark section-texture" data-surface="dark">
           <div class="container">
             <div class="section-head reveal">
               <span class="eyebrow" data-i18n="services.process.eyebrow">How We Work</span>
@@ -107,7 +175,7 @@
           </div>
         </section>
 
-        <section class="section section-cut section-blue section-texture">
+        <section class="section section-cut section-light services-support-section" data-surface="light">
           <div class="container">
             <div class="split-grid">
               <article class="story-panel reveal">
