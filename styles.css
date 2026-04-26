@@ -4880,6 +4880,1911 @@ html[dir="rtl"] .info-card a::after {
     translate: none;
   }
 }
+
+html:not([dir="rtl"])
+  body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) {
+  --display-font: "Bodoni Moda", serif;
+  --body-font: "Manrope", sans-serif;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) {
+  --home-bg: #0d0908;
+  --home-bg-soft: #18110f;
+  --home-panel: rgba(255, 255, 255, 0.045);
+  --home-panel-strong: rgba(255, 255, 255, 0.085);
+  --home-ink: #f4e6d7;
+  --home-muted: rgba(244, 230, 215, 0.74);
+  --home-soft: rgba(244, 230, 215, 0.5);
+  --home-accent: #d4ad91;
+  --home-accent-strong: #f0c8ad;
+  --home-line: rgba(244, 230, 215, 0.14);
+  --home-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+  --page-hero-art-position: calc(100% - 2.25rem) center;
+  --page-hero-art-size: auto 92%;
+  background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(212, 173, 145, 0.14),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 82% 10%,
+      rgba(255, 255, 255, 0.06),
+      transparent 18%
+    ),
+    linear-gradient(180deg, #0b0908 0%, #130e0c 36%, #1a120f 62%, #080605 100%);
+  color: var(--home-ink);
+}
+
+html[dir="rtl"]
+  body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) {
+  --page-hero-art-position: 2.25rem center;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  )::before {
+  opacity: 0.09;
+  mix-blend-mode: overlay;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-main {
+  padding-top: 0;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-cut::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-cut::after {
+  display: none;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .display {
+  color: var(--home-ink);
+  letter-spacing: 0.045em;
+  line-height: 0.86;
+}
+
+html[dir="rtl"]
+  body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .display {
+  line-height: 1.08;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .eyebrow {
+  color: var(--home-accent-strong);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .eyebrow::before {
+  background: linear-gradient(90deg, var(--home-accent), transparent);
+}
+
+html[dir="rtl"]
+  body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .eyebrow::before {
+  background: linear-gradient(270deg, var(--home-accent), transparent);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .body-copy,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-head p,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-label,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-text,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-copy,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .form-note,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card p,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .faq-item p {
+  color: var(--home-muted);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-note,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .kicker {
+  color: var(--home-soft);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-light,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-dark,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-blue {
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-light {
+  background:
+    radial-gradient(
+      circle at 18% 14%,
+      rgba(212, 173, 145, 0.12),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #100c0b 0%, #17110e 100%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-dark {
+  background:
+    radial-gradient(
+      circle at 80% 14%,
+      rgba(212, 173, 145, 0.1),
+      transparent 22%
+    ),
+    linear-gradient(180deg, #080605 0%, #0f0b09 100%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-blue {
+  background:
+    radial-gradient(
+      circle at 16% 0%,
+      rgba(212, 173, 145, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(135deg, #18100d 0%, #0d0908 100%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-light::after,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-dark::after,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-blue::after {
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .site-header,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .site-header {
+  padding: 1.1rem 0;
+  background:
+    linear-gradient(180deg, rgba(8, 6, 5, 0.88), rgba(8, 6, 5, 0.16)),
+    rgba(8, 6, 5, 0.12);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(20px);
+  box-shadow: none;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .site-header.is-scrolled,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .site-header.is-scrolled {
+  background: rgba(10, 7, 6, 0.82);
+  border-bottom-color: var(--home-line);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-row {
+  position: relative;
+  min-height: 4.2rem;
+  justify-content: flex-end;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 0.7rem;
+  z-index: 2;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-mark,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-mark {
+  width: auto;
+  height: auto;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-mark svg,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-mark svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-copy strong,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-copy strong {
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
+  letter-spacing: 0.08em;
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-copy span,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .brand-copy span {
+  font-family: var(--body-font);
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--home-soft);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-actions {
+  position: relative;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .language-switcher,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .language-switcher {
+  margin-inline-end: auto;
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--home-line);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .language-switcher button,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .language-switcher button {
+  color: var(--home-soft);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .language-switcher button.is-active,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .language-switcher button.is-active {
+  background: rgba(212, 173, 145, 0.18);
+  color: var(--home-ink);
+  transform: none;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle {
+  display: inline-flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 999px;
+  border-color: var(--home-line);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle span,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle span::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle span::after,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle span,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle span::before,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-toggle span::after {
+  background: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-cta,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-cta {
+  border-color: var(--home-line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-cta:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-cta:focus-visible,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-cta:hover,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .header-cta:focus-visible {
+  background: rgba(212, 173, 145, 0.14);
+  border-color: rgba(240, 200, 173, 0.28);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-panel,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-panel {
+  position: absolute;
+  top: calc(100% + 0.9rem);
+  inset-inline-end: 0;
+  width: min(24rem, calc(100vw - 2rem));
+  max-height: min(32rem, calc(100svh - 6.5rem));
+  overflow: auto;
+  display: block;
+  padding: 0.9rem;
+  background: rgba(10, 7, 6, 0.94);
+  border: 1px solid var(--home-line);
+  border-radius: 1.5rem;
+  box-shadow: var(--home-shadow);
+  backdrop-filter: blur(24px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.8rem);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-panel.is-open,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-panel.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-links {
+  display: grid;
+  align-content: start;
+  gap: 0.2rem;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link {
+  display: block;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  color: var(--home-soft);
+  font-family: var(--body-font);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link::after,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link::after {
+  display: none;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link:focus-visible,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link.is-current,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link:hover,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link:focus-visible,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .nav-link.is-current {
+  color: var(--home-ink);
+  border-color: rgba(240, 200, 173, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .motion-cursor {
+  mix-blend-mode: difference;
+}
+
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .motion-cursor__dot {
+  background: #fff;
+}
+
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .motion-cursor__ring {
+  border-color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero {
+  min-height: 100svh;
+  align-items: flex-end;
+  padding: clamp(7.6rem, 14vw, 9.5rem) 0 clamp(4rem, 9vw, 6rem);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 6, 5, 0.94) 0%,
+      rgba(8, 6, 5, 0.76) 36%,
+      rgba(8, 6, 5, 0.3) 72%,
+      rgba(8, 6, 5, 0.9) 100%
+    ),
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(240, 200, 173, 0.14),
+      transparent 22%
+    ),
+    var(--page-hero-art) var(--page-hero-art-position) /
+      var(--page-hero-art-size) no-repeat,
+    linear-gradient(135deg, #090706 0%, #140f0d 100%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero::before {
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero::after {
+  opacity: 0.18;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-cinematic .section-head {
+  max-width: 36rem;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-cinematic .section-head h1 {
+  max-width: 8ch;
+  font-size: clamp(4.4rem, 9vw, 7.2rem);
+  text-shadow: 0 20px 38px rgba(0, 0, 0, 0.36);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-cinematic .section-head p {
+  max-width: 31rem;
+  color: var(--home-muted);
+  font-size: clamp(1rem, 1.35vw, 1.08rem);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-scroll,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-scroll {
+  border-color: var(--home-line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-scroll::before,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-scroll::before {
+  border-color: rgba(244, 230, 215, 0.12);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-scroll span,
+body.surface-light:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .page-hero-scroll span {
+  border-inline-end-color: var(--home-ink);
+  border-bottom-color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .hero-void {
+  height: clamp(3.5rem, 8vw, 5rem);
+  background: linear-gradient(180deg, #080605 0%, #0f0b09 100%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .card,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .faq-item,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-card,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .cta-banner,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-panel,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .process-step,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .detail-list li,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .logo-card,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .feature-row,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .project-card,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .client-showcase-card,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .contact-poster,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-media,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .feature-image {
+  border-color: var(--home-line);
+  background:
+    radial-gradient(
+      circle at 82% 14%,
+      rgba(212, 173, 145, 0.12),
+      transparent 24%
+    ),
+    linear-gradient(180deg, rgba(30, 21, 17, 1) 0%, rgba(9, 7, 6, 1) 100%);
+  box-shadow: var(--home-shadow);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .card:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .card:focus-within,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card:focus-within,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .faq-item:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-card:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .cta-banner:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .logo-card:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .logo-card:focus-visible {
+  border-color: rgba(240, 200, 173, 0.3);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.32);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .card::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .faq-item::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-card::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .cta-banner::before {
+  background:
+    linear-gradient(135deg, rgba(212, 173, 145, 0.12), transparent 38%),
+    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.02));
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .card-icon,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .check,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .process-step strong {
+  background: rgba(212, 173, 145, 0.12);
+  color: var(--home-accent-strong);
+  border-color: rgba(240, 200, 173, 0.18);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .card h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-panel h2,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-panel h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .feature-copy h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-number,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .faq-item summary,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .project-card h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .client-showcase-copy h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .logo-card span {
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-number {
+  color: var(--home-accent-strong);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-card::after {
+  background: linear-gradient(90deg, var(--home-accent), transparent);
+}
+
+html[dir="rtl"]
+  body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .metric-card::after {
+  background: linear-gradient(270deg, var(--home-accent), transparent);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-grid,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .split-grid,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .contact-layout,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .feature-row {
+  gap: clamp(1.2rem, 4vw, 2rem);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-media {
+  min-height: 34rem;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .story-quote p {
+  max-width: 12ch;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .services-orbital {
+  background:
+    radial-gradient(
+      circle at 80% 18%,
+      rgba(212, 173, 145, 0.16),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #080706 0%, #0f0b09 100%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .services-orbital-copy h2,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .section-head h2 {
+  max-width: 9ch;
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .service-orb__ring {
+  border-color: var(--home-line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    rgba(9, 7, 6, 0.72);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .service-orb h3 {
+  color: var(--home-soft);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .service-orb:hover h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .service-orb:focus-visible h3,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .service-orb.is-active h3 {
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .project-card::before,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .client-showcase-card::before {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.84)),
+    linear-gradient(135deg, rgba(212, 173, 145, 0.12), transparent 45%);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .project-card::after,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .client-showcase-card::after {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 173, 145, 0.34),
+    rgba(8, 6, 5, 0.82)
+  );
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .projects-showcase-section .project-card p,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .projects-showcase-section .project-card .kicker,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .client-showcase-copy .kicker {
+  color: rgba(244, 230, 215, 0.8);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field label {
+  color: var(--home-soft);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field input,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--home-line);
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field input::placeholder,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field textarea::placeholder {
+  color: rgba(244, 230, 215, 0.36);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field input:focus,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .field textarea:focus {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(240, 200, 173, 0.36);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .button-primary {
+  color: #140f0d;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 214, 188, 1) 0%,
+    rgba(220, 182, 157, 1) 48%,
+    rgba(186, 145, 118, 1) 100%
+  );
+  box-shadow: 0 18px 40px rgba(212, 173, 145, 0.22);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .button-secondary {
+  border-color: var(--home-line);
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--home-ink);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .button-secondary:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .button-secondary:focus-visible {
+  background: rgba(212, 173, 145, 0.1);
+  border-color: rgba(240, 200, 173, 0.3);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .site-footer {
+  background: #0a0706;
+  border-top-color: var(--home-line);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-nav a,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-text,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-copy,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card a {
+  color: var(--home-soft);
+}
+
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-nav a:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .footer-nav a:focus-visible,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card a:hover,
+body:is(
+    .page-about,
+    .page-services,
+    .page-projects,
+    .page-clients,
+    .page-contact
+  ) .info-card a:focus-visible {
+  color: var(--home-ink);
+}
+
+@media (max-width: 860px) {
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) {
+    --page-hero-art-position: center bottom;
+    --page-hero-art-size: auto 88%;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .site-header {
+    padding: 0.9rem 0;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .nav-panel {
+    top: calc(100% + 0.7rem);
+    width: min(20rem, calc(100vw - 1.5rem));
+    max-height: calc(100svh - 5.75rem);
+    padding: 0.8rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .nav-link {
+    font-size: 0.88rem;
+    padding: 0.82rem 0.9rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .page-hero-cinematic .section-head h1 {
+    font-size: clamp(3.7rem, 12vw, 5.8rem);
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .section-head h2,
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .services-orbital-copy h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 620px) {
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) {
+    --page-hero-art-size: auto 80%;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .header-actions {
+    gap: 0.5rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .brand-copy {
+    display: none;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .language-switcher {
+    padding: 0.25rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .language-switcher button {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .nav-toggle {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .page-hero {
+    padding-top: 7rem;
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .page-hero-cinematic .section-head h1 {
+    font-size: clamp(3.1rem, 14vw, 4.9rem);
+  }
+
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .story-media,
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .feature-image,
+  body:is(
+      .page-about,
+      .page-services,
+      .page-projects,
+      .page-clients,
+      .page-contact
+    ) .client-showcase-card {
+    min-height: 20rem;
+  }
+}
 /* ═══════════════════════════════════════════════════════════════════════════
    EDITORIAL SLIDER — SCROLL HIJACK
    Paste this block at the very bottom of styles.css
