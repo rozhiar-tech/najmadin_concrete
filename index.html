@@ -59,15 +59,14 @@
 
       .hijack-outer {
         /* Total scroll distance = (slides - 1) × 100vh + 100vh for the panel itself */
-        /* 4 slides = 5 × 100vh total height */
-        height: 500vh;
+        height: calc(var(--slide-count, 4) * 100svh);
         position: relative;
       }
 
       .hijack-sticky {
         position: sticky;
         top: 0;
-        height: 100vh;
+        height: 100svh;
         overflow: hidden; /* clips the track as it moves */
       }
 
@@ -138,7 +137,7 @@
       /* ── INDIVIDUAL SLIDE ────────────────────────────────────────── */
       .slide {
         width: 100vw;
-        height: 100vh;
+        height: 100svh;
         flex-shrink: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -340,58 +339,98 @@
       /* ── MOBILE RESPONSIVE ────────────────────────────────────────── */
       @media (max-width: 1180px) {
         .hijack-outer {
-          height: auto;
+          height: calc(var(--slide-count, 4) * 100svh);
         }
 
         .hijack-sticky {
-          position: static;
-          height: auto;
-          overflow: visible;
+          position: sticky;
+          top: 0;
+          height: 100svh;
+          overflow: hidden;
         }
 
-        .progress-bar,
-        .lock-hint,
+        .progress-bar {
+          left: 1rem;
+          right: 1rem;
+          bottom: 0.9rem;
+          height: 3px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, rgba(184, 147, 106, 0.55), #d8b590);
+        }
+
         .slide-counter {
-          display: none;
+          top: 0.95rem;
+          right: 0.95rem;
+          bottom: auto;
+          gap: 0.35rem;
+          padding: 0.45rem 0.8rem;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(8, 6, 5, 0.68);
+          backdrop-filter: blur(12px);
+        }
+
+        .lock-hint {
+          top: auto;
+          left: 50%;
+          bottom: 1.55rem;
+          transform: translateX(-50%);
+          opacity: 0.74;
+          padding: 0.45rem 0.75rem;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(8, 6, 5, 0.68);
+          backdrop-filter: blur(12px);
+          white-space: nowrap;
+        }
+
+        .lock-hint.visible {
+          opacity: 0.84;
         }
 
         .hijack-track {
           display: flex;
-          flex-direction: column;
-          width: 100%;
-          height: auto;
-          gap: 0;
+          width: calc(var(--slide-count, 4) * 100vw);
+          height: 100%;
         }
 
         .slide {
-          width: 100%;
-          height: auto;
-          flex-shrink: 1;
+          width: 100vw;
+          height: 100svh;
+          flex: 0 0 100vw;
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: auto auto;
+          grid-template-rows: minmax(17rem, 38svh) minmax(0, 1fr);
           gap: 0;
           overflow: visible;
           position: relative;
-          padding-bottom: 2.5rem;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          padding: max(5.3rem, env(safe-area-inset-top) + 4.2rem) 0.95rem
+            max(1.25rem, env(safe-area-inset-bottom) + 1rem);
+          align-content: stretch;
+          background: transparent;
         }
 
-        .slide:last-child {
-          border-bottom: none;
-          padding-bottom: 0;
+        .slide.active {
+          box-shadow: none;
         }
 
         .slide__img {
           position: relative;
           width: 100%;
-          height: 320px;
+          height: 100%;
           overflow: hidden;
-          border-radius: 12px;
+          border-radius: 1.55rem 1.55rem 0 0;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-bottom: none;
         }
 
         .slide__img::after {
-          background: linear-gradient(180deg, transparent 60%, #0b0b0b 100%);
+          background: linear-gradient(
+            180deg,
+            transparent 12%,
+            rgba(11, 11, 11, 0.18) 56%,
+            #0b0b0b 100%
+          );
         }
 
         .slide__img img {
@@ -404,47 +443,56 @@
         }
 
         .slide__content {
-          background: transparent;
+          background:
+            radial-gradient(
+              circle at 82% 18%,
+              rgba(184, 147, 106, 0.12),
+              transparent 28%
+            ),
+            linear-gradient(180deg, rgba(23, 18, 15, 0.94), rgba(11, 11, 11, 0.98));
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          padding: 1.75rem 1.5rem;
+          padding: 1.2rem 1.05rem 1.2rem;
           position: relative;
           order: 2;
+          overflow: hidden;
+          border-radius: 0 0 1.55rem 1.55rem;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-top: none;
+          box-shadow: 0 24px 52px rgba(0, 0, 0, 0.32);
         }
 
         .slide__bg-num {
-          display: none;
+          display: block;
+          right: 0.04em;
+          bottom: -0.08em;
+          font-size: clamp(5.4rem, 24vw, 8.5rem);
+          color: rgba(255, 255, 255, 0.06);
         }
 
         .slide__overline {
-          font-size: 0.58rem;
-          margin-bottom: 1.1rem;
+          font-size: 0.6rem;
+          margin-bottom: 0.9rem;
         }
 
         .slide__headline {
-          font-size: clamp(2rem, 7vw, 3.5rem);
-          margin-bottom: 1.3rem;
-          line-height: 1.1;
+          font-size: clamp(2.2rem, 7.4vw, 4rem);
+          margin-bottom: 1rem;
+          line-height: 0.95;
         }
 
         .slide__divider {
           width: 40px;
-          margin-bottom: 1.1rem;
+          margin-bottom: 0.95rem;
         }
 
         .slide__body {
           font-size: 0.7rem;
-          line-height: 1.85;
+          line-height: 1.68;
           max-width: 100%;
-          color: rgba(255, 255, 255, 0.55);
-          letter-spacing: 0.08em;
-        }
-
-        .slide__content > * {
-          opacity: 1;
-          transform: none;
-          transition: none;
+          color: rgba(255, 255, 255, 0.62);
+          letter-spacing: 0.06em;
         }
 
         .fake-section {
@@ -456,32 +504,73 @@
       }
 
       @media (max-width: 768px) {
-        .slide__img {
-          height: 260px;
+        .slide-counter {
+          right: 0.9rem;
+          top: 0.9rem;
+        }
+
+        .lock-hint {
+          bottom: 1.45rem;
+          font-size: 0.55rem;
+        }
+
+        .slide {
+          padding: max(5rem, env(safe-area-inset-top) + 4rem) 0.82rem
+            max(1.1rem, env(safe-area-inset-bottom) + 0.95rem);
+          grid-template-rows: minmax(15.2rem, 35svh) minmax(0, 1fr);
         }
 
         .slide__content {
-          padding: 1.5rem 1rem;
+          padding: 1.05rem 0.95rem 1.1rem;
         }
 
         .slide__headline {
-          font-size: clamp(1.7rem, 6vw, 2.8rem);
-          margin-bottom: 1rem;
-        }
-
-        .slide__overline {
-          font-size: 0.55rem;
+          font-size: clamp(2rem, 10vw, 3.2rem);
           margin-bottom: 0.9rem;
         }
 
         .slide__body {
-          font-size: 0.65rem;
-          line-height: 1.7;
+          font-size: 0.68rem;
+          line-height: 1.72;
         }
 
         .fake-section {
           padding: 1.5rem 1rem;
           font-size: clamp(1.2rem, 4vw, 1.8rem);
+        }
+      }
+
+      @media (max-width: 520px) {
+        .progress-bar {
+          left: 0.85rem;
+          right: 0.85rem;
+          bottom: 0.55rem;
+        }
+
+        .slide-counter {
+          padding: 0.38rem 0.62rem;
+        }
+
+        .lock-hint {
+          display: none;
+        }
+
+        .slide {
+          padding: max(4.85rem, env(safe-area-inset-top) + 3.9rem) 0.72rem
+            max(0.95rem, env(safe-area-inset-bottom) + 0.85rem);
+          grid-template-rows: minmax(14.2rem, 32svh) minmax(0, 1fr);
+        }
+
+        .slide__img {
+          border-radius: 1.35rem 1.35rem 0 0;
+        }
+
+        .slide__content {
+          border-radius: 0 0 1.35rem 1.35rem;
+        }
+
+        .slide__headline {
+          font-size: clamp(1.85rem, 9vw, 2.8rem);
         }
       }
     </style>
@@ -1169,65 +1258,88 @@
       const progress = document.getElementById("progressBar");
       const lockHint = document.getElementById("lockHint");
       const counter = document.getElementById("counterCurrent");
-      const slides = document.querySelectorAll(".slide");
-      const TOTAL = slides.length; // 4
-
+      const slides = Array.from(document.querySelectorAll(".slide"));
+      const TOTAL = slides.length;
       let currentSlide = 0;
       let rafId = null;
-      let targetX = 0;
       let currentX = 0;
+      let targetX = 0;
 
-      function update() {
+      outer.style.setProperty("--slide-count", TOTAL);
+
+      function setActive(nextIndex) {
+        const safeIndex = Math.max(0, Math.min(TOTAL - 1, nextIndex));
+
+        if (safeIndex !== currentSlide) {
+          slides[currentSlide].classList.remove("active");
+          currentSlide = safeIndex;
+          slides[currentSlide].classList.add("active");
+          counter.textContent = currentSlide + 1;
+          counter.style.transform = "scale(1.14)";
+          setTimeout(() => (counter.style.transform = ""), 180);
+        }
+      }
+
+      function setProgress(value) {
+        const safeValue = Math.max(0, Math.min(1, value));
+        progress.style.width = safeValue * 100 + "%";
+      }
+
+      function updateSlider() {
         const outerRect = outer.getBoundingClientRect();
         const outerH = outer.offsetHeight;
         const stickyH = window.innerHeight;
-
-        // scrollProgress: 0 when section enters viewport, 1 when it leaves
-        // The scrollable distance is outerH - stickyH
-        const scrolled = -outerRect.top; // px scrolled into section
-        const maxScroll = outerH - stickyH; // total scrollable distance
+        const scrolled = -outerRect.top;
+        const maxScroll = Math.max(outerH - stickyH, 1);
         const progress0 = Math.max(0, Math.min(1, scrolled / maxScroll));
 
-        // Convert progress to horizontal translateX
-        // At 0: first slide visible (translateX = 0)
-        // At 1: last slide visible (translateX = -(TOTAL-1)*100vw)
         targetX = -(progress0 * (TOTAL - 1) * window.innerWidth);
+        currentX += (targetX - currentX) * (window.innerWidth <= 1180 ? 0.16 : 0.1);
 
-        // Smooth lerp — 0.1 = 10% closer per frame (~60fps = buttery)
-        currentX += (targetX - currentX) * 0.1;
-
-        // Snap to exact when very close (avoids infinite micro-movement)
-        if (Math.abs(targetX - currentX) < 0.3) currentX = targetX;
+        if (Math.abs(targetX - currentX) < 0.3) {
+          currentX = targetX;
+        }
 
         track.style.transform = `translateX(${currentX}px)`;
+        setProgress(progress0);
+        lockHint.textContent =
+          window.innerWidth <= 1180
+            ? "— Scroll to change image —"
+            : "— Scroll to explore —";
 
-        // Progress bar
-        progress.style.width = progress0 * 100 + "%";
-
-        // Lock hint visibility
         if (progress0 > 0.01 && progress0 < 0.99) {
           lockHint.classList.add("visible");
         } else {
           lockHint.classList.remove("visible");
         }
 
-        // Active slide: which slide is most visible
-        const activeIndex = Math.round(progress0 * (TOTAL - 1));
-        if (activeIndex !== currentSlide) {
-          slides[currentSlide].classList.remove("active");
-          currentSlide = activeIndex;
-          slides[currentSlide].classList.add("active");
-          counter.textContent = currentSlide + 1;
-          // brief scale pop on counter
-          counter.style.transform = "scale(1.4)";
-          setTimeout(() => (counter.style.transform = ""), 200);
-        }
-
-        rafId = requestAnimationFrame(update);
+        setActive(Math.round(progress0 * (TOTAL - 1)));
+        rafId = requestAnimationFrame(updateSlider);
       }
 
-      // Start the loop
-      update();
+      function syncSlider() {
+        targetX = -(currentSlide * window.innerWidth);
+        currentX = targetX;
+        track.style.transform = `translateX(${currentX}px)`;
+        lockHint.classList.remove("visible");
+      }
+
+      window.addEventListener("resize", syncSlider);
+      window.addEventListener(
+        "load",
+        () => {
+          syncSlider();
+          if (!rafId) {
+            rafId = requestAnimationFrame(updateSlider);
+          }
+        },
+        { once: true },
+      );
+
+      syncSlider();
+      if (!rafId) {
+        rafId = requestAnimationFrame(updateSlider);
+      }
     </script>
   </body>
 </html>
