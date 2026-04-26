@@ -3113,6 +3113,7 @@ html[dir="rtl"] .home-trust-grid {
     ),
     linear-gradient(180deg, rgba(30, 21, 17, 1) 0%, rgba(9, 7, 6, 1) 100%);
   box-shadow: var(--home-shadow);
+  /* add an image here */
 }
 
 .page-home .poster-frame {
@@ -3693,6 +3694,26 @@ html[dir="rtl"] .home-service-item.is-active {
     transform: none;
   }
 
+  .home-editorial-card {
+    flex: initial;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+
+  .home-editorial-card-media {
+    min-height: 26rem;
+  }
+
+  .home-editorial-card-copy {
+    padding: 0.5rem 0;
+  }
+
+  .home-editorial-card-mark {
+    display: none;
+  }
+
   .home-editorial-feature,
   .home-editorial-stack,
   .home-editorial-note,
@@ -3810,6 +3831,16 @@ html[dir="rtl"] .home-service-item.is-active {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .home-editorial-card {
+    grid-template-columns: 1fr;
+    padding: 0.8rem;
+    min-height: auto;
+  }
+
+  .home-editorial-card-media {
+    min-height: 22rem;
+  }
+
   .home-editorial-marquee-main {
     font-size: clamp(3.4rem, 10vw, 5.8rem);
   }
@@ -3896,24 +3927,25 @@ html[dir="rtl"] .home-service-item.is-active {
   }
 
   .home-editorial-card {
-    flex: 0 0 100%;
     grid-template-columns: 1fr;
-    gap: 1rem;
     padding: 0.75rem;
-    min-height: auto;
+    gap: 0.8rem;
   }
 
   .home-editorial-card-media {
-    min-height: 22rem;
-    order: -1;
+    min-height: 20rem;
   }
 
   .home-editorial-card-copy {
-    padding: 1rem 0.75rem 0 0.75rem;
+    padding: 0;
   }
 
-  .home-editorial-card-mark {
-    display: none;
+  .home-editorial-card-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .home-editorial-card-text {
+    font-size: 0.85rem;
   }
 
   .home-editorial-slide,
@@ -4846,5 +4878,95 @@ html[dir="rtl"] .info-card a::after {
 
   [data-scroll-shift] {
     translate: none;
+  }
+}
+/* ═══════════════════════════════════════════════════════════════════════════
+   EDITORIAL SLIDER — SCROLL HIJACK
+   Paste this block at the very bottom of styles.css
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 1. The outer section becomes the tall scroll container.
+      JS sets height: N*100vh dynamically, so we just
+      ensure the section doesn't clip its sticky child.        */
+[data-editorial-slider] {
+  overflow: visible !important; /* must see the sticky child   */
+  /* existing padding/margin from .home-editorial is preserved  */
+}
+
+/* 2. The sticky viewport (pan) — JS sets position/top/height,
+      we make sure nothing forces it out of flow.               */
+[data-editorial-pan] {
+  width: 100%;
+}
+
+/* 3. The horizontal track — JS sets display/width/transform.   */
+[data-editorial-track] {
+  /* gap between cards from the original style is kept          */
+}
+
+/* 4. Each slide must be a proper full-viewport flex child.
+      JS sets flex / width / height directly on each slide.     */
+[data-editorial-slide] {
+  overflow: hidden;
+  border-radius: 1.8rem; /* match original .home-editorial-card */
+}
+
+/* 5. Progress bar — JS drives scaleX directly so we only
+      need the transition to stay on the element.               */
+[data-editorial-progress-bar] {
+  transform-origin: left;
+  /* transition already defined in existing styles              */
+}
+
+/* 6. Compact / reduced-motion: disable everything above so the
+      original CSS-variable approach takes over again.          */
+@media (max-width: 1180px) {
+  [data-editorial-slider] {
+    overflow: clip !important;
+    height: auto !important;
+  }
+
+  [data-editorial-pan] {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  [data-editorial-track] {
+    display: grid !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  [data-editorial-slide] {
+    flex: unset !important;
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-editorial-slider] {
+    height: auto !important;
+  }
+
+  [data-editorial-pan] {
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+  }
+
+  [data-editorial-track] {
+    display: grid !important;
+    width: auto !important;
+    transform: none !important;
+  }
+
+  [data-editorial-slide] {
+    flex: unset !important;
+    width: auto !important;
+    height: auto !important;
   }
 }

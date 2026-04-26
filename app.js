@@ -48,7 +48,8 @@ const translations = {
     "common.stats.clients": "Major Clients",
     "footer.tagline": "Building Tomorrow, Today.",
     "footer.rights": "Najmadin Concrete. All rights reserved.",
-    "home.hero.eyebrow": "Leading Concrete Supplier In The Kurdistan Region Of Iraq",
+    "home.hero.eyebrow":
+      "Leading Concrete Supplier In The Kurdistan Region Of Iraq",
     "home.hero.title": "Building Iraq's Future Since 2002",
     "home.hero.body":
       "Najmadin Concrete delivers ready-mix concrete, aggregates, technical support, and dependable site logistics for ambitious developments across the region.",
@@ -57,11 +58,14 @@ const translations = {
     "home.hero.badge3": "Remote Site Delivery",
     "home.hero.panel_title": "Built For High-Demand Sites",
     "home.hero.panel1.title": "Advanced Mixing Precision",
-    "home.hero.panel1.body": "Consistency and performance designed into every batch.",
+    "home.hero.panel1.body":
+      "Consistency and performance designed into every batch.",
     "home.hero.panel2.title": "Reliable Logistics",
-    "home.hero.panel2.body": "Delivery coordination that protects demanding schedules.",
+    "home.hero.panel2.body":
+      "Delivery coordination that protects demanding schedules.",
     "home.hero.panel3.title": "Local Industrial Strength",
-    "home.hero.panel3.body": "100% locally manufactured output backed by technical support.",
+    "home.hero.panel3.body":
+      "100% locally manufactured output backed by technical support.",
     "home.story.eyebrow": "Why Najmadin Concrete",
     "home.story.title": "Industrial Strength. Local Precision.",
     "home.story.visual1": "Industrial Strength.",
@@ -75,11 +79,14 @@ const translations = {
     "home.services.body":
       "From structural-grade ready-mix to aggregate supply and technical guidance, our teams support performance from the plant to the project site.",
     "home.services.card1.title": "Ready-Mix Concrete",
-    "home.services.card1.body": "All grades from 15 N/mm2 to 100 N/mm2 with disciplined production control.",
+    "home.services.card1.body":
+      "All grades from 15 N/mm2 to 100 N/mm2 with disciplined production control.",
     "home.services.card2.title": "Aggregates & Gravel",
-    "home.services.card2.body": "Stable upstream material supply that supports consistency and delivery speed.",
+    "home.services.card2.body":
+      "Stable upstream material supply that supports consistency and delivery speed.",
     "home.services.card3.title": "Remote Site Delivery",
-    "home.services.card3.body": "Logistics capability built for hard-to-reach locations and demanding schedules.",
+    "home.services.card3.body":
+      "Logistics capability built for hard-to-reach locations and demanding schedules.",
     "home.projects.eyebrow": "Featured Projects",
     "home.projects.title": "Concrete Behind Landmark Development",
     "home.projects.body":
@@ -103,8 +110,7 @@ const translations = {
       "Today the company stands among Iraq's leading producers and suppliers of ready-mix concrete and aggregates, backed by 200+ trained professionals from diverse technical and operational backgrounds.",
     "about.story.p3":
       "We are committed to customer satisfaction, consistent product quality, and on-time delivery, including to remote locations where dependable coordination matters most.",
-    "about.story.quote":
-      "Built to last, like the structures we create.",
+    "about.story.quote": "Built to last, like the structures we create.",
     "about.values.eyebrow": "Core Values",
     "about.values.title": "The Standards That Shape Our Work",
     "about.values.body":
@@ -123,40 +129,53 @@ const translations = {
     "about.qhse.body":
       "Najmadin Concrete maintains a strict QHSE policy enforced at leadership level, with safety, legal compliance, environmental protection, and team accountability embedded into operations.",
     "about.qhse.item1": "Strict QHSE policy enforced at management level.",
-    "about.qhse.item2": "Zero time-lost injury target across operations and sites.",
-    "about.qhse.item3": "Pollution prevention and environmental preservation focus.",
-    "about.qhse.item4": "Full compliance with legal and regulatory requirements.",
+    "about.qhse.item2":
+      "Zero time-lost injury target across operations and sites.",
+    "about.qhse.item3":
+      "Pollution prevention and environmental preservation focus.",
+    "about.qhse.item4":
+      "Full compliance with legal and regulatory requirements.",
     "about.qhse.item5": "Employee empowerment and team-based problem solving.",
     "about.ops.eyebrow": "Operational Strength",
     "about.ops.title": "Built Around People, Process, And Precision",
     "about.ops.body":
       "Our reputation reflects the strength of our team, while our concrete reflects the dedication of those who produce it.",
     "about.ops.card1.title": "20+ Years Of Delivery",
-    "about.ops.card1.body": "A long operating history shaped by real project conditions and continuous learning.",
+    "about.ops.card1.body":
+      "A long operating history shaped by real project conditions and continuous learning.",
     "about.ops.card2.title": "200+ Skilled Professionals",
-    "about.ops.card2.body": "A trained workforce that supports production, dispatch, quality, and technical coordination.",
+    "about.ops.card2.body":
+      "A trained workforce that supports production, dispatch, quality, and technical coordination.",
     "about.ops.card3.title": "Remote Site Capability",
-    "about.ops.card3.body": "Dependable supply even where access, timing, and terrain create extra pressure.",
+    "about.ops.card3.body":
+      "Dependable supply even where access, timing, and terrain create extra pressure.",
     "services.hero.eyebrow": "Services",
     "services.hero.title": "Complete Concrete Supply Solutions",
     "services.hero.body":
       "Najmadin Concrete supports projects with ready-mix production, material supply, technical guidance, and dependable logistics from plant to site.",
     "services.grid.eyebrow": "What We Offer",
-    "services.grid.title": "Production, Supply, And Technical Support In One System",
+    "services.grid.title":
+      "Production, Supply, And Technical Support In One System",
     "services.grid.body":
       "Our service model is built to reduce friction across the concrete supply chain while protecting quality and schedule performance.",
     "services.card1.title": "Ready-Mix Concrete",
-    "services.card1.body": "All grades from 15 N/mm2 to 100 N/mm2 with controlled production and 28-day strength discipline.",
+    "services.card1.body":
+      "All grades from 15 N/mm2 to 100 N/mm2 with controlled production and 28-day strength discipline.",
     "services.card2.title": "Aggregates & Gravel Supply",
-    "services.card2.body": "Consistent aggregate sourcing that supports mix quality and stable operations.",
+    "services.card2.body":
+      "Consistent aggregate sourcing that supports mix quality and stable operations.",
     "services.card3.title": "Remote Site Delivery",
-    "services.card3.body": "Reliable site logistics for hard-to-reach locations and demanding project conditions.",
+    "services.card3.body":
+      "Reliable site logistics for hard-to-reach locations and demanding project conditions.",
     "services.card4.title": "Custom Mix Design",
-    "services.card4.body": "Tailored mix solutions aligned with structural, environmental, and site-specific needs.",
+    "services.card4.body":
+      "Tailored mix solutions aligned with structural, environmental, and site-specific needs.",
     "services.card5.title": "Quality-Controlled Production",
-    "services.card5.body": "100% locally manufactured output supported by disciplined process checks and repeatability.",
+    "services.card5.body":
+      "100% locally manufactured output supported by disciplined process checks and repeatability.",
     "services.card6.title": "Technical Consultation",
-    "services.card6.body": "Specialized advice from teams who understand site performance, concrete behavior, and delivery constraints.",
+    "services.card6.body":
+      "Specialized advice from teams who understand site performance, concrete behavior, and delivery constraints.",
     "services.standards":
       "Compliant with ASTM · ACI · BS · IS · EN international and national standards",
     "services.process.eyebrow": "How We Work",
@@ -164,11 +183,14 @@ const translations = {
     "services.process.body":
       "We simplify coordination by aligning technical review, production planning, and site logistics in one sequence.",
     "services.process.step1.title": "Assess",
-    "services.process.step1.body": "We study project requirements, site conditions, grade needs, and delivery timing.",
+    "services.process.step1.body":
+      "We study project requirements, site conditions, grade needs, and delivery timing.",
     "services.process.step2.title": "Produce",
-    "services.process.step2.body": "We prepare the right mix with quality-controlled production and documented consistency.",
+    "services.process.step2.body":
+      "We prepare the right mix with quality-controlled production and documented consistency.",
     "services.process.step3.title": "Deliver",
-    "services.process.step3.body": "We coordinate dispatch and site delivery to protect schedule and placement performance.",
+    "services.process.step3.body":
+      "We coordinate dispatch and site delivery to protect schedule and placement performance.",
     "services.support.eyebrow": "Technical Support",
     "services.support.title": "Support That Continues Beyond The Plant",
     "services.support.body":
@@ -217,11 +239,14 @@ const translations = {
     "clients.sectors.body":
       "Our supply model adapts across development types, site conditions, and program pressures.",
     "clients.sector1.title": "Residential & Mixed-Use",
-    "clients.sector1.body": "Large communities, towers, and urban developments requiring reliable daily coordination.",
+    "clients.sector1.body":
+      "Large communities, towers, and urban developments requiring reliable daily coordination.",
     "clients.sector2.title": "Hospitality & Commercial",
-    "clients.sector2.body": "Hotels, malls, and commercial projects where timing, finish, and continuity matter.",
+    "clients.sector2.body":
+      "Hotels, malls, and commercial projects where timing, finish, and continuity matter.",
     "clients.sector3.title": "Strategic City Projects",
-    "clients.sector3.body": "Developments that demand technical accuracy, schedule discipline, and long-term trust.",
+    "clients.sector3.body":
+      "Developments that demand technical accuracy, schedule discipline, and long-term trust.",
     "clients.proof.eyebrow": "Proof Points",
     "clients.proof.title": "Why Clients Return",
     "clients.proof.body":
@@ -242,9 +267,11 @@ const translations = {
     "contact.form.phone": "Phone",
     "contact.form.phone_ph": "+964 770 000 0000",
     "contact.form.message": "Message",
-    "contact.form.message_ph": "Tell us about your project, site location, grade needs, and delivery timeline.",
+    "contact.form.message_ph":
+      "Tell us about your project, site location, grade needs, and delivery timeline.",
     "contact.form.submit": "Send Inquiry",
-    "contact.form.note": "Current phone and email values are placeholders until official company details are supplied.",
+    "contact.form.note":
+      "Current phone and email values are placeholders until official company details are supplied.",
     "contact.form.validation": "Please complete all fields before submitting.",
     "contact.form.opening": "Opening your email client...",
     "contact.form.subject": "Project Inquiry | Najmadin Concrete",
@@ -256,11 +283,14 @@ const translations = {
     "contact.faq.body":
       "A few quick answers to the questions clients often ask before the first coordination call.",
     "contact.faq.q1": "Do you serve remote sites?",
-    "contact.faq.a1": "Yes. Delivery planning is structured to support difficult routes and hard-to-reach locations.",
+    "contact.faq.a1":
+      "Yes. Delivery planning is structured to support difficult routes and hard-to-reach locations.",
     "contact.faq.q2": "What grades do you supply?",
-    "contact.faq.a2": "Najmadin Concrete supplies grades from 15 N/mm2 to 100 N/mm2 based on project requirements.",
+    "contact.faq.a2":
+      "Najmadin Concrete supplies grades from 15 N/mm2 to 100 N/mm2 based on project requirements.",
     "contact.faq.q3": "Do you support technical coordination?",
-    "contact.faq.a3": "Yes. Our teams provide mix guidance, production support, and delivery coordination before and during execution."
+    "contact.faq.a3":
+      "Yes. Our teams provide mix guidance, production support, and delivery coordination before and during execution.",
   },
   ar: {
     "meta.home.title": "نجمدين كونكريت | نبني مستقبل العراق منذ 2002",
@@ -333,11 +363,14 @@ const translations = {
     "home.services.body":
       "من الخرسانة الجاهزة الإنشائية إلى توريد الركام والإسناد الفني، تدعم فرقنا الأداء من المصنع حتى موقع المشروع.",
     "home.services.card1.title": "الخرسانة الجاهزة",
-    "home.services.card1.body": "جميع الدرجات من 15 إلى 100 نيوتن/مم2 مع ضبط إنتاج منظم.",
+    "home.services.card1.body":
+      "جميع الدرجات من 15 إلى 100 نيوتن/مم2 مع ضبط إنتاج منظم.",
     "home.services.card2.title": "الركام والحصى",
-    "home.services.card2.body": "توريد مستقر للمواد الأولية يحافظ على الجودة وسرعة التوصيل.",
+    "home.services.card2.body":
+      "توريد مستقر للمواد الأولية يحافظ على الجودة وسرعة التوصيل.",
     "home.services.card3.title": "التوصيل للمواقع البعيدة",
-    "home.services.card3.body": "قدرة لوجستية للمناطق صعبة الوصول والجداول الزمنية الحساسة.",
+    "home.services.card3.body":
+      "قدرة لوجستية للمناطق صعبة الوصول والجداول الزمنية الحساسة.",
     "home.projects.eyebrow": "مشاريع مميزة",
     "home.projects.title": "الخرسانة خلف المشاريع البارزة",
     "home.projects.body":
@@ -379,8 +412,10 @@ const translations = {
     "about.qhse.title": "الجودة، الصحة، السلامة والبيئة",
     "about.qhse.body":
       "تتبع نجمدين كونكريت سياسة صارمة في الجودة والصحة والسلامة والبيئة تُطبَّق على مستوى الإدارة العليا، مع ترسيخ السلامة والالتزام القانوني وحماية البيئة والمسؤولية الجماعية في العمليات اليومية.",
-    "about.qhse.item1": "سياسة صارمة للجودة والصحة والسلامة والبيئة على مستوى الإدارة.",
-    "about.qhse.item2": "هدف واضح للوصول إلى صفر إصابات وقت ضائع في المواقع والعمليات.",
+    "about.qhse.item1":
+      "سياسة صارمة للجودة والصحة والسلامة والبيئة على مستوى الإدارة.",
+    "about.qhse.item2":
+      "هدف واضح للوصول إلى صفر إصابات وقت ضائع في المواقع والعمليات.",
     "about.qhse.item3": "تركيز على منع التلوث والحفاظ على البيئة.",
     "about.qhse.item4": "التزام كامل بالمتطلبات القانونية والتنظيمية.",
     "about.qhse.item5": "تمكين العاملين وحل المشكلات بروح الفريق.",
@@ -389,11 +424,14 @@ const translations = {
     "about.ops.body":
       "تعكس سمعتنا قوة فريقنا، بينما تعكس خرسانتنا التزام من يقفون خلف إنتاجها.",
     "about.ops.card1.title": "أكثر من 20 عاماً من التنفيذ",
-    "about.ops.card1.body": "سجل تشغيلي طويل تشكّل من خلال ظروف المشاريع الحقيقية والتعلم المستمر.",
+    "about.ops.card1.body":
+      "سجل تشغيلي طويل تشكّل من خلال ظروف المشاريع الحقيقية والتعلم المستمر.",
     "about.ops.card2.title": "أكثر من 200 مختص",
-    "about.ops.card2.body": "كوادر مدربة تدعم الإنتاج والجودة والتنسيق الفني والتوزيع.",
+    "about.ops.card2.body":
+      "كوادر مدربة تدعم الإنتاج والجودة والتنسيق الفني والتوزيع.",
     "about.ops.card3.title": "قدرة على خدمة المواقع البعيدة",
-    "about.ops.card3.body": "توريد موثوق حتى عندما يفرض الوصول والوقت والتضاريس ضغطاً إضافياً.",
+    "about.ops.card3.body":
+      "توريد موثوق حتى عندما يفرض الوصول والوقت والتضاريس ضغطاً إضافياً.",
     "services.hero.eyebrow": "الخدمات",
     "services.hero.title": "حلول متكاملة لتوريد الخرسانة",
     "services.hero.body":
@@ -403,17 +441,23 @@ const translations = {
     "services.grid.body":
       "بُني نموذج خدماتنا لتقليل التعقيد في سلسلة توريد الخرسانة مع حماية الجودة والانضباط الزمني.",
     "services.card1.title": "الخرسانة الجاهزة",
-    "services.card1.body": "جميع الدرجات من 15 إلى 100 نيوتن/مم2 مع ضبط إنتاج واختبارات مقاومة منظمة.",
+    "services.card1.body":
+      "جميع الدرجات من 15 إلى 100 نيوتن/مم2 مع ضبط إنتاج واختبارات مقاومة منظمة.",
     "services.card2.title": "توريد الركام والحصى",
-    "services.card2.body": "توريد منتظم للركام يدعم جودة الخلطة واستقرار العمليات.",
+    "services.card2.body":
+      "توريد منتظم للركام يدعم جودة الخلطة واستقرار العمليات.",
     "services.card3.title": "التوصيل للمواقع البعيدة",
-    "services.card3.body": "خدمات لوجستية موثوقة للمواقع صعبة الوصول والظروف التشغيلية المعقدة.",
+    "services.card3.body":
+      "خدمات لوجستية موثوقة للمواقع صعبة الوصول والظروف التشغيلية المعقدة.",
     "services.card4.title": "تصميم خلطات مخصصة",
-    "services.card4.body": "حلول خلط مصممة وفق المتطلبات الإنشائية والبيئية وظروف الموقع.",
+    "services.card4.body":
+      "حلول خلط مصممة وفق المتطلبات الإنشائية والبيئية وظروف الموقع.",
     "services.card5.title": "إنتاج مضبوط الجودة",
-    "services.card5.body": "إنتاج محلي بالكامل مدعوم بإجراءات تحقق منضبطة وتكرارية موثوقة.",
+    "services.card5.body":
+      "إنتاج محلي بالكامل مدعوم بإجراءات تحقق منضبطة وتكرارية موثوقة.",
     "services.card6.title": "استشارات فنية",
-    "services.card6.body": "إسناد متخصص من فرق تفهم أداء الخرسانة ومتطلبات الموقع وقيود التسليم.",
+    "services.card6.body":
+      "إسناد متخصص من فرق تفهم أداء الخرسانة ومتطلبات الموقع وقيود التسليم.",
     "services.standards":
       "متوافق مع المعايير الدولية والوطنية ASTM · ACI · BS · IS · EN",
     "services.process.eyebrow": "آلية العمل",
@@ -421,11 +465,14 @@ const translations = {
     "services.process.body":
       "نبسط التنسيق من خلال مواءمة المراجعة الفنية وخطة الإنتاج والخدمات اللوجستية في تسلسل واحد.",
     "services.process.step1.title": "التقييم",
-    "services.process.step1.body": "نراجع متطلبات المشروع وظروف الموقع والدرجات المطلوبة وتوقيت التسليم.",
+    "services.process.step1.body":
+      "نراجع متطلبات المشروع وظروف الموقع والدرجات المطلوبة وتوقيت التسليم.",
     "services.process.step2.title": "الإنتاج",
-    "services.process.step2.body": "نجهز الخلطة المناسبة بإنتاج مضبوط الجودة وثبات موثق.",
+    "services.process.step2.body":
+      "نجهز الخلطة المناسبة بإنتاج مضبوط الجودة وثبات موثق.",
     "services.process.step3.title": "التسليم",
-    "services.process.step3.body": "ننسق الإرسال والتسليم الموقعي لحماية الجدول الزمني والأداء التنفيذي.",
+    "services.process.step3.body":
+      "ننسق الإرسال والتسليم الموقعي لحماية الجدول الزمني والأداء التنفيذي.",
     "services.support.eyebrow": "الدعم الفني",
     "services.support.title": "دعم يمتد إلى ما بعد المصنع",
     "services.support.body":
@@ -474,11 +521,14 @@ const translations = {
     "clients.sectors.body":
       "يتكيف نموذج التوريد لدينا مع أنواع المشاريع المختلفة وظروف المواقع وضغوط الجداول الزمنية.",
     "clients.sector1.title": "السكني والمتعدد الاستخدامات",
-    "clients.sector1.body": "مجتمعات كبيرة وأبراج ومشاريع حضرية تحتاج إلى تنسيق يومي موثوق.",
+    "clients.sector1.body":
+      "مجتمعات كبيرة وأبراج ومشاريع حضرية تحتاج إلى تنسيق يومي موثوق.",
     "clients.sector2.title": "الضيافة والتجاري",
-    "clients.sector2.body": "فنادق ومولات ومشاريع تجارية يكون فيها الوقت والاستمرارية عوامل حاسمة.",
+    "clients.sector2.body":
+      "فنادق ومولات ومشاريع تجارية يكون فيها الوقت والاستمرارية عوامل حاسمة.",
     "clients.sector3.title": "مشاريع المدينة الاستراتيجية",
-    "clients.sector3.body": "تطويرات تتطلب دقة فنية وانضباطاً زمنياً وثقة طويلة الأمد.",
+    "clients.sector3.body":
+      "تطويرات تتطلب دقة فنية وانضباطاً زمنياً وثقة طويلة الأمد.",
     "clients.proof.eyebrow": "مؤشرات الثقة",
     "clients.proof.title": "لماذا يعود العملاء إلينا",
     "clients.proof.body":
@@ -499,9 +549,11 @@ const translations = {
     "contact.form.phone": "الهاتف",
     "contact.form.phone_ph": "+964 770 000 0000",
     "contact.form.message": "الرسالة",
-    "contact.form.message_ph": "أخبرنا عن المشروع والموقع والدرجات المطلوبة والجدول الزمني للتسليم.",
+    "contact.form.message_ph":
+      "أخبرنا عن المشروع والموقع والدرجات المطلوبة والجدول الزمني للتسليم.",
     "contact.form.submit": "أرسل الاستفسار",
-    "contact.form.note": "أرقام الهاتف والبريد الحالية مؤقتة إلى حين تزويدنا ببيانات الشركة الرسمية.",
+    "contact.form.note":
+      "أرقام الهاتف والبريد الحالية مؤقتة إلى حين تزويدنا ببيانات الشركة الرسمية.",
     "contact.form.validation": "يرجى إكمال جميع الحقول قبل الإرسال.",
     "contact.form.opening": "يتم فتح برنامج البريد الإلكتروني...",
     "contact.form.subject": "استفسار مشروع | نجمدين كونكريت",
@@ -513,14 +565,18 @@ const translations = {
     "contact.faq.body":
       "إجابات سريعة عن الأسئلة التي يطرحها العملاء غالباً قبل أول اجتماع تنسيقي.",
     "contact.faq.q1": "هل تخدمون المواقع البعيدة؟",
-    "contact.faq.a1": "نعم، فخطط التسليم لدينا مهيأة لدعم الطرق الصعبة والمواقع بعيدة الوصول.",
+    "contact.faq.a1":
+      "نعم، فخطط التسليم لدينا مهيأة لدعم الطرق الصعبة والمواقع بعيدة الوصول.",
     "contact.faq.q2": "ما هي الدرجات التي توفرونها؟",
-    "contact.faq.a2": "توفر نجمدين كونكريت درجات تبدأ من 15 وحتى 100 نيوتن/مم2 بحسب متطلبات المشروع.",
+    "contact.faq.a2":
+      "توفر نجمدين كونكريت درجات تبدأ من 15 وحتى 100 نيوتن/مم2 بحسب متطلبات المشروع.",
     "contact.faq.q3": "هل تقدمون دعماً فنياً؟",
-    "contact.faq.a3": "نعم، تقدم فرقنا الإرشاد في الخلطات والدعم الإنتاجي والتنسيق أثناء التنفيذ."
+    "contact.faq.a3":
+      "نعم، تقدم فرقنا الإرشاد في الخلطات والدعم الإنتاجي والتنسيق أثناء التنفيذ.",
   },
   ku: {
-    "meta.home.title": "نەجمەدین کۆنکریت | ئایندەی عێراق دروست دەکەین لە 2002ەوە",
+    "meta.home.title":
+      "نەجمەدین کۆنکریت | ئایندەی عێراق دروست دەکەین لە 2002ەوە",
     "meta.home.description":
       "نەجمەدین کۆنکریت یەکێکە لە دابینکەرە سەرەکییەکانی کۆنکریتی ئامادە و رێگمات لە هەرێمی کوردستانی عێراق، بە ئەزموونی پشتپێبەستوو لە ساڵی 2002ەوە.",
     "meta.about.title": "دەربارەی نەجمەدین کۆنکریت",
@@ -590,11 +646,14 @@ const translations = {
     "home.services.body":
       "لە کۆنکریتی ئامادەی ئینشایی تا دابینکردنی رێگمات و پشتگیری فنی، تیمەکانمان کارایی لە کارگەهەوە تا شوێنی پڕۆژە پشتگیری دەکەن.",
     "home.services.card1.title": "کۆنکریتی ئامادە",
-    "home.services.card1.body": "هەموو پلەکان لە 15 تا 100 نیوتن/مم2 بە کۆنترۆڵی ڕێکخراوی بەرهەمهێنان.",
+    "home.services.card1.body":
+      "هەموو پلەکان لە 15 تا 100 نیوتن/مم2 بە کۆنترۆڵی ڕێکخراوی بەرهەمهێنان.",
     "home.services.card2.title": "رێگمات و حەصا",
-    "home.services.card2.body": "دابینکردنی جێگیر بۆ ماددەی سەرەتایی بۆ پاراستنی کوالێتی و خێرایی گەیاندن.",
+    "home.services.card2.body":
+      "دابینکردنی جێگیر بۆ ماددەی سەرەتایی بۆ پاراستنی کوالێتی و خێرایی گەیاندن.",
     "home.services.card3.title": "گەیاندن بۆ شوێنە دوورەکان",
-    "home.services.card3.body": "توانای لۆجستی بۆ ناوچە دژوارەکان و کاتە هەستیارەکان.",
+    "home.services.card3.body":
+      "توانای لۆجستی بۆ ناوچە دژوارەکان و کاتە هەستیارەکان.",
     "home.projects.eyebrow": "پڕۆژەی دیار",
     "home.projects.title": "کۆنکریت لە پشتی گەشەپێدانە گەورەکان",
     "home.projects.body":
@@ -607,7 +666,8 @@ const translations = {
     "home.cta.body":
       "زانیاری شوێن و پلەی پێویست و کاتی کار و مەرجی گەیاندن بنێرە، تیمەکەمان هەنگاوی داهاتووت بۆ دیاری دەکات.",
     "about.hero.eyebrow": "دەربارەی نەجمەدین کۆنکریت",
-    "about.hero.title": "کۆمپانیایەک کە لەسەر متمانە و کوالێتی و گەیاندن دروست بووە",
+    "about.hero.title":
+      "کۆمپانیایەک کە لەسەر متمانە و کوالێتی و گەیاندن دروست بووە",
     "about.hero.body":
       "نەجمەدین کۆنکریت ئەزموونی پیشەسازیی درێژخایەن و تیمی ڕاهێنراو و سیستەمی تێکەڵکردنی پێشکەوتوو و لۆجستی ڕێکخراو کۆدەکاتەوە بۆ خزمەتکردنی بوارەکانی بیناسازی بە باوەڕ.",
     "about.story.eyebrow": "چیرۆکی ئێمە",
@@ -637,8 +697,10 @@ const translations = {
     "about.qhse.body":
       "نەجمەدین کۆنکریت سیاسەتێکی توندی QHSE هەیە کە لەلایەن بەڕێوەبەرایەتیی سەرەوە جێبەجێ دەکرێت و سەلامەتی و پابەندی یاسایی و پاراستنی ژینگە و بەرپرسیارێتیی تیمی تێدا بنیات نراون.",
     "about.qhse.item1": "سیاسەتی توندی QHSE لە ئاستی بەڕێوەبەرایەتی.",
-    "about.qhse.item2": "ئامانجی ڕوون بۆ هیچ برینداربوونێکی کاتی لەدەستچوو نییە.",
-    "about.qhse.item3": "سەرنجی تایبەتی بۆ پێشگیری لە پیسبوون و پاراستنی ژینگە.",
+    "about.qhse.item2":
+      "ئامانجی ڕوون بۆ هیچ برینداربوونێکی کاتی لەدەستچوو نییە.",
+    "about.qhse.item3":
+      "سەرنجی تایبەتی بۆ پێشگیری لە پیسبوون و پاراستنی ژینگە.",
     "about.qhse.item4": "پابەندی تەواو بە پێداویستی یاسایی و ڕێنمایییەکان.",
     "about.qhse.item5": "توانابەخشینی کارمەندان و چارەسەری کێشە بە ڕووحی تیمی.",
     "about.ops.eyebrow": "هێزی کارکردن",
@@ -646,31 +708,41 @@ const translations = {
     "about.ops.body":
       "ناوبانگمان هێزی تیمەکەمان پیشان دەدات، و کۆنکریتەکەشمان دڵسۆزیی ئەوانەی لە پشتی بەرهەمهێنانی دەنیشتن.",
     "about.ops.card1.title": "زیاتر لە 20 ساڵ جێبەجێکردن",
-    "about.ops.card1.body": "تۆمارێکی درێژی کارکردن کە لە ئەزموونی ڕاستەقینەی پڕۆژەکانەوە درووست بووە.",
+    "about.ops.card1.body":
+      "تۆمارێکی درێژی کارکردن کە لە ئەزموونی ڕاستەقینەی پڕۆژەکانەوە درووست بووە.",
     "about.ops.card2.title": "زیاتر لە 200 پسپۆڕ",
-    "about.ops.card2.body": "کادرێکی ڕاهێنراو کە بەرهەمهێنان و کوالێتی و دابەشکردن و هاوردەکردنی فنی پشتگیری دەکات.",
+    "about.ops.card2.body":
+      "کادرێکی ڕاهێنراو کە بەرهەمهێنان و کوالێتی و دابەشکردن و هاوردەکردنی فنی پشتگیری دەکات.",
     "about.ops.card3.title": "توانای خزمەتگوزاری بۆ شوێنە دوورەکان",
-    "about.ops.card3.body": "دابینکردنی باوەڕپێکراو تەنانەت کاتێک گەیشتن و کات و ناهمواریەکان فشار دروست دەکەن.",
+    "about.ops.card3.body":
+      "دابینکردنی باوەڕپێکراو تەنانەت کاتێک گەیشتن و کات و ناهمواریەکان فشار دروست دەکەن.",
     "services.hero.eyebrow": "خزمەتگوزارییەکان",
     "services.hero.title": "چارەسەری تەواوی دابینکردنی کۆنکریت",
     "services.hero.body":
       "نەجمەدین کۆنکریت پڕۆژەکان بە بەرهەمهێنانی کۆنکریتی ئامادە و دابینکردنی ماددە و ڕێنمایی فنی و لۆجستی باوەڕپێکراو پشتگیری دەکات.",
     "services.grid.eyebrow": "چی پێشکەش دەکەین",
-    "services.grid.title": "بەرهەمهێنان و دابینکردن و پشتگیری فنی لە یەک سیستەمدا",
+    "services.grid.title":
+      "بەرهەمهێنان و دابینکردن و پشتگیری فنی لە یەک سیستەمدا",
     "services.grid.body":
       "مۆدێلی خزمەتگوزارییەکەمان بۆ کەمکردنەوەی ئاڵۆزی لە زنجیرەی دابینکردنی کۆنکریت دروست کراوە، لەگەڵ پاراستنی کوالێتی و کات.",
     "services.card1.title": "کۆنکریتی ئامادە",
-    "services.card1.body": "هەموو پلەکان لە 15 تا 100 نیوتن/مم2 بە بەرهەمهێنانی کۆنترۆڵکراو و تاقیکردنەوەی ڕێکخراو.",
+    "services.card1.body":
+      "هەموو پلەکان لە 15 تا 100 نیوتن/مم2 بە بەرهەمهێنانی کۆنترۆڵکراو و تاقیکردنەوەی ڕێکخراو.",
     "services.card2.title": "دابینکردنی رێگمات و حەصا",
-    "services.card2.body": "دابینکردنی بەردەوامی رێگمات بۆ پاراستنی کوالێتی تێکەڵە و جێگیریی کارکردن.",
+    "services.card2.body":
+      "دابینکردنی بەردەوامی رێگمات بۆ پاراستنی کوالێتی تێکەڵە و جێگیریی کارکردن.",
     "services.card3.title": "گەیاندن بۆ شوێنە دوورەکان",
-    "services.card3.body": "خزمەتگوزاریی لۆجستیی باوەڕپێکراو بۆ شوێنی دژوار و دۆخی کارکردنی ئاڵۆز.",
+    "services.card3.body":
+      "خزمەتگوزاریی لۆجستیی باوەڕپێکراو بۆ شوێنی دژوار و دۆخی کارکردنی ئاڵۆز.",
     "services.card4.title": "دیزاینی تایبەتی تێکەڵە",
-    "services.card4.body": "چارەسەری تێکەڵە بەگوێرەی داواکاریی ئینشایی و ژینگەیی و مەرجی شوێن.",
+    "services.card4.body":
+      "چارەسەری تێکەڵە بەگوێرەی داواکاریی ئینشایی و ژینگەیی و مەرجی شوێن.",
     "services.card5.title": "بەرهەمهێنانی کۆنترۆڵکراوی کوالێتی",
-    "services.card5.body": "بەرهەمی تەواو ناوخۆیی بە پشکنین و جێگیریی ڕێکخراو پشتگیری دەکرێت.",
+    "services.card5.body":
+      "بەرهەمی تەواو ناوخۆیی بە پشکنین و جێگیریی ڕێکخراو پشتگیری دەکرێت.",
     "services.card6.title": "ڕاوێژی فنی",
-    "services.card6.body": "پشتگیری تایبەتی لەلایەن تیمێکەوە کە هەڵسوکەوتی کۆنکریت و پێداویستیی شوێن دەزانن.",
+    "services.card6.body":
+      "پشتگیری تایبەتی لەلایەن تیمێکەوە کە هەڵسوکەوتی کۆنکریت و پێداویستیی شوێن دەزانن.",
     "services.standards":
       "هاوتا لەگەڵ ستانداردە نێودەوڵەتی و نیشتمانییەکان ASTM · ACI · BS · IS · EN",
     "services.process.eyebrow": "شێوازی کارکردن",
@@ -678,11 +750,14 @@ const translations = {
     "services.process.body":
       "هاوردەکردن ئاسان دەکەین بە یەکخستنی پشکنینی فنی و پلانی بەرهەمهێنان و لۆجستی لە یەک زنجیرەدا.",
     "services.process.step1.title": "هەڵسەنگاندن",
-    "services.process.step1.body": "پێداویستیی پڕۆژە و دۆخی شوێن و پلەی پێویست و کاتی گەیاندن دەخوێنینەوە.",
+    "services.process.step1.body":
+      "پێداویستیی پڕۆژە و دۆخی شوێن و پلەی پێویست و کاتی گەیاندن دەخوێنینەوە.",
     "services.process.step2.title": "بەرهەمهێنان",
-    "services.process.step2.body": "تێکەڵەی گونجاو ئامادە دەکەین بە بەرهەمهێنانی کۆنترۆڵکراو و جێگیریی تۆمارکراو.",
+    "services.process.step2.body":
+      "تێکەڵەی گونجاو ئامادە دەکەین بە بەرهەمهێنانی کۆنترۆڵکراو و جێگیریی تۆمارکراو.",
     "services.process.step3.title": "گەیاندن",
-    "services.process.step3.body": "ناردن و گەیاندن هاوردە دەکەین بۆ پاراستنی کات و کارایی دانان.",
+    "services.process.step3.body":
+      "ناردن و گەیاندن هاوردە دەکەین بۆ پاراستنی کات و کارایی دانان.",
     "services.support.eyebrow": "پشتگیری فنی",
     "services.support.title": "پشتگیرییەک کە لە دوای کارگەهیش بەردەوام دەبێت",
     "services.support.body":
@@ -731,11 +806,14 @@ const translations = {
     "clients.sectors.body":
       "مۆدێلی دابینکردنمان لەگەڵ جۆری پڕۆژە و مەرجی شوێن و فشاری کات دەگونجێت.",
     "clients.sector1.title": "سەکەنی و فرەبەکارهێنان",
-    "clients.sector1.body": "کۆمەڵگە گەورەکان و تاوەر و پڕۆژە شارستانییەکان کە پێویستییان بە هاوردەکردنی ڕۆژانەی باوەڕپێکراو هەیە.",
+    "clients.sector1.body":
+      "کۆمەڵگە گەورەکان و تاوەر و پڕۆژە شارستانییەکان کە پێویستییان بە هاوردەکردنی ڕۆژانەی باوەڕپێکراو هەیە.",
     "clients.sector2.title": "میوانداری و بازرگانی",
-    "clients.sector2.body": "هوتێل و مۆڵ و پڕۆژە بازرگانییەکان کە کات و بەردەوامی و جێگیری گرنگن.",
+    "clients.sector2.body":
+      "هوتێل و مۆڵ و پڕۆژە بازرگانییەکان کە کات و بەردەوامی و جێگیری گرنگن.",
     "clients.sector3.title": "پڕۆژە ستراتیژییەکانی شار",
-    "clients.sector3.body": "گەشەپێدانەکان کە پێویستییان بە وردی فنی و ڕێکخراوی کات و متمانەی درێژخایەن هەیە.",
+    "clients.sector3.body":
+      "گەشەپێدانەکان کە پێویستییان بە وردی فنی و ڕێکخراوی کات و متمانەی درێژخایەن هەیە.",
     "clients.proof.eyebrow": "بەڵگەی متمانە",
     "clients.proof.title": "بۆچی کڕیاران دەگەڕێنەوە",
     "clients.proof.body":
@@ -756,9 +834,11 @@ const translations = {
     "contact.form.phone": "ژمارەی تەلەفۆن",
     "contact.form.phone_ph": "+964 770 000 0000",
     "contact.form.message": "پەیام",
-    "contact.form.message_ph": "لەسەر پڕۆژەکەت و شوێن و پلەی پێویست و کاتی گەیاندن پەیام بنوسە.",
+    "contact.form.message_ph":
+      "لەسەر پڕۆژەکەت و شوێن و پلەی پێویست و کاتی گەیاندن پەیام بنوسە.",
     "contact.form.submit": "داواکاری بنێرە",
-    "contact.form.note": "ژمارەی تەلەفۆن و ئیمەیڵی ئێستا کاتییە تا زانیاری ڕەسمیی کۆمپانیا دابین بکرێت.",
+    "contact.form.note":
+      "ژمارەی تەلەفۆن و ئیمەیڵی ئێستا کاتییە تا زانیاری ڕەسمیی کۆمپانیا دابین بکرێت.",
     "contact.form.validation": "تکایە هەموو خانەکان پڕ بکە پێش ناردن.",
     "contact.form.opening": "ئیمەیڵەکەت دەکرێتەوە...",
     "contact.form.subject": "داواکاریی پڕۆژە | نەجمەدین کۆنکریت",
@@ -770,12 +850,15 @@ const translations = {
     "contact.faq.body":
       "چەند وەڵامێکی خێرا بۆ ئەو پرسیارانەی زۆرجار پێش یەکەم گفتوگۆی هاوردەکردن دەوترێن.",
     "contact.faq.q1": "ئایا شوێنە دوورەکانیش خزمەت دەکەن؟",
-    "contact.faq.a1": "بەڵێ، پلانی گەیاندنمان بۆ ڕێگا دژوارەکان و شوێنە دوورەکانیش ئامادە کراوە.",
+    "contact.faq.a1":
+      "بەڵێ، پلانی گەیاندنمان بۆ ڕێگا دژوارەکان و شوێنە دوورەکانیش ئامادە کراوە.",
     "contact.faq.q2": "چی پلەیەک دابین دەکەن؟",
-    "contact.faq.a2": "نەجمەدین کۆنکریت پلەی 15 تا 100 نیوتن/مم2 دابین دەکات بەگوێرەی پێداویستیی پڕۆژە.",
+    "contact.faq.a2":
+      "نەجمەدین کۆنکریت پلەی 15 تا 100 نیوتن/مم2 دابین دەکات بەگوێرەی پێداویستیی پڕۆژە.",
     "contact.faq.q3": "ئایا پشتگیری فنی دەدەن؟",
-    "contact.faq.a3": "بەڵێ، تیمەکانمان ڕێنماییی تێکەڵە و پشتگیریی بەرهەمهێنان و هاوردەکردنی جێبەجێکردن پێشکەش دەکەن."
-  }
+    "contact.faq.a3":
+      "بەڵێ، تیمەکانمان ڕێنماییی تێکەڵە و پشتگیریی بەرهەمهێنان و هاوردەکردنی جێبەجێکردن پێشکەش دەکەن.",
+  },
 };
 
 const getTranslation = (lang, key) =>
@@ -784,7 +867,9 @@ const getTranslation = (lang, key) =>
 const setLanguageState = (lang) => {
   const effectiveLang = translations[lang] ? lang : "en";
   document.documentElement.lang = effectiveLang;
-  document.documentElement.dir = RTL_LANGUAGES.has(effectiveLang) ? "rtl" : "ltr";
+  document.documentElement.dir = RTL_LANGUAGES.has(effectiveLang)
+    ? "rtl"
+    : "ltr";
   document.body.dataset.lang = effectiveLang;
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -799,21 +884,21 @@ const setLanguageState = (lang) => {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
     element.setAttribute(
       "placeholder",
-      getTranslation(effectiveLang, element.dataset.i18nPlaceholder)
+      getTranslation(effectiveLang, element.dataset.i18nPlaceholder),
     );
   });
 
   document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
     element.setAttribute(
       "aria-label",
-      getTranslation(effectiveLang, element.dataset.i18nAriaLabel)
+      getTranslation(effectiveLang, element.dataset.i18nAriaLabel),
     );
   });
 
   document.querySelectorAll("[data-i18n-content]").forEach((element) => {
     element.setAttribute(
       "content",
-      getTranslation(effectiveLang, element.dataset.i18nContent)
+      getTranslation(effectiveLang, element.dataset.i18nContent),
     );
   });
 
@@ -835,14 +920,19 @@ const setLanguageState = (lang) => {
   const yearNode = document.querySelector("[data-footer-year]");
   if (yearNode) {
     yearNode.textContent =
-      "2002-" + new Date().getFullYear() + " " + getTranslation(effectiveLang, "footer.rights");
+      "2002-" +
+      new Date().getFullYear() +
+      " " +
+      getTranslation(effectiveLang, "footer.rights");
   }
 
-  document.querySelectorAll(".language-switcher button[data-lang]").forEach((button) => {
-    const active = button.dataset.lang === effectiveLang;
-    button.classList.toggle("is-active", active);
-    button.setAttribute("aria-pressed", String(active));
-  });
+  document
+    .querySelectorAll(".language-switcher button[data-lang]")
+    .forEach((button) => {
+      const active = button.dataset.lang === effectiveLang;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
 
   localStorage.setItem(STORAGE_KEY, effectiveLang);
 };
@@ -851,11 +941,13 @@ const setupLanguageSwitcher = () => {
   const initialLanguage = localStorage.getItem(STORAGE_KEY) || "en";
   setLanguageState(initialLanguage);
 
-  document.querySelectorAll(".language-switcher button[data-lang]").forEach((button) => {
-    button.addEventListener("click", () => {
-      setLanguageState(button.dataset.lang);
+  document
+    .querySelectorAll(".language-switcher button[data-lang]")
+    .forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguageState(button.dataset.lang);
+      });
     });
-  });
 };
 
 const setupNavigation = () => {
@@ -900,7 +992,10 @@ const setupNavigation = () => {
     });
 
     document.addEventListener("click", (event) => {
-      if (!navPanel.contains(event.target) && !navToggle.contains(event.target)) {
+      if (
+        !navPanel.contains(event.target) &&
+        !navToggle.contains(event.target)
+      ) {
         closeNav();
       }
     });
@@ -915,7 +1010,9 @@ const setupNavigation = () => {
 
 const setupReveal = () => {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    document.querySelectorAll(".reveal").forEach((item) => item.classList.add("is-visible"));
+    document
+      .querySelectorAll(".reveal")
+      .forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
@@ -928,10 +1025,12 @@ const setupReveal = () => {
         }
       });
     },
-    { threshold: 0.18 }
+    { threshold: 0.18 },
   );
 
-  document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
+  document
+    .querySelectorAll(".reveal")
+    .forEach((item) => observer.observe(item));
 };
 
 const setupCounters = () => {
@@ -972,7 +1071,7 @@ const setupCounters = () => {
         }
       });
     },
-    { threshold: 0.55 }
+    { threshold: 0.55 },
   );
 
   counters.forEach((counter) => observer.observe(counter));
@@ -994,11 +1093,15 @@ const setupTilt = () => {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
-      const rotateY = ((x / rect.width) - 0.5) * 8;
-      const rotateX = (0.5 - (y / rect.height)) * 8;
+      const rotateY = (x / rect.width - 0.5) * 8;
+      const rotateX = (0.5 - y / rect.height) * 8;
       card.style.transform =
         baseTransform +
-        " translateY(-8px) rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)";
+        " translateY(-8px) rotateX(" +
+        rotateX +
+        "deg) rotateY(" +
+        rotateY +
+        "deg)";
     });
 
     card.addEventListener("mouseleave", reset);
@@ -1012,7 +1115,9 @@ const setupParallax = () => {
     return;
   }
 
-  const items = document.querySelectorAll("[data-parallax][data-base-transform]");
+  const items = document.querySelectorAll(
+    "[data-parallax][data-base-transform]",
+  );
   if (!items.length) {
     return;
   }
@@ -1022,7 +1127,8 @@ const setupParallax = () => {
     items.forEach((item) => {
       const speed = Number(item.dataset.parallax || 0);
       const base = item.dataset.baseTransform || "";
-      item.style.transform = base + " translateY(" + (scrollY * speed).toFixed(2) + "px)";
+      item.style.transform =
+        base + " translateY(" + (scrollY * speed).toFixed(2) + "px)";
     });
   };
 
@@ -1035,7 +1141,9 @@ const setupHomeMotion = () => {
     return;
   }
 
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
   const preloader = document.querySelector("[data-home-preloader]");
   const dismissPreloader = () => {
     document.body.classList.add("is-ready");
@@ -1056,9 +1164,13 @@ const setupHomeMotion = () => {
     } else if (document.readyState === "complete") {
       window.setTimeout(dismissPreloader, 220);
     } else {
-      window.addEventListener("load", () => {
-        window.setTimeout(dismissPreloader, 260);
-      }, { once: true });
+      window.addEventListener(
+        "load",
+        () => {
+          window.setTimeout(dismissPreloader, 260);
+        },
+        { once: true },
+      );
       window.setTimeout(dismissPreloader, 1400);
     }
   } else {
@@ -1076,21 +1188,28 @@ const setupHomeMotion = () => {
       });
 
       servicePanels.forEach((panel) => {
-        panel.classList.toggle("is-active", panel.dataset.serviceImage === target);
+        panel.classList.toggle(
+          "is-active",
+          panel.dataset.serviceImage === target,
+        );
       });
     };
 
     serviceItems.forEach((item) => {
       const target = item.dataset.serviceTarget;
-      item.setAttribute("aria-pressed", String(item.classList.contains("is-active")));
+      item.setAttribute(
+        "aria-pressed",
+        String(item.classList.contains("is-active")),
+      );
       item.addEventListener("mouseenter", () => activateService(target));
       item.addEventListener("focus", () => activateService(target));
       item.addEventListener("click", () => activateService(target));
     });
 
     activateService(
-      Array.from(serviceItems).find((item) => item.classList.contains("is-active"))?.dataset
-        .serviceTarget || serviceItems[0].dataset.serviceTarget
+      Array.from(serviceItems).find((item) =>
+        item.classList.contains("is-active"),
+      )?.dataset.serviceTarget || serviceItems[0].dataset.serviceTarget,
     );
   }
 
@@ -1102,20 +1221,27 @@ const setupHomeMotion = () => {
       const scrollY = window.scrollY;
       driftItems.forEach((item) => {
         const factor = Number(item.dataset.homeShift || 0);
-        item.style.setProperty("--home-drift", (scrollY * factor).toFixed(2) + "px");
+        item.style.setProperty(
+          "--home-drift",
+          (scrollY * factor).toFixed(2) + "px",
+        );
       });
       ticking = false;
     };
 
     updateDrift();
-    window.addEventListener("scroll", () => {
-      if (ticking) {
-        return;
-      }
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) {
+          return;
+        }
 
-      ticking = true;
-      window.requestAnimationFrame(updateDrift);
-    }, { passive: true });
+        ticking = true;
+        window.requestAnimationFrame(updateDrift);
+      },
+      { passive: true },
+    );
   }
 
   if (reducedMotion || window.matchMedia("(pointer: coarse)").matches) {
@@ -1141,13 +1267,19 @@ const setupHomeMotion = () => {
 
   scene.addEventListener("mousemove", (event) => {
     const rect = scene.getBoundingClientRect();
-    const offsetX = ((event.clientX - rect.left) / rect.width) - 0.5;
-    const offsetY = ((event.clientY - rect.top) / rect.height) - 0.5;
+    const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
+    const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
 
     layers.forEach((layer) => {
       const depth = Number(layer.dataset.homeDepth || 0);
-      layer.style.setProperty("--pointer-x", (offsetX * depth * 1.9).toFixed(2) + "px");
-      layer.style.setProperty("--pointer-y", (offsetY * depth * 1.3).toFixed(2) + "px");
+      layer.style.setProperty(
+        "--pointer-x",
+        (offsetX * depth * 1.9).toFixed(2) + "px",
+      );
+      layer.style.setProperty(
+        "--pointer-y",
+        (offsetY * depth * 1.3).toFixed(2) + "px",
+      );
     });
   });
 
@@ -1215,7 +1347,7 @@ const setupCustomCursor = () => {
     ".logo-card",
     ".card",
     ".info-card",
-    ".faq-item"
+    ".faq-item",
   ].join(", ");
   const dot = cursor.querySelector(".motion-cursor__dot");
   const ring = cursor.querySelector(".motion-cursor__ring");
@@ -1232,13 +1364,19 @@ const setupCustomCursor = () => {
 
     if (dot) {
       dot.style.transform =
-        "translate3d(" + pointerX.toFixed(2) + "px, " + pointerY.toFixed(2) +
+        "translate3d(" +
+        pointerX.toFixed(2) +
+        "px, " +
+        pointerY.toFixed(2) +
         "px, 0) translate(-50%, -50%)";
     }
 
     if (ring) {
       ring.style.transform =
-        "translate3d(" + ringX.toFixed(2) + "px, " + ringY.toFixed(2) +
+        "translate3d(" +
+        ringX.toFixed(2) +
+        "px, " +
+        ringY.toFixed(2) +
         "px, 0) translate(-50%, -50%)";
     }
 
@@ -1247,14 +1385,21 @@ const setupCustomCursor = () => {
 
   window.requestAnimationFrame(render);
 
-  window.addEventListener("pointermove", (event) => {
-    pointerX = event.clientX;
-    pointerY = event.clientY;
-    cursor.classList.add("is-visible");
-  }, { passive: true });
+  window.addEventListener(
+    "pointermove",
+    (event) => {
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+      cursor.classList.add("is-visible");
+    },
+    { passive: true },
+  );
 
   document.addEventListener("mouseover", (event) => {
-    cursor.classList.toggle("is-active", Boolean(event.target.closest(interactiveSelector)));
+    cursor.classList.toggle(
+      "is-active",
+      Boolean(event.target.closest(interactiveSelector)),
+    );
   });
 
   document.addEventListener("mouseout", (event) => {
@@ -1292,8 +1437,12 @@ const setupScrollMotion = () => {
     items.forEach((item) => {
       const speed = Number(item.dataset.scrollShift || 0);
       const rect = item.getBoundingClientRect();
-      const progress = ((viewportHeight - rect.top) / (viewportHeight + rect.height)) - 0.5;
-      item.style.setProperty("--scroll-lift", (progress * speed * 220).toFixed(2) + "px");
+      const progress =
+        (viewportHeight - rect.top) / (viewportHeight + rect.height) - 0.5;
+      item.style.setProperty(
+        "--scroll-lift",
+        (progress * speed * 220).toFixed(2) + "px",
+      );
     });
 
     ticking = false;
@@ -1301,106 +1450,195 @@ const setupScrollMotion = () => {
 
   update();
 
-  window.addEventListener("scroll", () => {
-    if (ticking) {
-      return;
-    }
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) {
+        return;
+      }
 
-    ticking = true;
-    window.requestAnimationFrame(update);
-  }, { passive: true });
+      ticking = true;
+      window.requestAnimationFrame(update);
+    },
+    { passive: true },
+  );
 
   window.addEventListener("resize", update);
 };
 
 const setupEditorialSlider = () => {
-  if (document.body.dataset.page !== "home") {
-    return;
-  }
+  if (document.body.dataset.page !== "home") return;
 
   const section = document.querySelector("[data-editorial-slider]");
   const pan = section?.querySelector("[data-editorial-pan]");
   const track = section?.querySelector("[data-editorial-track]");
-  const slides = Array.from(section?.querySelectorAll("[data-editorial-slide]") || []);
+  const slides = Array.from(
+    section?.querySelectorAll("[data-editorial-slide]") || [],
+  );
+  const progBar = document.querySelector("[data-editorial-progress-bar]");
+
+  if (!section || !pan || !track || !slides.length) return;
+
+  const SLIDE_COUNT = slides.length;
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
   const compactQuery = window.matchMedia("(max-width: 1180px)");
-  const reducedQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-  if (!section || !pan || !track || !slides.length) {
-    return;
-  }
+  // ── Helpers ────────────────────────────────────────────────────────────────
 
-  let ticking = false;
-  let travel = 0;
+  let currentIndex = 0;
 
   const setActive = (index) => {
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle("is-active", slideIndex === index);
-    });
+    if (index === currentIndex) return;
+    slides[currentIndex].classList.remove("is-active");
+    currentIndex = index;
+    slides[currentIndex].classList.add("is-active");
   };
 
-  const reset = () => {
+  // ── COMPACT / REDUCED-MOTION fallback (original CSS-var behaviour) ─────────
+
+  const setupCompact = () => {
+    // Remove hijack height so section scrolls normally
+    section.style.removeProperty("--hijack-height");
+    section.style.removeProperty("height");
+    section.style.removeProperty("position");
+
+    pan.style.removeProperty("position");
+    pan.style.removeProperty("top");
+    pan.style.removeProperty("height");
+    pan.style.removeProperty("overflow");
+
+    track.style.removeProperty("transform");
+    track.style.removeProperty("will-change");
+    track.style.removeProperty("display");
+    track.style.removeProperty("width");
+    track.style.removeProperty("height");
+
     section.style.setProperty("--editorial-progress", "0");
     section.style.setProperty("--editorial-shift", "0px");
-    section.style.setProperty("--editorial-scroll-span", "0px");
     setActive(0);
   };
 
-  const update = () => {
-    if (compactQuery.matches || reducedQuery.matches) {
-      reset();
-      ticking = false;
-      return;
+  // ── FULL HIJACK setup ──────────────────────────────────────────────────────
+
+  const setupHijack = () => {
+    // outer section becomes the scroll container
+    // height = (SLIDE_COUNT - 1) * 100vh  +  one viewport for the panel itself
+    section.style.height = `${SLIDE_COUNT * 100}vh`;
+
+    // pan = the sticky viewport
+    pan.style.cssText = `
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+    `;
+
+    // track = the horizontal strip
+    track.style.cssText = `
+      display: flex;
+      width: ${SLIDE_COUNT * 100}vw;
+      height: 100%;
+      will-change: transform;
+    `;
+
+    // each slide fills exactly one viewport
+    slides.forEach((slide) => {
+      slide.style.cssText = `
+        flex: 0 0 100vw;
+        width: 100vw;
+        height: 100%;
+      `;
+    });
+  };
+
+  // ── RAF loop ───────────────────────────────────────────────────────────────
+
+  let currentX = 0; // smoothed position (px)
+  let targetX = 0; // raw target from scroll
+  let rafId = null;
+
+  const tick = () => {
+    // lerp — 0.1 gives the weighted, momentum feel
+    currentX += (targetX - currentX) * 0.1;
+    if (Math.abs(targetX - currentX) < 0.3) currentX = targetX;
+
+    track.style.transform = `translateX(${-currentX}px)`;
+
+    // ── progress bar ──
+    const maxX = (SLIDE_COUNT - 1) * window.innerWidth;
+    const pct = maxX > 0 ? currentX / maxX : 0;
+    if (progBar) {
+      progBar.style.transform = `scaleX(${pct.toFixed(4)})`;
     }
+    section.style.setProperty("--editorial-progress", pct.toFixed(4));
+
+    rafId = requestAnimationFrame(tick);
+  };
+
+  // ── Scroll handler ─────────────────────────────────────────────────────────
+
+  const onScroll = () => {
+    if (compactQuery.matches || reducedMotion) return;
 
     const rect = section.getBoundingClientRect();
-    const scrollSpan = Math.max(section.offsetHeight - window.innerHeight, 1);
-    const progress = Math.min(Math.max((-rect.top) / scrollSpan, 0), 1);
-    const activeIndex = Math.min(
-      slides.length - 1,
-      Math.round(progress * Math.max(slides.length - 1, 1))
+    const outerH = section.offsetHeight;
+    const vpH = window.innerHeight;
+    const scrolled = -rect.top; // px scrolled into section
+    const maxScroll = outerH - vpH; // total scrollable distance
+    const progress = Math.max(0, Math.min(1, scrolled / maxScroll));
+
+    // convert to horizontal px
+    targetX = progress * (SLIDE_COUNT - 1) * window.innerWidth;
+
+    // active slide index
+    const idx = Math.min(
+      SLIDE_COUNT - 1,
+      Math.round(progress * (SLIDE_COUNT - 1)),
     );
-
-    section.style.setProperty("--editorial-progress", progress.toFixed(4));
-    section.style.setProperty("--editorial-shift", (travel * progress).toFixed(2) + "px");
-    setActive(activeIndex);
-    ticking = false;
+    setActive(idx);
   };
 
-  const measure = () => {
-    if (compactQuery.matches || reducedQuery.matches) {
-      reset();
-      return;
+  // ── Init / resize ──────────────────────────────────────────────────────────
+
+  const init = () => {
+    if (compactQuery.matches || reducedMotion) {
+      setupCompact();
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    } else {
+      setupHijack();
+      if (!rafId) rafId = requestAnimationFrame(tick);
     }
-
-    travel = Math.max(track.scrollWidth - pan.clientWidth, 0);
-    section.style.setProperty(
-      "--editorial-scroll-span",
-      (travel + window.innerHeight * 0.82).toFixed(2) + "px"
-    );
-    update();
+    onScroll();
   };
 
-  const requestUpdate = () => {
-    if (ticking) {
-      return;
-    }
+  // ── Wire events ────────────────────────────────────────────────────────────
 
-    ticking = true;
-    window.requestAnimationFrame(update);
-  };
+  window.addEventListener("scroll", onScroll, { passive: true });
 
-  measure();
-  window.addEventListener("scroll", requestUpdate, { passive: true });
-  window.addEventListener("resize", measure);
-  window.addEventListener("load", measure, { once: true });
-
+  const handleBreakpoint = () => init();
   if (typeof compactQuery.addEventListener === "function") {
-    compactQuery.addEventListener("change", measure);
-    reducedQuery.addEventListener("change", measure);
+    compactQuery.addEventListener("change", handleBreakpoint);
   } else {
-    compactQuery.addListener(measure);
-    reducedQuery.addListener(measure);
+    compactQuery.addListener(handleBreakpoint);
   }
+
+  window.addEventListener("resize", () => {
+    // recalculate on resize so track width stays correct
+    if (!compactQuery.matches && !reducedMotion) {
+      setupHijack();
+    }
+    onScroll();
+  });
+
+  window.addEventListener("load", init, { once: true });
+
+  // kick off immediately
+  init();
 };
 
 const setupOrbGallery = () => {
@@ -1453,12 +1691,25 @@ const setupContactForm = () => {
       return;
     }
 
-    const subject = encodeURIComponent(getTranslation(lang, "contact.form.subject"));
+    const subject = encodeURIComponent(
+      getTranslation(lang, "contact.form.subject"),
+    );
     const body = encodeURIComponent(
-      getTranslation(lang, "contact.form.name") + ": " + name + "\n" +
-      getTranslation(lang, "contact.form.company") + ": " + company + "\n" +
-      getTranslation(lang, "contact.form.phone") + ": " + phone + "\n\n" +
-      getTranslation(lang, "contact.form.message") + ":\n" + message
+      getTranslation(lang, "contact.form.name") +
+        ": " +
+        name +
+        "\n" +
+        getTranslation(lang, "contact.form.company") +
+        ": " +
+        company +
+        "\n" +
+        getTranslation(lang, "contact.form.phone") +
+        ": " +
+        phone +
+        "\n\n" +
+        getTranslation(lang, "contact.form.message") +
+        ":\n" +
+        message,
     );
 
     status.textContent = getTranslation(lang, "contact.form.opening");
