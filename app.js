@@ -1025,7 +1025,7 @@ const setupReveal = () => {
         }
       });
     },
-    { threshold: 0.18 },
+    { threshold: 0.04, rootMargin: "0px 0px 60px 0px" },
   );
 
   document

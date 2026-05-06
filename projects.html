@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <script src="animations.js" defer></script>
   </head>
   <body class="page page-projects" data-page="projects">
     <div class="site-shell">
@@ -27,27 +28,11 @@
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 132 80" fill="currentColor">
-                <path d="M6 70V10H22L46 46V10H61V70H46L21 33V70H6Z"></path>
-                <path d="M72 19C80 12 90 9 100 9C118 9 126 23 126 40C126 57 118 71 100 71C90 71 80 68 72 61V47C79 55 87 59 95 59C107 59 112 52 112 40C112 28 107 21 95 21C87 21 79 25 72 33V19Z"></path>
-              </svg>
-            </span>
-            <span class="brand-copy">
-              <strong data-i18n="brand.title">Najmadin</strong>
-              <span data-i18n="brand.subtitle">Concrete</span>
+            <span class="brand-logo-clip" aria-hidden="true">
+              <img src="assets/images/logo2.png" alt="" />
             </span>
           </a>
           <div class="header-actions">
-            <div class="language-switcher" role="group" data-i18n-aria-label="common.language_label">
-              <button type="button" data-lang="en" aria-pressed="true">EN</button>
-              <button type="button" data-lang="ar" aria-pressed="false">AR</button>
-              <button type="button" data-lang="ku" aria-pressed="false">KU</button>
-            </div>
-            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
-            <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
-              <span></span>
-            </button>
             <nav class="nav-panel" aria-label="Primary navigation">
               <ul class="nav-links">
                 <li><a class="nav-link" href="index.html" data-page-link="home" data-i18n="nav.home">Home</a></li>
@@ -58,6 +43,15 @@
                 <li><a class="nav-link" href="contact.html" data-page-link="contact" data-i18n="nav.contact">Contact</a></li>
               </ul>
             </nav>
+            <div class="language-switcher" role="group" data-i18n-aria-label="common.language_label">
+              <button type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+              <button type="button" data-lang="ku" aria-pressed="false">KU</button>
+            </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
+              <span></span>
+            </button>
           </div>
         </div>
       </header>
@@ -86,15 +80,15 @@
             </div>
 
             <div class="project-grid">
-              <article class="project-card feature reveal reveal-zoom poster-frame"><img src="assets/images/1%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.flagship">Flagship High-Rise</span><h3 class="display">Kurd Tower</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/images/1%20(2).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Grand Boulevard</h3><p>Najm Park</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/images/2%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.residential">Residential</span><h3 class="display">Shary Aram</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame"><img src="assets/images/3%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.mixed">Mixed Use</span><h3 class="display">Miran City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/images/3%20(2).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Dania City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/images/4%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.hospitality">Hospitality</span><h3 class="display">Ramada Sulaymaniyah</h3><p>Salim Street</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame"><img src="assets/images/22.jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.expansion">Residential Expansion</span><h3 class="display">Goizha City III</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/images/33%20(1).jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.commercial">Commercial</span><h3 class="display">Pioneer</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
-              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/images/778.jpg" alt=""><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.housing">Urban Housing</span><h3 class="display">Shari Zaytun</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card feature reveal reveal-zoom poster-frame"><img src="assets/projects/kurd_tower_1.png" alt="Kurd Tower"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.flagship">Flagship High-Rise</span><h3 class="display">Kurd Tower</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/projects/kurd_tower_2.png" alt="Kurd Tower Detail"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.flagship">Kurd Tower</span><h3 class="display">Structure & Form</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/projects/grand_boulevard_1.png" alt="Grand Boulevard"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Grand Boulevard</h3><p>Najm Park</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame"><img src="assets/projects/grand_boulevard_2.png" alt="Grand Boulevard Detail"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Grand Boulevard</span><h3 class="display">Master Planning</h3><p>Najm Park</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/projects/shary_aram_1.png" alt="Shary Aram"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.residential">Residential</span><h3 class="display">Shary Aram</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/projects/shary_aram_2.png" alt="Shary Aram Detail"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.residential">Shary Aram</span><h3 class="display">Community Living</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame"><img src="assets/projects/shary_aram_3.png" alt="Shary Aram Phase"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.residential">Shary Aram</span><h3 class="display">Phase Development</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="1"><img src="assets/projects/projects_overview_1.png" alt="Projects Overview"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.mixed">Mixed Use</span><h3 class="display">Miran City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
+              <article class="project-card medium reveal reveal-zoom poster-frame" data-delay="2"><img src="assets/projects/projects_overview_2.png" alt="Projects Overview 2"><div class="project-card-copy"><span class="kicker" data-i18n="projects.kicker.urban">Urban Development</span><h3 class="display">Dania City</h3><p data-i18n="common.location_region">Kurdistan Region, Iraq</p></div></article>
             </div>
           </div>
         </section>
@@ -116,7 +110,7 @@
                   <p data-i18n="projects.ex1.body">We translate structural requirements into dependable production outcomes backed by operational discipline.</p>
                 </div>
                 <figure class="feature-image poster-frame">
-                  <img src="assets/images/hf_20260401_222455_1656fbbf-3091-4c91-b098-c41ab9f0949e.png" alt="" />
+                  <img src="assets/projects/kurd_tower_3.png" alt="Kurd Tower technical" />
                 </figure>
               </article>
               <article class="feature-row reveal reveal-right" data-delay="1" data-scroll-shift="0.08">
@@ -125,7 +119,7 @@
                   <p data-i18n="projects.ex2.body">From production to logistics and client communication, systems are constantly refined to improve performance.</p>
                 </div>
                 <figure class="feature-image poster-frame">
-                  <img src="assets/images/hf_20260421_135732_4fbf2e10-b34c-4c29-90f4-9b428ac0da48.png" alt="" />
+                  <img src="assets/projects/grand_boulevard_2.png" alt="Grand Boulevard" />
                 </figure>
               </article>
               <article class="feature-row reveal reveal-left" data-delay="2" data-scroll-shift="-0.08">
@@ -134,7 +128,7 @@
                   <p data-i18n="projects.ex3.body">We align quality, responsiveness, and capacity with the needs of each project and each phase of work.</p>
                 </div>
                 <figure class="feature-image poster-frame">
-                  <img src="assets/images/33%20(1).jpg" alt="" />
+                  <img src="assets/projects/shary_aram_4.png" alt="Shary Aram" />
                 </figure>
               </article>
             </div>
@@ -146,15 +140,8 @@
         <div class="container footer-grid">
           <div>
             <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
-              <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 132 80" fill="currentColor">
-                  <path d="M6 70V10H22L46 46V10H61V70H46L21 33V70H6Z"></path>
-                  <path d="M72 19C80 12 90 9 100 9C118 9 126 23 126 40C126 57 118 71 100 71C90 71 80 68 72 61V47C79 55 87 59 95 59C107 59 112 52 112 40C112 28 107 21 95 21C87 21 79 25 72 33V19Z"></path>
-                </svg>
-              </span>
-              <span class="brand-copy">
-                <strong data-i18n="brand.title">Najmadin</strong>
-                <span data-i18n="brand.subtitle">Concrete</span>
+              <span class="brand-logo-clip" aria-hidden="true">
+                <img src="assets/images/logo2.png" alt="" />
               </span>
             </a>
             <div class="display footer-tagline" data-i18n="footer.tagline">Building Tomorrow, Today.</div>
@@ -163,6 +150,7 @@
             </p>
           </div>
           <nav class="footer-nav" aria-label="Footer navigation">
+            <p class="footer-nav-label">Navigation</p>
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="about.html" data-i18n="nav.about">About</a>
             <a href="services.html" data-i18n="nav.services">Services</a>
@@ -170,7 +158,14 @@
             <a href="clients.html" data-i18n="nav.clients">Clients</a>
             <a href="contact.html" data-i18n="nav.contact">Contact</a>
           </nav>
-          <div class="footer-copy" data-footer-year>2002-2026 Najmadin Concrete. All rights reserved.</div>
+          <div>
+            <p class="footer-nav-label">Contact</p>
+            <p class="footer-text" data-i18n="common.location_city">Sulaymaniyah, Kurdistan Region, Iraq</p>
+            <a class="button button-primary" href="contact.html" style="margin-top:1.5rem;display:inline-flex" data-i18n="button.inquiry">Send Inquiry</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="footer-copy" data-footer-year>&copy; 2002–2026 Najmadin Concrete. All rights reserved.</div>
         </div>
       </footer>
     </div>

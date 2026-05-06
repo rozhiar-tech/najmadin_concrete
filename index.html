@@ -11,593 +11,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background: #0b0b0b;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-        overflow-x: hidden;
-      }
-
-      /* ── FAKE SECTIONS ───────────────────────────────────────────── */
-      .fake-section {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(2.5rem, 6vw, 5rem);
-        font-weight: 300;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: rgba(184, 147, 106, 0.2);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      }
-
-      /* ── SCROLL HIJACK STRUCTURE ─────────────────────────────────── */
-
-      /*
-  The trick:
-  - .hijack-outer is tall (height = 100vh * number of slides)
-    This creates the scrollable "space" for the locked section
-  - .hijack-sticky sits inside it and is position:sticky top:0
-    It locks to the viewport while .hijack-outer is in view
-  - .hijack-track is the horizontal strip of all slides
-    Its translateX is driven by scroll progress through JS
-*/
-
-      .hijack-outer {
-        /* Total scroll distance = (slides - 1) × 100vh + 100vh for the panel itself */
-        height: calc(var(--slide-count, 4) * 100svh);
-        position: relative;
-      }
-
-      .hijack-sticky {
-        position: sticky;
-        top: 0;
-        height: 100svh;
-        overflow: hidden; /* clips the track as it moves */
-      }
-
-      /* Progress bar */
-      .progress-bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 0%;
-        background: linear-gradient(90deg, rgba(184, 147, 106, 0.4), #b8936a);
-        z-index: 10;
-        transition: width 0.05s linear;
-      }
-
-      /* Slide counter */
-      .slide-counter {
-        position: absolute;
-        bottom: 2.5rem;
-        right: 3rem;
-        z-index: 10;
-        font-size: 0.65rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.3);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .slide-counter .current {
-        color: #b8936a;
-        font-size: 1.1rem;
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 300;
-        transition: all 0.3s ease;
-      }
-
-      /* Scroll lock hint */
-      .lock-hint {
-        position: absolute;
-        top: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        font-size: 0.6rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.2);
-        opacity: 0;
-        transition: opacity 0.5s;
-        white-space: nowrap;
-      }
-
-      .lock-hint.visible {
-        opacity: 1;
-      }
-
-      /* ── TRACK: moves horizontally ───────────────────────────────── */
-      .hijack-track {
-        display: flex;
-        width: 400vw; /* 4 slides × 100vw each */
-        height: 100%;
-        will-change: transform;
-        /* NO transition here — JS drives it directly via requestAnimationFrame */
-      }
-
-      /* ── INDIVIDUAL SLIDE ────────────────────────────────────────── */
-      .slide {
-        width: 100vw;
-        height: 100svh;
-        flex-shrink: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        overflow: hidden;
-        position: relative;
-      }
-
-      /* Image half */
-      .slide__img {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .slide__img-inner {
-        position: absolute;
-        inset: -5%;
-        background-size: cover;
-        background-position: center;
-        /* Each slide gets its own warm tint as a placeholder */
-      }
-
-      /* Gradient overlay on image */
-      .slide__img::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(90deg, transparent 60%, #0b0b0b 100%);
-        z-index: 1;
-      }
-
-      /* Text half */
-      .slide__content {
-        background: #0b0b0b;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: clamp(2.5rem, 5vw, 5.5rem);
-        position: relative;
-      }
-
-      /* Vertical slide number — decorative */
-      .slide__bg-num {
-        position: absolute;
-        right: -0.02em;
-        bottom: -0.1em;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 18rem;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.025);
-        line-height: 1;
-        pointer-events: none;
-        user-select: none;
-      }
-
-      .slide__overline {
-        font-size: 0.6rem;
-        font-weight: 500;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #b8936a;
-        margin-bottom: 1.75rem;
-      }
-
-      .slide__headline {
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 300;
-        font-size: clamp(3rem, 5.5vw, 6rem);
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
-        line-height: 0.92;
-        margin-bottom: 2rem;
-      }
-
-      .slide__headline .gold {
-        color: rgba(184, 147, 106, 0.7);
-        display: block;
-      }
-      .slide__headline .white {
-        color: #fff;
-        display: block;
-      }
-
-      .slide__divider {
-        width: 48px;
-        height: 1px;
-        background: rgba(184, 147, 106, 0.35);
-        margin-bottom: 2rem;
-      }
-
-      .slide__body {
-        font-size: 0.68rem;
-        font-weight: 300;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.45);
-        line-height: 2.3;
-        max-width: 360px;
-      }
-
-      /* ── SLIDE CONTENT ENTRANCE ANIMATIONS ──────────────────────── */
-      /* Each slide's content animates in when that slide becomes active */
-      .slide__content > * {
-        opacity: 0;
-        transform: translateY(22px);
-        transition:
-          opacity 0.7s ease,
-          transform 0.7s ease;
-      }
-
-      .slide.active .slide__overline {
-        opacity: 1;
-        transform: none;
-        transition-delay: 0.05s;
-      }
-      .slide.active .slide__headline {
-        opacity: 1;
-        transform: none;
-        transition-delay: 0.18s;
-      }
-      .slide.active .slide__divider {
-        opacity: 1;
-        transform: none;
-        transition-delay: 0.32s;
-      }
-      .slide.active .slide__body {
-        opacity: 1;
-        transform: none;
-        transition-delay: 0.44s;
-      }
-      .slide.active .slide__bg-num {
-        opacity: 1;
-        transform: none;
-        transition-delay: 0s;
-      }
-
-      /* Image Ken Burns per slide */
-      .slide__img-inner {
-        transform: scale(1.06);
-        transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-      }
-      .slide.active .slide__img-inner {
-        transform: scale(1);
-      }
-
-      /* ── SLIDE PLACEHOLDER IMAGES (color blocks) ─────────────────── */
-      .slide:nth-child(1) .slide__img-inner {
-        background-color: #2a1c0e;
-        background-image: radial-gradient(
-          ellipse 70% 80% at 50% 40%,
-          #5a3a1a 0%,
-          #1a0e06 100%
-        );
-      }
-      .slide:nth-child(2) .slide__img-inner {
-        background-color: #0a1525;
-        background-image: radial-gradient(
-          ellipse 70% 80% at 50% 40%,
-          #1a3a5a 0%,
-          #050d1a 100%
-        );
-      }
-      .slide:nth-child(3) .slide__img-inner {
-        background-color: #121a12;
-        background-image: radial-gradient(
-          ellipse 70% 80% at 50% 40%,
-          #203520 0%,
-          #0a120a 100%
-        );
-      }
-      .slide:nth-child(4) .slide__img-inner {
-        background-color: #1a0f1a;
-        background-image: radial-gradient(
-          ellipse 70% 80% at 50% 40%,
-          #3a1a3a 0%,
-          #0f080f 100%
-        );
-      }
-
-      /* SVG texture on each image */
-      .slide__img-texture {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
-        opacity: 0.06;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0h60v60H0z' fill='none' stroke='white' stroke-width='0.5'/%3E%3C/svg%3E");
-        background-size: 60px 60px;
-      }
-
-      /* Handle image display */
-      .slide__img img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
-
-      /* ── MOBILE RESPONSIVE ────────────────────────────────────────── */
-      @media (max-width: 1180px) {
-        .hijack-outer {
-          height: calc(var(--slide-count, 4) * 100svh);
-        }
-
-        .hijack-sticky {
-          position: sticky;
-          top: 0;
-          height: 100svh;
-          overflow: hidden;
-        }
-
-        .progress-bar {
-          left: 1rem;
-          right: 1rem;
-          bottom: 0.9rem;
-          height: 3px;
-          border-radius: 999px;
-          background: linear-gradient(90deg, rgba(184, 147, 106, 0.55), #d8b590);
-        }
-
-        .slide-counter {
-          top: 0.95rem;
-          right: 0.95rem;
-          bottom: auto;
-          gap: 0.35rem;
-          padding: 0.45rem 0.8rem;
-          border-radius: 999px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          background: rgba(8, 6, 5, 0.68);
-          backdrop-filter: blur(12px);
-        }
-
-        .lock-hint {
-          top: auto;
-          left: 50%;
-          bottom: 1.55rem;
-          transform: translateX(-50%);
-          opacity: 0.74;
-          padding: 0.45rem 0.75rem;
-          border-radius: 999px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          background: rgba(8, 6, 5, 0.68);
-          backdrop-filter: blur(12px);
-          white-space: nowrap;
-        }
-
-        .lock-hint.visible {
-          opacity: 0.84;
-        }
-
-        .hijack-track {
-          display: flex;
-          width: calc(var(--slide-count, 4) * 100vw);
-          height: 100%;
-        }
-
-        .slide {
-          width: 100vw;
-          height: 100svh;
-          flex: 0 0 100vw;
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-rows: minmax(17rem, 38svh) minmax(0, 1fr);
-          gap: 0;
-          overflow: visible;
-          position: relative;
-          padding: max(5.3rem, env(safe-area-inset-top) + 4.2rem) 0.95rem
-            max(1.25rem, env(safe-area-inset-bottom) + 1rem);
-          align-content: stretch;
-          background: transparent;
-        }
-
-        .slide.active {
-          box-shadow: none;
-        }
-
-        .slide__img {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          overflow: hidden;
-          border-radius: 1.55rem 1.55rem 0 0;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          border-bottom: none;
-        }
-
-        .slide__img::after {
-          background: linear-gradient(
-            180deg,
-            transparent 12%,
-            rgba(11, 11, 11, 0.18) 56%,
-            #0b0b0b 100%
-          );
-        }
-
-        .slide__img img {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-
-        .slide__content {
-          background:
-            radial-gradient(
-              circle at 82% 18%,
-              rgba(184, 147, 106, 0.12),
-              transparent 28%
-            ),
-            linear-gradient(180deg, rgba(23, 18, 15, 0.94), rgba(11, 11, 11, 0.98));
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          padding: 1.2rem 1.05rem 1.2rem;
-          position: relative;
-          order: 2;
-          overflow: hidden;
-          border-radius: 0 0 1.55rem 1.55rem;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          border-top: none;
-          box-shadow: 0 24px 52px rgba(0, 0, 0, 0.32);
-        }
-
-        .slide__bg-num {
-          display: block;
-          right: 0.04em;
-          bottom: -0.08em;
-          font-size: clamp(5.4rem, 24vw, 8.5rem);
-          color: rgba(255, 255, 255, 0.06);
-        }
-
-        .slide__overline {
-          font-size: 0.6rem;
-          margin-bottom: 0.9rem;
-        }
-
-        .slide__headline {
-          font-size: clamp(2.2rem, 7.4vw, 4rem);
-          margin-bottom: 1rem;
-          line-height: 0.95;
-        }
-
-        .slide__divider {
-          width: 40px;
-          margin-bottom: 0.95rem;
-        }
-
-        .slide__body {
-          font-size: 0.7rem;
-          line-height: 1.68;
-          max-width: 100%;
-          color: rgba(255, 255, 255, 0.62);
-          letter-spacing: 0.06em;
-        }
-
-        .fake-section {
-          height: auto;
-          min-height: 50vh;
-          padding: 2rem 1.5rem;
-          font-size: clamp(1.4rem, 5vw, 2rem);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .slide-counter {
-          right: 0.9rem;
-          top: 0.9rem;
-        }
-
-        .lock-hint {
-          bottom: 1.45rem;
-          font-size: 0.55rem;
-        }
-
-        .slide {
-          padding: max(5rem, env(safe-area-inset-top) + 4rem) 0.82rem
-            max(1.1rem, env(safe-area-inset-bottom) + 0.95rem);
-          grid-template-rows: minmax(15.2rem, 35svh) minmax(0, 1fr);
-        }
-
-        .slide__content {
-          padding: 1.05rem 0.95rem 1.1rem;
-        }
-
-        .slide__headline {
-          font-size: clamp(2rem, 10vw, 3.2rem);
-          margin-bottom: 0.9rem;
-        }
-
-        .slide__body {
-          font-size: 0.68rem;
-          line-height: 1.72;
-        }
-
-        .fake-section {
-          padding: 1.5rem 1rem;
-          font-size: clamp(1.2rem, 4vw, 1.8rem);
-        }
-      }
-
-      @media (max-width: 520px) {
-        .progress-bar {
-          left: 0.85rem;
-          right: 0.85rem;
-          bottom: 0.55rem;
-        }
-
-        .slide-counter {
-          padding: 0.38rem 0.62rem;
-        }
-
-        .lock-hint {
-          display: none;
-        }
-
-        .slide {
-          padding: max(4.85rem, env(safe-area-inset-top) + 3.9rem) 0.72rem
-            max(0.95rem, env(safe-area-inset-bottom) + 0.85rem);
-          grid-template-rows: minmax(14.2rem, 32svh) minmax(0, 1fr);
-        }
-
-        .slide__img {
-          border-radius: 1.35rem 1.35rem 0 0;
-        }
-
-        .slide__content {
-          border-radius: 0 0 1.35rem 1.35rem;
-        }
-
-        .slide__headline {
-          font-size: clamp(1.85rem, 9vw, 2.8rem);
-        }
-      }
-    </style>
     <script src="app.js" defer></script>
+    <script src="animations.js" defer></script>
   </head>
   <body class="page page-home" data-page="home">
     <div class="site-shell">
-      <div class="motion-cursor" aria-hidden="true">
-        <span class="motion-cursor__dot"></span>
-        <span class="motion-cursor__ring"></span>
-      </div>
-
+      <!-- PRELOADER -->
       <div class="home-preloader" data-home-preloader aria-hidden="true">
         <div class="home-preloader__sheet">
-          <p
-            class="eyebrow home-preloader__eyebrow"
-            data-i18n="home.hero.eyebrow"
-          >
+          <p class="home-preloader__eyebrow" data-i18n="home.hero.eyebrow">
             Leading Concrete Supplier In The Kurdistan Region Of Iraq
           </p>
           <div class="home-preloader__title">
-            <span class="display" data-i18n="brand.title">Najmadin</span>
-            <span class="display" data-i18n="brand.subtitle">Concrete</span>
+            <span data-i18n="brand.title">Najmadin</span>
+            <span data-i18n="brand.subtitle">Concrete</span>
           </div>
         </div>
       </div>
 
+      <!-- HEADER -->
       <header class="site-header" id="top">
         <div class="container header-row">
           <a
@@ -605,50 +41,12 @@
             href="index.html"
             data-i18n-aria-label="common.home_label"
           >
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 132 80" fill="currentColor">
-                <path d="M6 70V10H22L46 46V10H61V70H46L21 33V70H6Z"></path>
-                <path
-                  d="M72 19C80 12 90 9 100 9C118 9 126 23 126 40C126 57 118 71 100 71C90 71 80 68 72 61V47C79 55 87 59 95 59C107 59 112 52 112 40C112 28 107 21 95 21C87 21 79 25 72 33V19Z"
-                ></path>
-              </svg>
-            </span>
-            <span class="brand-copy">
-              <strong data-i18n="brand.title">Najmadin</strong>
-              <span data-i18n="brand.subtitle">Concrete</span>
+            <span class="brand-logo-clip" aria-hidden="true">
+              <img src="assets/images/logo2.png" alt="" />
             </span>
           </a>
 
           <div class="header-actions">
-            <div
-              class="language-switcher"
-              role="group"
-              data-i18n-aria-label="common.language_label"
-            >
-              <button type="button" data-lang="en" aria-pressed="true">
-                EN
-              </button>
-              <button type="button" data-lang="ar" aria-pressed="false">
-                AR
-              </button>
-              <button type="button" data-lang="ku" aria-pressed="false">
-                KU
-              </button>
-            </div>
-
-            <a class="header-cta" href="contact.html" data-i18n="button.inquiry"
-              >Send Inquiry</a
-            >
-
-            <button
-              class="nav-toggle"
-              type="button"
-              aria-expanded="false"
-              data-i18n-aria-label="common.menu"
-            >
-              <span></span>
-            </button>
-
             <nav class="nav-panel" aria-label="Primary navigation">
               <ul class="nav-links">
                 <li>
@@ -706,30 +104,60 @@
                   >
                 </li>
               </ul>
-              <figure class="home-nav-preview poster-frame" aria-hidden="true">
-                <img src="assets/images/33%20(1).jpg" alt="" />
-              </figure>
             </nav>
+
+            <div
+              class="language-switcher"
+              role="group"
+              data-i18n-aria-label="common.language_label"
+            >
+              <button type="button" data-lang="en" aria-pressed="true">
+                EN
+              </button>
+              <button type="button" data-lang="ar" aria-pressed="false">
+                AR
+              </button>
+              <button type="button" data-lang="ku" aria-pressed="false">
+                KU
+              </button>
+            </div>
+
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry"
+              >Send Inquiry</a
+            >
+
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              data-i18n-aria-label="common.menu"
+            >
+              <span></span>
+            </button>
           </div>
         </div>
       </header>
 
-      <main class="page-main home-page-main">
+      <main class="page-main home-page-main" style="padding-top: 0">
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- HERO: Full-viewport video background                    -->
+        <!-- ─────────────────────────────────────────────────────── -->
         <section
-          class="section section-cut home-entrance"
+          class="section home-entrance"
           data-home-scene
           data-surface="dark"
+          style="padding: 0"
         >
           <div class="home-entrance-media" aria-hidden="true">
-            <figure class="home-entrance-media-main" data-home-depth="9">
-              <img
-                src="assets/images/IMG_2445%20(1).JPG"
-                alt="Najmadin Concrete fleet"
+            <video autoplay muted loop playsinline preload="auto">
+              <source
+                src="assets/videos/Najmadin%20concrete%20TV-C%20FINAL%20VERSION%20(1).mp4"
+                type="video/mp4"
               />
-            </figure>
+            </video>
           </div>
 
-          <div class="container-wide home-entrance-shell">
+          <div class="home-entrance-shell container">
             <article class="home-entrance-copy">
               <span
                 class="eyebrow reveal is-visible"
@@ -738,17 +166,17 @@
                 Leading Concrete Supplier In The Kurdistan Region Of Iraq
               </span>
               <h1
-                class="display home-entrance-title reveal is-visible"
+                class="home-entrance-title reveal is-visible"
                 data-i18n="home.hero.title"
               >
-                Building Iraq's Future Since 2002
+                Building Iraq's<br /><em>Future</em>
               </h1>
               <p
-                class="display home-entrance-subtitle reveal is-visible"
+                class="home-entrance-subtitle reveal is-visible"
                 data-delay="1"
                 data-i18n="home.story.title"
               >
-                Industrial Strength. Local Precision.
+                Since 2002
               </p>
               <p
                 class="home-entrance-body reveal is-visible"
@@ -769,7 +197,7 @@
                     data-count="20"
                     data-suffix="+"
                   >
-                    0
+                    20+
                   </div>
                   <div class="metric-label" data-i18n="common.stats.years">
                     Years In Business Since 2002
@@ -781,7 +209,7 @@
                     data-count="200"
                     data-suffix="+"
                   >
-                    0
+                    200+
                   </div>
                   <div class="metric-label" data-i18n="common.stats.people">
                     Trained Professionals
@@ -793,17 +221,16 @@
                     data-count="15"
                     data-suffix="+"
                   >
-                    0
+                    15+
                   </div>
                   <div class="metric-label" data-i18n="common.stats.clients">
                     Major Clients
                   </div>
                 </article>
               </div>
-
               <a
                 class="home-entrance-next"
-                href="#home-story"
+                href="#home-about"
                 aria-label="Next section"
               >
                 <span aria-hidden="true"></span>
@@ -812,163 +239,121 @@
           </div>
         </section>
 
-        <section
-          class="section section-cut home-editorial"
-          id="home-story"
-          data-surface="dark"
-          data-editorial-slider
-        >
-          <div class="container-wide home-editorial-stage">
-            <div class="home-editorial-progress" aria-hidden="true">
-              <span
-                class="home-editorial-progress-label"
-                data-i18n="home.story.scroll"
-              >
-                Scroll to move
-              </span>
-              <span class="home-editorial-progress-bar">
-                <span data-editorial-progress-bar></span>
-              </span>
-            </div>
-
-            <div class="hijack-outer" id="hijackOuter">
-              <div class="hijack-sticky" id="hijackSticky">
-                <div class="progress-bar" id="progressBar"></div>
-                <div class="lock-hint" id="lockHint">— Scroll to explore —</div>
-                <div class="slide-counter">
-                  <span class="current" id="counterCurrent">1</span>
-                  <span>/ 4</span>
-                </div>
-
-                <!-- The moving track -->
-                <div class="hijack-track" id="hijackTrack">
-                  <!-- SLIDE 1 -->
-                  <div class="slide active" id="slide-0">
-                    <div class="slide__img">
-                      <img
-                        src="assets/images/1 (1).jpg"
-                        alt="Concrete foundation and placement"
-                      />
-                    </div>
-                    <div class="slide__content">
-                      <div class="slide__bg-num">1</div>
-                      <span class="slide__overline">Trusted Placement</span>
-                      <div class="slide__headline">
-                        <span class="gold">Quality</span>
-                        <span class="white">From The Start</span>
-                      </div>
-                      <div class="slide__divider"></div>
-                      <p class="slide__body">
-                        Ready-mix concrete engineered for precision and
-                        durability. Every batch is quality-controlled and tested
-                        for strength, ensuring your project meets the highest
-                        standards from foundation to finish.
-                      </p>
-                    </div>
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- ABOUT: Company story & stats                            -->
+        <!-- ─────────────────────────────────────────────────────── -->
+        <section class="section section-dark home-about-section" id="home-about" data-surface="dark">
+          <div class="container">
+            <div class="home-about-grid">
+              <article class="home-about-copy reveal">
+                <span class="eyebrow" data-i18n="about.story.eyebrow">Our Story</span>
+                <h2 class="display">Two Decades Of Building Kurdistan's Infrastructure</h2>
+                <p class="body-copy">Founded in 2002, Najmadin Concrete has grown into the region's most trusted ready-mix concrete and aggregate supplier. From structural towers to sprawling residential communities, we deliver the material backbone of Kurdistan's construction sector.</p>
+                <div class="home-about-stats">
+                  <div class="home-about-stat">
+                    <span class="stat-number display">20+</span>
+                    <span class="stat-label" data-i18n="common.stats.years">Years Since 2002</span>
                   </div>
-
-                  <!-- SLIDE 2 -->
-                  <div class="slide" id="slide-1">
-                    <div class="slide__img">
-                      <img
-                        src="assets/images/hf_20260401_222455_1656fbbf-3091-4c91-b098-c41ab9f0949e.png"
-                        alt="Concrete delivery and logistics"
-                      />
-                    </div>
-                    <div class="slide__content">
-                      <div class="slide__bg-num">2</div>
-                      <span class="slide__overline">Certified Delivery</span>
-                      <div class="slide__headline">
-                        <span class="gold">On Time</span>
-                        <span class="white">Every Time</span>
-                      </div>
-                      <div class="slide__divider"></div>
-                      <p class="slide__body">
-                        Dedicated logistics teams coordinate delivery to urban
-                        centers and remote sites alike. We protect your schedule
-                        with reliable coordination and on-time arrival,
-                        supporting demanding pours across the Kurdistan Region.
-                      </p>
-                    </div>
+                  <div class="home-about-stat">
+                    <span class="stat-number display">200+</span>
+                    <span class="stat-label" data-i18n="common.stats.people">Trained Professionals</span>
                   </div>
-
-                  <!-- SLIDE 3 -->
-                  <div class="slide" id="slide-2">
-                    <div class="slide__img">
-                      <img
-                        src="assets/images/2 (1).jpg"
-                        alt="Concrete production and quality control"
-                      />
-                    </div>
-                    <div class="slide__content">
-                      <div class="slide__bg-num">3</div>
-                      <span class="slide__overline">Remote Reach</span>
-                      <div class="slide__headline">
-                        <span class="gold">Reaching</span>
-                        <span class="white">Beyond Boundaries</span>
-                      </div>
-                      <div class="slide__divider"></div>
-                      <p class="slide__body">
-                        From urban centers to hard-to-reach project sites,
-                        Najmadin Concrete maintains supply consistency. Our
-                        logistics capability supports ambitious developments
-                        wherever they are, with technical guidance at every
-                        step.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- SLIDE 4 -->
-                  <div class="slide" id="slide-3">
-                    <div class="slide__img">
-                      <img
-                        src="assets/images/4 (1).jpg"
-                        alt="Industrial concrete production facility"
-                      />
-                    </div>
-                    <div class="slide__content">
-                      <div class="slide__bg-num">4</div>
-                      <span class="slide__overline">Industrial Scale</span>
-                      <div class="slide__headline">
-                        <span class="gold">Strength</span>
-                        <span class="white">At Every Grade</span>
-                      </div>
-                      <div class="slide__divider"></div>
-                      <p class="slide__body">
-                        From 15 to 100 N/mm², Najmadin Concrete produces
-                        locally-manufactured solutions for every structural
-                        demand. Disciplined production control and technical
-                        support define our industrial capability and commitment
-                        to your success.
-                      </p>
-                    </div>
+                  <div class="home-about-stat">
+                    <span class="stat-number display">15+</span>
+                    <span class="stat-label" data-i18n="common.stats.clients">Major Clients</span>
                   </div>
                 </div>
-                <!-- /track -->
-              </div>
-              <!-- /sticky -->
-            </div>
-            <!-- /outer -->
-
-            <!-- SECTION BELOW -->
-            <div
-              class="fake-section"
-              style="border-top: 1px solid rgba(255, 255, 255, 0.05)"
-            >
-              Continue ↓
+                <a class="button btn-white" href="about.html">Learn About Us</a>
+              </article>
+              <figure class="home-about-image poster-frame reveal" data-delay="1">
+                <img src="assets/projects/projects_overview_1.png" alt="Najmadin Concrete operations" />
+              </figure>
             </div>
           </div>
         </section>
 
-        <section
-          class="section section-cut home-service-lab"
-          data-surface="dark"
-        >
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- VISION: Values & mission                                -->
+        <!-- ─────────────────────────────────────────────────────── -->
+        <section class="section section-light home-vision-section" data-surface="light">
+          <div class="container">
+            <div class="home-vision-grid">
+              <div class="home-vision-intro reveal">
+                <span class="eyebrow">Our Vision</span>
+                <h2 class="display">A Stronger Kurdistan Built On Concrete We Stand Behind</h2>
+                <p class="body-copy">We exist to give builders the material confidence they need — on schedule, to specification, on every project that matters.</p>
+              </div>
+              <div class="home-vision-cards">
+                <article class="vision-card reveal">
+                  <h3 class="display">Quality First</h3>
+                  <p>Every mix is controlled, tested, and delivered to specification — from 15 N/mm² to 100 N/mm² with disciplined 28-day strength monitoring.</p>
+                </article>
+                <article class="vision-card reveal" data-delay="1">
+                  <h3 class="display">Built To Last</h3>
+                  <p>Our concrete supports the structures that define Kurdistan's cities — towers, communities, hotels, and institutions engineered to endure.</p>
+                </article>
+                <article class="vision-card reveal" data-delay="2">
+                  <h3 class="display">Always Reliable</h3>
+                  <p>On-time delivery, technical precision, and a team that stays engaged from inquiry through final placement on even the most demanding sites.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- ACTION CARDS: Turner-style 3-column CTA                 -->
+        <!-- ─────────────────────────────────────────────────────── -->
+        <div class="action-cards" id="action-cards">
+          <a class="action-card" href="projects.html">
+            <div class="action-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+            <h2 class="action-card-title">A Project</h2>
+            <p class="action-card-body">
+              Explore landmark developments supplied by Najmadin Concrete across
+              the Kurdistan Region.
+            </p>
+          </a>
+
+          <a class="action-card" href="services.html">
+            <div class="action-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+            <h2 class="action-card-title">A Service</h2>
+            <p class="action-card-body">
+              Ready-mix concrete, aggregates, and remote site delivery solutions
+              for every grade.
+            </p>
+          </a>
+
+          <a class="action-card" href="contact.html">
+            <div class="action-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </div>
+            <h2 class="action-card-title">A Partnership</h2>
+            <p class="action-card-body">
+              Tell us your requirements and our team will guide every step from
+              mix design to delivery.
+            </p>
+          </a>
+        </div>
+
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- SERVICES SECTION                                        -->
+        <!-- ─────────────────────────────────────────────────────── -->
+        <section class="section home-service-lab" data-surface="light">
           <div class="container-wide home-service-lab-grid">
             <article class="home-service-lab-copy reveal">
-              <span class="eyebrow" data-i18n="home.services.eyebrow">
-                Featured Services
-              </span>
+              <span class="eyebrow" data-i18n="home.services.eyebrow"
+                >Featured Services</span
+              >
               <h2 class="display" data-i18n="home.services.title">
                 What We Deliver
               </h2>
@@ -985,17 +370,19 @@
                   data-service-target="ready"
                 >
                   <span class="home-service-index">01</span>
-                  <span
-                    class="home-service-name display"
-                    data-i18n="home.services.card1.title"
-                    >Ready-Mix Concrete</span
-                  >
-                  <span
-                    class="home-service-text"
-                    data-i18n="home.services.card1.body"
-                    >All grades from 15 N/mm2 to 100 N/mm2 with disciplined
-                    production control.</span
-                  >
+                  <span>
+                    <span
+                      class="home-service-name display"
+                      data-i18n="home.services.card1.title"
+                      >Ready-Mix Concrete</span
+                    >
+                    <span
+                      class="home-service-text"
+                      data-i18n="home.services.card1.body"
+                      >All grades from 15 N/mm² to 100 N/mm² with disciplined
+                      production control.</span
+                    >
+                  </span>
                 </button>
                 <button
                   class="home-service-item"
@@ -1003,17 +390,19 @@
                   data-service-target="aggregate"
                 >
                   <span class="home-service-index">02</span>
-                  <span
-                    class="home-service-name display"
-                    data-i18n="home.services.card2.title"
-                    >Aggregates &amp; Gravel</span
-                  >
-                  <span
-                    class="home-service-text"
-                    data-i18n="home.services.card2.body"
-                    >Stable upstream material supply that supports consistency
-                    and delivery speed.</span
-                  >
+                  <span>
+                    <span
+                      class="home-service-name display"
+                      data-i18n="home.services.card2.title"
+                      >Aggregates &amp; Gravel</span
+                    >
+                    <span
+                      class="home-service-text"
+                      data-i18n="home.services.card2.body"
+                      >Stable upstream material supply that supports consistency
+                      and delivery speed.</span
+                    >
+                  </span>
                 </button>
                 <button
                   class="home-service-item"
@@ -1021,27 +410,28 @@
                   data-service-target="remote"
                 >
                   <span class="home-service-index">03</span>
-                  <span
-                    class="home-service-name display"
-                    data-i18n="home.services.card3.title"
-                    >Remote Site Delivery</span
-                  >
-                  <span
-                    class="home-service-text"
-                    data-i18n="home.services.card3.body"
-                    >Logistics capability built for hard-to-reach locations and
-                    demanding schedules.</span
-                  >
+                  <span>
+                    <span
+                      class="home-service-name display"
+                      data-i18n="home.services.card3.title"
+                      >Remote Site Delivery</span
+                    >
+                    <span
+                      class="home-service-text"
+                      data-i18n="home.services.card3.body"
+                      >Logistics capability built for hard-to-reach locations
+                      and demanding schedules.</span
+                    >
+                  </span>
                 </button>
               </div>
 
               <div class="service-standard-strip reveal" data-delay="1">
                 <p class="section-note" data-i18n="services.standards">
-                  Compliant with ASTM · ACI · BS · IS · EN international and
-                  national standards
+                  Compliant with ASTM · ACI · BS · IS · EN standards
                 </p>
                 <a
-                  class="button button-secondary"
+                  class="button button-primary"
                   href="services.html"
                   data-i18n="button.services"
                   >Our Services</a
@@ -1054,33 +444,39 @@
                 class="home-service-panel poster-frame is-active"
                 data-service-image="ready"
               >
-                <img src="assets/images/22.jpg" alt="" />
+                <img src="assets/images/22.jpg" alt="Ready-Mix Concrete" />
               </figure>
               <figure
                 class="home-service-panel poster-frame"
                 data-service-image="aggregate"
               >
-                <img src="assets/images/33%20(1).jpg" alt="" />
+                <img
+                  src="assets/images/33%20(1).jpg"
+                  alt="Aggregates and Gravel"
+                />
               </figure>
               <figure
                 class="home-service-panel poster-frame"
                 data-service-image="remote"
               >
-                <img src="assets/images/3%20(2).jpg" alt="" />
+                <img
+                  src="assets/images/3%20(2).jpg"
+                  alt="Remote Site Delivery"
+                />
               </figure>
             </div>
           </div>
         </section>
 
-        <section
-          class="section section-cut home-project-journal"
-          data-surface="dark"
-        >
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- FEATURED PROJECTS                                        -->
+        <!-- ─────────────────────────────────────────────────────── -->
+        <section class="section home-project-journal" data-surface="light">
           <div class="container-wide">
-            <div class="section-head reveal home-journal-head">
-              <span class="eyebrow" data-i18n="home.projects.eyebrow">
-                Featured Projects
-              </span>
+            <div class="section-head home-journal-head reveal">
+              <span class="eyebrow" data-i18n="home.projects.eyebrow"
+                >Featured Projects</span
+              >
               <h2 class="display" data-i18n="home.projects.title">
                 Concrete Behind Landmark Development
               </h2>
@@ -1093,12 +489,12 @@
             <div class="home-journal-grid">
               <article class="home-journal-feature reveal">
                 <figure class="home-journal-feature-media poster-frame">
-                  <img src="assets/images/33%20(1).jpg" alt="" />
+                  <img src="assets/projects/kurd_tower_1.png" alt="Kurd Tower" />
                 </figure>
                 <div class="home-journal-feature-copy">
-                  <span class="kicker" data-i18n="projects.kicker.flagship">
-                    Flagship High-Rise
-                  </span>
+                  <span class="kicker" data-i18n="projects.kicker.flagship"
+                    >Flagship High-Rise</span
+                  >
                   <h3 class="display">Kurd Tower</h3>
                   <p data-i18n="common.location_region">
                     Kurdistan Region, Iraq
@@ -1108,12 +504,12 @@
 
               <article class="home-journal-card reveal" data-delay="1">
                 <figure class="poster-frame">
-                  <img src="assets/images/22.jpg" alt="" />
+                  <img src="assets/projects/grand_boulevard_1.png" alt="Grand Boulevard" />
                 </figure>
                 <div class="home-journal-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.urban">
-                    Urban Development
-                  </span>
+                  <span class="kicker" data-i18n="projects.kicker.urban"
+                    >Urban Development</span
+                  >
                   <h3 class="display">Grand Boulevard</h3>
                   <p>Najm Park</p>
                 </div>
@@ -1121,12 +517,12 @@
 
               <article class="home-journal-card reveal" data-delay="2">
                 <figure class="poster-frame">
-                  <img src="assets/images/3%20(2).jpg" alt="" />
+                  <img src="assets/projects/shary_aram_1.png" alt="Shary Aram" />
                 </figure>
                 <div class="home-journal-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.residential">
-                    Residential
-                  </span>
+                  <span class="kicker" data-i18n="projects.kicker.residential"
+                    >Residential</span
+                  >
                   <h3 class="display">Shary Aram</h3>
                   <p data-i18n="common.location_region">
                     Kurdistan Region, Iraq
@@ -1137,7 +533,7 @@
 
             <div class="cta-actions reveal" data-delay="1">
               <a
-                class="button button-secondary"
+                class="button button-primary"
                 href="projects.html"
                 data-i18n="button.all_projects"
                 >See All Projects</a
@@ -1146,19 +542,22 @@
           </div>
         </section>
 
-        <section
-          class="section section-cut home-trust-band"
-          data-surface="dark"
-        >
+        <!-- ─────────────────────────────────────────────────────── -->
+        <!-- CLIENTS + CTA                                           -->
+        <!-- ─────────────────────────────────────────────────────── -->
+        <section class="section home-trust-band" data-surface="light">
           <div class="container-wide home-trust-grid">
             <figure class="home-trust-image poster-frame reveal">
-              <img src="assets/images/4%20(1).jpg" alt="" />
+              <img
+                src="assets/images/4%20(1).jpg"
+                alt="Najmadin Concrete Operations"
+              />
             </figure>
 
             <article class="home-trust-copy reveal" data-delay="1">
-              <span class="eyebrow" data-i18n="home.clients.eyebrow">
-                Selected Clients
-              </span>
+              <span class="eyebrow" data-i18n="home.clients.eyebrow"
+                >Selected Clients</span
+              >
               <h2 class="display" data-i18n="home.clients.title">
                 Trusted By Leading Developers
               </h2>
@@ -1177,9 +576,9 @@
             </article>
 
             <aside class="home-trust-cta reveal" data-delay="2">
-              <span class="eyebrow" data-i18n="button.inquiry">
-                Send Inquiry
-              </span>
+              <span class="eyebrow" data-i18n="button.inquiry"
+                >Send Inquiry</span
+              >
               <h2 class="display" data-i18n="home.cta.title">
                 Need A Concrete Partner For Your Next Build?
               </h2>
@@ -1206,6 +605,7 @@
         </section>
       </main>
 
+      <!-- FOOTER -->
       <footer class="site-footer">
         <div class="container footer-grid">
           <div>
@@ -1214,17 +614,8 @@
               href="index.html"
               data-i18n-aria-label="common.home_label"
             >
-              <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 132 80" fill="currentColor">
-                  <path d="M6 70V10H22L46 46V10H61V70H46L21 33V70H6Z"></path>
-                  <path
-                    d="M72 19C80 12 90 9 100 9C118 9 126 23 126 40C126 57 118 71 100 71C90 71 80 68 72 61V47C79 55 87 59 95 59C107 59 112 52 112 40C112 28 107 21 95 21C87 21 79 25 72 33V19Z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="brand-copy">
-                <strong data-i18n="brand.title">Najmadin</strong>
-                <span data-i18n="brand.subtitle">Concrete</span>
+              <span class="brand-logo-clip" aria-hidden="true">
+                <img src="assets/images/logo2.png" alt="" />
               </span>
             </a>
             <div class="display footer-tagline" data-i18n="footer.tagline">
@@ -1238,6 +629,7 @@
           </div>
 
           <nav class="footer-nav" aria-label="Footer navigation">
+            <p class="footer-nav-label">Navigation</p>
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="about.html" data-i18n="nav.about">About</a>
             <a href="services.html" data-i18n="nav.services">Services</a>
@@ -1246,100 +638,32 @@
             <a href="contact.html" data-i18n="nav.contact">Contact</a>
           </nav>
 
+          <div>
+            <p class="footer-nav-label">Contact</p>
+            <p
+              class="footer-text"
+              style="margin-bottom: 0.5rem"
+              data-i18n="common.location_city"
+            >
+              Sulaymaniyah, Kurdistan Region, Iraq
+            </p>
+            <a
+              class="button button-primary"
+              href="contact.html"
+              style="margin-top: 1.5rem; display: inline-flex"
+              data-i18n="button.inquiry"
+              >Send Inquiry</a
+            >
+          </div>
+        </div>
+
+        <div class="container">
           <div class="footer-copy" data-footer-year>
-            2002-2026 Najmadin Concrete. All rights reserved.
+            &copy; 2002–2026 Najmadin Concrete. All rights reserved.
           </div>
         </div>
       </footer>
     </div>
-    <script>
-      const outer = document.getElementById("hijackOuter");
-      const track = document.getElementById("hijackTrack");
-      const progress = document.getElementById("progressBar");
-      const lockHint = document.getElementById("lockHint");
-      const counter = document.getElementById("counterCurrent");
-      const slides = Array.from(document.querySelectorAll(".slide"));
-      const TOTAL = slides.length;
-      let currentSlide = 0;
-      let rafId = null;
-      let currentX = 0;
-      let targetX = 0;
-
-      outer.style.setProperty("--slide-count", TOTAL);
-
-      function setActive(nextIndex) {
-        const safeIndex = Math.max(0, Math.min(TOTAL - 1, nextIndex));
-
-        if (safeIndex !== currentSlide) {
-          slides[currentSlide].classList.remove("active");
-          currentSlide = safeIndex;
-          slides[currentSlide].classList.add("active");
-          counter.textContent = currentSlide + 1;
-          counter.style.transform = "scale(1.14)";
-          setTimeout(() => (counter.style.transform = ""), 180);
-        }
-      }
-
-      function setProgress(value) {
-        const safeValue = Math.max(0, Math.min(1, value));
-        progress.style.width = safeValue * 100 + "%";
-      }
-
-      function updateSlider() {
-        const outerRect = outer.getBoundingClientRect();
-        const outerH = outer.offsetHeight;
-        const stickyH = window.innerHeight;
-        const scrolled = -outerRect.top;
-        const maxScroll = Math.max(outerH - stickyH, 1);
-        const progress0 = Math.max(0, Math.min(1, scrolled / maxScroll));
-
-        targetX = -(progress0 * (TOTAL - 1) * window.innerWidth);
-        currentX += (targetX - currentX) * (window.innerWidth <= 1180 ? 0.16 : 0.1);
-
-        if (Math.abs(targetX - currentX) < 0.3) {
-          currentX = targetX;
-        }
-
-        track.style.transform = `translateX(${currentX}px)`;
-        setProgress(progress0);
-        lockHint.textContent =
-          window.innerWidth <= 1180
-            ? "— Scroll to change image —"
-            : "— Scroll to explore —";
-
-        if (progress0 > 0.01 && progress0 < 0.99) {
-          lockHint.classList.add("visible");
-        } else {
-          lockHint.classList.remove("visible");
-        }
-
-        setActive(Math.round(progress0 * (TOTAL - 1)));
-        rafId = requestAnimationFrame(updateSlider);
-      }
-
-      function syncSlider() {
-        targetX = -(currentSlide * window.innerWidth);
-        currentX = targetX;
-        track.style.transform = `translateX(${currentX}px)`;
-        lockHint.classList.remove("visible");
-      }
-
-      window.addEventListener("resize", syncSlider);
-      window.addEventListener(
-        "load",
-        () => {
-          syncSlider();
-          if (!rafId) {
-            rafId = requestAnimationFrame(updateSlider);
-          }
-        },
-        { once: true },
-      );
-
-      syncSlider();
-      if (!rafId) {
-        rafId = requestAnimationFrame(updateSlider);
-      }
-    </script>
+    <!-- /site-shell -->
   </body>
 </html>

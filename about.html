@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
+    <script src="animations.js" defer></script>
   </head>
   <body class="page page-about" data-page="about">
     <div class="site-shell">
@@ -27,27 +28,11 @@
       <header class="site-header" id="top">
         <div class="container header-row">
           <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
-            <span class="brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 132 80" fill="currentColor">
-                <path d="M6 70V10H22L46 46V10H61V70H46L21 33V70H6Z"></path>
-                <path d="M72 19C80 12 90 9 100 9C118 9 126 23 126 40C126 57 118 71 100 71C90 71 80 68 72 61V47C79 55 87 59 95 59C107 59 112 52 112 40C112 28 107 21 95 21C87 21 79 25 72 33V19Z"></path>
-              </svg>
-            </span>
-            <span class="brand-copy">
-              <strong data-i18n="brand.title">Najmadin</strong>
-              <span data-i18n="brand.subtitle">Concrete</span>
+            <span class="brand-logo-clip" aria-hidden="true">
+              <img src="assets/images/logo2.png" alt="" />
             </span>
           </a>
           <div class="header-actions">
-            <div class="language-switcher" role="group" data-i18n-aria-label="common.language_label">
-              <button type="button" data-lang="en" aria-pressed="true">EN</button>
-              <button type="button" data-lang="ar" aria-pressed="false">AR</button>
-              <button type="button" data-lang="ku" aria-pressed="false">KU</button>
-            </div>
-            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
-            <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
-              <span></span>
-            </button>
             <nav class="nav-panel" aria-label="Primary navigation">
               <ul class="nav-links">
                 <li><a class="nav-link" href="index.html" data-page-link="home" data-i18n="nav.home">Home</a></li>
@@ -58,6 +43,15 @@
                 <li><a class="nav-link" href="contact.html" data-page-link="contact" data-i18n="nav.contact">Contact</a></li>
               </ul>
             </nav>
+            <div class="language-switcher" role="group" data-i18n-aria-label="common.language_label">
+              <button type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+              <button type="button" data-lang="ku" aria-pressed="false">KU</button>
+            </div>
+            <a class="header-cta" href="contact.html" data-i18n="button.inquiry">Send Inquiry</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" data-i18n-aria-label="common.menu">
+              <span></span>
+            </button>
           </div>
         </div>
       </header>
@@ -201,15 +195,8 @@
         <div class="container footer-grid">
           <div>
             <a class="brand" href="index.html" data-i18n-aria-label="common.home_label">
-              <span class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 132 80" fill="currentColor">
-                  <path d="M6 70V10H22L46 46V10H61V70H46L21 33V70H6Z"></path>
-                  <path d="M72 19C80 12 90 9 100 9C118 9 126 23 126 40C126 57 118 71 100 71C90 71 80 68 72 61V47C79 55 87 59 95 59C107 59 112 52 112 40C112 28 107 21 95 21C87 21 79 25 72 33V19Z"></path>
-                </svg>
-              </span>
-              <span class="brand-copy">
-                <strong data-i18n="brand.title">Najmadin</strong>
-                <span data-i18n="brand.subtitle">Concrete</span>
+              <span class="brand-logo-clip" aria-hidden="true">
+                <img src="assets/images/logo2.png" alt="" />
               </span>
             </a>
             <div class="display footer-tagline" data-i18n="footer.tagline">Building Tomorrow, Today.</div>
@@ -218,6 +205,7 @@
             </p>
           </div>
           <nav class="footer-nav" aria-label="Footer navigation">
+            <p class="footer-nav-label">Navigation</p>
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="about.html" data-i18n="nav.about">About</a>
             <a href="services.html" data-i18n="nav.services">Services</a>
@@ -225,7 +213,14 @@
             <a href="clients.html" data-i18n="nav.clients">Clients</a>
             <a href="contact.html" data-i18n="nav.contact">Contact</a>
           </nav>
-          <div class="footer-copy" data-footer-year>2002-2026 Najmadin Concrete. All rights reserved.</div>
+          <div>
+            <p class="footer-nav-label">Contact</p>
+            <p class="footer-text" data-i18n="common.location_city">Sulaymaniyah, Kurdistan Region, Iraq</p>
+            <a class="button button-primary" href="contact.html" style="margin-top:1.5rem;display:inline-flex" data-i18n="button.inquiry">Send Inquiry</a>
+          </div>
+        </div>
+        <div class="container">
+          <div class="footer-copy" data-footer-year>&copy; 2002–2026 Najmadin Concrete. All rights reserved.</div>
         </div>
       </footer>
     </div>
