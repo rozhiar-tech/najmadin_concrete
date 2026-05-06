@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="notranslate" translate="no">
   <head>
     <meta charset="UTF-8" />
+    <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Najmadin Concrete | Building Iraq's Future Since 2002</title>
     <meta
@@ -14,11 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="assets/images/projects%20pic4.jpg" />
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
     <script src="animations.js" defer></script>
   </head>
-  <body class="page page-home" data-page="home">
+  <body class="page page-home notranslate" data-page="home" translate="no">
     <div class="site-shell">
       <!-- PRELOADER -->
       <div class="home-preloader" data-home-preloader aria-hidden="true">
@@ -149,7 +151,14 @@
           style="padding: 0"
         >
           <div class="home-entrance-media" aria-hidden="true">
-            <video autoplay muted loop playsinline preload="auto">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/images/projects%20pic4.jpg"
+            >
               <source
                 src="assets/videos/Najmadin%20concrete%20TV-C%20FINAL%20VERSION%20(1).mp4"
                 type="video/mp4"
@@ -158,115 +167,84 @@
           </div>
 
           <div class="home-entrance-shell container">
-            <article class="home-entrance-copy">
+            <h1 class="home-entrance-message reveal is-visible">
               <span
-                class="eyebrow reveal is-visible"
-                data-i18n="home.hero.eyebrow"
+                class="home-entrance-message__primary"
+                dir="auto"
+                data-i18n="home.hero.trust.primary"
               >
-                Leading Concrete Supplier In The Kurdistan Region Of Iraq
+                21 years of experience in trust
               </span>
-              <h1
-                class="home-entrance-title reveal is-visible"
-                data-i18n="home.hero.title"
+              <span
+                class="home-entrance-message__secondary"
+                lang="ku"
+                dir="rtl"
+                data-i18n="home.hero.trust.secondary"
               >
-                Building Iraq's<br /><em>Future</em>
-              </h1>
-              <p
-                class="home-entrance-subtitle reveal is-visible"
-                data-delay="1"
-                data-i18n="home.story.title"
-              >
-                Since 2002
-              </p>
-              <p
-                class="home-entrance-body reveal is-visible"
-                data-delay="2"
-                data-i18n="home.hero.body"
-              >
-                Najmadin Concrete delivers ready-mix concrete, aggregates,
-                technical support, and dependable site logistics for ambitious
-                developments across the region.
-              </p>
-            </article>
-
-            <div class="home-entrance-footer reveal is-visible" data-delay="2">
-              <div class="home-entrance-stats">
-                <article class="home-entrance-stat">
-                  <div
-                    class="metric-number display"
-                    data-count="20"
-                    data-suffix="+"
-                  >
-                    20+
-                  </div>
-                  <div class="metric-label" data-i18n="common.stats.years">
-                    Years In Business Since 2002
-                  </div>
-                </article>
-                <article class="home-entrance-stat">
-                  <div
-                    class="metric-number display"
-                    data-count="200"
-                    data-suffix="+"
-                  >
-                    200+
-                  </div>
-                  <div class="metric-label" data-i18n="common.stats.people">
-                    Trained Professionals
-                  </div>
-                </article>
-                <article class="home-entrance-stat">
-                  <div
-                    class="metric-number display"
-                    data-count="15"
-                    data-suffix="+"
-                  >
-                    15+
-                  </div>
-                  <div class="metric-label" data-i18n="common.stats.clients">
-                    Major Clients
-                  </div>
-                </article>
-              </div>
-              <a
-                class="home-entrance-next"
-                href="#home-about"
-                aria-label="Next section"
-              >
-                <span aria-hidden="true"></span>
-              </a>
-            </div>
+              </span>
+            </h1>
           </div>
         </section>
 
         <!-- ─────────────────────────────────────────────────────── -->
         <!-- ABOUT: Company story & stats                            -->
         <!-- ─────────────────────────────────────────────────────── -->
-        <section class="section section-dark home-about-section" id="home-about" data-surface="dark">
+        <section
+          class="section section-dark home-about-section"
+          id="home-about"
+          data-surface="dark"
+        >
           <div class="container">
             <div class="home-about-grid">
               <article class="home-about-copy reveal">
-                <span class="eyebrow" data-i18n="about.story.eyebrow">Our Story</span>
-                <h2 class="display">Two Decades Of Building Kurdistan's Infrastructure</h2>
-                <p class="body-copy">Founded in 2002, Najmadin Concrete has grown into the region's most trusted ready-mix concrete and aggregate supplier. From structural towers to sprawling residential communities, we deliver the material backbone of Kurdistan's construction sector.</p>
+                <span class="eyebrow" data-i18n="about.story.eyebrow"
+                  >Our Story</span
+                >
+                <h2 class="display" data-i18n="home.about.title">
+                  Two Decades Of Building Kurdistan's Infrastructure
+                </h2>
+                <p class="body-copy" data-i18n="home.about.body">
+                  Founded in 2002, Najmadin Concrete has grown into the region's
+                  most trusted ready-mix concrete and aggregate supplier. From
+                  structural towers to sprawling residential communities, we
+                  deliver the material backbone of Kurdistan's construction
+                  sector.
+                </p>
                 <div class="home-about-stats">
                   <div class="home-about-stat">
                     <span class="stat-number display">20+</span>
-                    <span class="stat-label" data-i18n="common.stats.years">Years Since 2002</span>
+                    <span class="stat-label" data-i18n="common.stats.years"
+                      >Years Since 2002</span
+                    >
                   </div>
                   <div class="home-about-stat">
                     <span class="stat-number display">200+</span>
-                    <span class="stat-label" data-i18n="common.stats.people">Trained Professionals</span>
+                    <span class="stat-label" data-i18n="common.stats.people"
+                      >Trained Professionals</span
+                    >
                   </div>
                   <div class="home-about-stat">
                     <span class="stat-number display">15+</span>
-                    <span class="stat-label" data-i18n="common.stats.clients">Major Clients</span>
+                    <span class="stat-label" data-i18n="common.stats.clients"
+                      >Major Clients</span
+                    >
                   </div>
                 </div>
-                <a class="button btn-white" href="about.html">Learn About Us</a>
+                <a
+                  class="button btn-white"
+                  href="about.html"
+                  data-i18n="button.about"
+                  >Learn About Us</a
+                >
               </article>
-              <figure class="home-about-image poster-frame reveal" data-delay="1">
-                <img src="assets/projects/projects_overview_1.png" alt="Najmadin Concrete operations" />
+              <figure
+                class="home-about-image poster-frame reveal"
+                data-delay="1"
+              >
+                <img
+                  src="assets/projects/projects_overview_1.png"
+                  alt="Najmadin Concrete operations"
+                />
               </figure>
             </div>
           </div>
@@ -275,26 +253,54 @@
         <!-- ─────────────────────────────────────────────────────── -->
         <!-- VISION: Values & mission                                -->
         <!-- ─────────────────────────────────────────────────────── -->
-        <section class="section section-light home-vision-section" data-surface="light">
+        <section
+          class="section section-light home-vision-section"
+          data-surface="light"
+        >
           <div class="container">
             <div class="home-vision-grid">
               <div class="home-vision-intro reveal">
-                <span class="eyebrow">Our Vision</span>
-                <h2 class="display">A Stronger Kurdistan Built On Concrete We Stand Behind</h2>
-                <p class="body-copy">We exist to give builders the material confidence they need — on schedule, to specification, on every project that matters.</p>
+                <span class="eyebrow" data-i18n="home.vision.eyebrow"
+                  >Our Vision</span
+                >
+                <h2 class="display" data-i18n="home.vision.title">
+                  A Stronger Kurdistan Built On Concrete We Stand Behind
+                </h2>
+                <p class="body-copy" data-i18n="home.vision.body">
+                  We exist to give builders the material confidence they need -
+                  on schedule, to specification, on every project that matters.
+                </p>
               </div>
               <div class="home-vision-cards">
                 <article class="vision-card reveal">
-                  <h3 class="display">Quality First</h3>
-                  <p>Every mix is controlled, tested, and delivered to specification — from 15 N/mm² to 100 N/mm² with disciplined 28-day strength monitoring.</p>
+                  <h3 class="display" data-i18n="home.vision.card1.title">
+                    Quality First
+                  </h3>
+                  <p data-i18n="home.vision.card1.body">
+                    Every mix is controlled, tested, and delivered to
+                    specification - from 15 N/mm2 to 100 N/mm2 with disciplined
+                    28-day strength monitoring.
+                  </p>
                 </article>
                 <article class="vision-card reveal" data-delay="1">
-                  <h3 class="display">Built To Last</h3>
-                  <p>Our concrete supports the structures that define Kurdistan's cities — towers, communities, hotels, and institutions engineered to endure.</p>
+                  <h3 class="display" data-i18n="home.vision.card2.title">
+                    Built To Last
+                  </h3>
+                  <p data-i18n="home.vision.card2.body">
+                    Our concrete supports the structures that define Kurdistan's
+                    cities - towers, communities, hotels, and institutions
+                    engineered to endure.
+                  </p>
                 </article>
                 <article class="vision-card reveal" data-delay="2">
-                  <h3 class="display">Always Reliable</h3>
-                  <p>On-time delivery, technical precision, and a team that stays engaged from inquiry through final placement on even the most demanding sites.</p>
+                  <h3 class="display" data-i18n="home.vision.card3.title">
+                    Always Reliable
+                  </h3>
+                  <p data-i18n="home.vision.card3.body">
+                    On-time delivery, technical precision, and a team that stays
+                    engaged from inquiry through final placement on even the
+                    most demanding sites.
+                  </p>
                 </article>
               </div>
             </div>
@@ -311,8 +317,10 @@
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </div>
-            <h2 class="action-card-title">A Project</h2>
-            <p class="action-card-body">
+            <h2 class="action-card-title" data-i18n="home.action.project.title">
+              A Project
+            </h2>
+            <p class="action-card-body" data-i18n="home.action.project.body">
               Explore landmark developments supplied by Najmadin Concrete across
               the Kurdistan Region.
             </p>
@@ -324,8 +332,10 @@
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </div>
-            <h2 class="action-card-title">A Service</h2>
-            <p class="action-card-body">
+            <h2 class="action-card-title" data-i18n="home.action.service.title">
+              A Service
+            </h2>
+            <p class="action-card-body" data-i18n="home.action.service.body">
               Ready-mix concrete, aggregates, and remote site delivery solutions
               for every grade.
             </p>
@@ -337,8 +347,16 @@
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </div>
-            <h2 class="action-card-title">A Partnership</h2>
-            <p class="action-card-body">
+            <h2
+              class="action-card-title"
+              data-i18n="home.action.partnership.title"
+            >
+              A Partnership
+            </h2>
+            <p
+              class="action-card-body"
+              data-i18n="home.action.partnership.body"
+            >
               Tell us your requirements and our team will guide every step from
               mix design to delivery.
             </p>
@@ -489,7 +507,10 @@
             <div class="home-journal-grid">
               <article class="home-journal-feature reveal">
                 <figure class="home-journal-feature-media poster-frame">
-                  <img src="assets/projects/kurd_tower_1.png" alt="Kurd Tower" />
+                  <img
+                    src="assets/projects/kurd_tower_1.png"
+                    alt="Kurd Tower"
+                  />
                 </figure>
                 <div class="home-journal-feature-copy">
                   <span class="kicker" data-i18n="projects.kicker.flagship"
@@ -504,7 +525,10 @@
 
               <article class="home-journal-card reveal" data-delay="1">
                 <figure class="poster-frame">
-                  <img src="assets/projects/grand_boulevard_1.png" alt="Grand Boulevard" />
+                  <img
+                    src="assets/projects/grand_boulevard_1.png"
+                    alt="Grand Boulevard"
+                  />
                 </figure>
                 <div class="home-journal-card-copy">
                   <span class="kicker" data-i18n="projects.kicker.urban"
@@ -517,7 +541,10 @@
 
               <article class="home-journal-card reveal" data-delay="2">
                 <figure class="poster-frame">
-                  <img src="assets/projects/shary_aram_1.png" alt="Shary Aram" />
+                  <img
+                    src="assets/projects/shary_aram_1.png"
+                    alt="Shary Aram"
+                  />
                 </figure>
                 <div class="home-journal-card-copy">
                   <span class="kicker" data-i18n="projects.kicker.residential"
@@ -629,7 +656,9 @@
           </div>
 
           <nav class="footer-nav" aria-label="Footer navigation">
-            <p class="footer-nav-label">Navigation</p>
+            <p class="footer-nav-label" data-i18n="footer.navigation">
+              Navigation
+            </p>
             <a href="index.html" data-i18n="nav.home">Home</a>
             <a href="about.html" data-i18n="nav.about">About</a>
             <a href="services.html" data-i18n="nav.services">Services</a>
@@ -639,7 +668,7 @@
           </nav>
 
           <div>
-            <p class="footer-nav-label">Contact</p>
+            <p class="footer-nav-label" data-i18n="footer.contact">Contact</p>
             <p
               class="footer-text"
               style="margin-bottom: 0.5rem"

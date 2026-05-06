@@ -40,6 +40,7 @@ const translations = {
     "button.all_projects": "See All Projects",
     "button.all_clients": "See All Clients",
     "button.inquiry": "Send Inquiry",
+    "button.about": "Learn About Us",
     "common.location_region": "Kurdistan Region, Iraq",
     "common.location_city": "Sulaymaniyah, Kurdistan Region, Iraq",
     "common.stats.years": "Years In Business Since 2002",
@@ -48,11 +49,14 @@ const translations = {
     "common.stats.clients": "Major Clients",
     "footer.tagline": "Building Tomorrow, Today.",
     "footer.rights": "Najmadin Concrete. All rights reserved.",
+    "footer.navigation": "Navigation",
+    "footer.contact": "Contact",
     "home.hero.eyebrow":
       "Leading Concrete Supplier In The Kurdistan Region Of Iraq",
     "home.hero.title": "Building Iraq's Future Since 2002",
     "home.hero.body":
       "Najmadin Concrete delivers ready-mix concrete, aggregates, technical support, and dependable site logistics for ambitious developments across the region.",
+    "home.hero.trust.primary": "21 years of experience in trust",
     "home.hero.badge1": "20+ Years Of Proven Excellence",
     "home.hero.badge2": "200+ Trained Professionals",
     "home.hero.badge3": "Remote Site Delivery",
@@ -74,6 +78,32 @@ const translations = {
       "Founded in 2002, Najmadin Concrete has grown into one of Iraq's leading ready-mix concrete and aggregate suppliers. Our reputation is built on dependable quality, on-time delivery, and the technical capability to support projects from urban centers to remote sites.",
     "home.story.quote":
       "Concrete is more than a mixture. It is a durable solution that keeps us connected to every client we serve.",
+    "home.about.title": "Two Decades Of Building Kurdistan's Infrastructure",
+    "home.about.body":
+      "Founded in 2002, Najmadin Concrete has grown into the region's most trusted ready-mix concrete and aggregate supplier. From structural towers to sprawling residential communities, we deliver the material backbone of Kurdistan's construction sector.",
+    "home.vision.eyebrow": "Our Vision",
+    "home.vision.title":
+      "A Stronger Kurdistan Built On Concrete We Stand Behind",
+    "home.vision.body":
+      "We exist to give builders the material confidence they need - on schedule, to specification, on every project that matters.",
+    "home.vision.card1.title": "Quality First",
+    "home.vision.card1.body":
+      "Every mix is controlled, tested, and delivered to specification - from 15 N/mm2 to 100 N/mm2 with disciplined 28-day strength monitoring.",
+    "home.vision.card2.title": "Built To Last",
+    "home.vision.card2.body":
+      "Our concrete supports the structures that define Kurdistan's cities - towers, communities, hotels, and institutions engineered to endure.",
+    "home.vision.card3.title": "Always Reliable",
+    "home.vision.card3.body":
+      "On-time delivery, technical precision, and a team that stays engaged from inquiry through final placement on even the most demanding sites.",
+    "home.action.project.title": "A Project",
+    "home.action.project.body":
+      "Explore landmark developments supplied by Najmadin Concrete across the Kurdistan Region.",
+    "home.action.service.title": "A Service",
+    "home.action.service.body":
+      "Ready-mix concrete, aggregates, and remote site delivery solutions for every grade.",
+    "home.action.partnership.title": "A Partnership",
+    "home.action.partnership.body":
+      "Tell us your requirements and our team will guide every step from mix design to delivery.",
     "home.services.eyebrow": "Featured Services",
     "home.services.title": "What We Deliver",
     "home.services.body":
@@ -328,6 +358,7 @@ const translations = {
     "button.all_projects": "كل المشاريع",
     "button.all_clients": "كل العملاء",
     "button.inquiry": "أرسل استفساراً",
+    "button.about": "تعرف علينا",
     "common.location_region": "إقليم كردستان، العراق",
     "common.location_city": "السليمانية، إقليم كردستان، العراق",
     "common.stats.years": "سنوات في العمل منذ 2002",
@@ -336,10 +367,13 @@ const translations = {
     "common.stats.clients": "عميل رئيسي",
     "footer.tagline": "نبني الغد، اليوم.",
     "footer.rights": "نجمدين كونكريت. جميع الحقوق محفوظة.",
+    "footer.navigation": "التنقل",
+    "footer.contact": "التواصل",
     "home.hero.eyebrow": "مورد خرسانة رائد في إقليم كردستان العراق",
     "home.hero.title": "نبني مستقبل العراق منذ 2002",
     "home.hero.body":
       "توفر نجمدين كونكريت الخرسانة الجاهزة والركام والدعم الفني والخدمات اللوجستية الموثوقة للمشاريع الطموحة في مختلف أنحاء المنطقة.",
+    "home.hero.trust.primary": "٢١ عاماً من الخبرة المبنية على الثقة",
     "home.hero.badge1": "أكثر من 20 عاماً من التميز",
     "home.hero.badge2": "أكثر من 200 محترف مدرب",
     "home.hero.badge3": "توصيل إلى المواقع البعيدة",
@@ -358,6 +392,31 @@ const translations = {
       "منذ تأسيسها عام 2002، نمت نجمدين كونكريت لتصبح إحدى الشركات الرائدة في العراق في مجال الخرسانة الجاهزة والركام. سمعتنا مبنية على الجودة الموثوقة والتسليم في الوقت المحدد والقدرة الفنية على دعم المشاريع من المراكز الحضرية إلى المواقع النائية.",
     "home.story.quote":
       "الخرسانة أكثر من مجرد خلطة، إنها حل متين يربطنا بكل عميل نخدمه.",
+    "home.about.title": "عقدان من بناء البنية التحتية في كردستان",
+    "home.about.body":
+      "منذ تأسيسها عام 2002، نمت نجمدين كونكريت لتصبح أكثر موردي الخرسانة الجاهزة والركام ثقة في المنطقة. من الأبراج الإنشائية إلى المجمعات السكنية الواسعة، نوفر المادة الأساسية لقطاع البناء في كردستان.",
+    "home.vision.eyebrow": "رؤيتنا",
+    "home.vision.title": "كردستان أقوى مبنية على خرسانة نثق بها ونقف خلفها",
+    "home.vision.body":
+      "نحن موجودون لمنح البنائين الثقة المادية التي يحتاجونها - في الوقت المحدد، وفق المواصفات، وفي كل مشروع مهم.",
+    "home.vision.card1.title": "الجودة أولاً",
+    "home.vision.card1.body":
+      "كل خلطة يتم ضبطها وفحصها وتسليمها وفق المواصفات - من 15 نيوتن/مم2 إلى 100 نيوتن/مم2 مع متابعة منظمة لقوة 28 يوماً.",
+    "home.vision.card2.title": "مصممة لتدوم",
+    "home.vision.card2.body":
+      "تدعم خرسانتنا المنشآت التي ترسم مدن كردستان - الأبراج والمجتمعات والفنادق والمؤسسات المصممة للاستمرار.",
+    "home.vision.card3.title": "اعتمادية دائمة",
+    "home.vision.card3.body":
+      "تسليم في الوقت المحدد، ودقة فنية، وفريق يبقى متابعاً من الاستفسار حتى الصب النهائي في أكثر المواقع تطلباً.",
+    "home.action.project.title": "مشروع",
+    "home.action.project.body":
+      "استكشف المشاريع البارزة التي زودتها نجمدين كونكريت في أنحاء إقليم كردستان.",
+    "home.action.service.title": "خدمة",
+    "home.action.service.body":
+      "حلول الخرسانة الجاهزة والركام والتوصيل إلى المواقع البعيدة لكل درجة.",
+    "home.action.partnership.title": "شراكة",
+    "home.action.partnership.body":
+      "أخبرنا بمتطلباتك وسيرشدك فريقنا في كل خطوة من تصميم الخلطة إلى التسليم.",
     "home.services.eyebrow": "خدمات مختارة",
     "home.services.title": "ما الذي نقدمه",
     "home.services.body":
@@ -611,6 +670,7 @@ const translations = {
     "button.all_projects": "هەموو پڕۆژەکان",
     "button.all_clients": "هەموو کڕیارەکان",
     "button.inquiry": "داواکاری بنێرە",
+    "button.about": "دەربارەمان بزانە",
     "common.location_region": "هەرێمی کوردستان، عێراق",
     "common.location_city": "سلێمانی، هەرێمی کوردستان، عێراق",
     "common.stats.years": "ساڵ لە کارکردنەوە لە 2002ەوە",
@@ -619,10 +679,14 @@ const translations = {
     "common.stats.clients": "کڕیاری سەرەکی",
     "footer.tagline": "سبەی دروست دەکەین، ئەمڕۆ.",
     "footer.rights": "نەجمەدین کۆنکریت. هەموو مافەکان پارێزراون.",
+    "footer.navigation": "ڕێنیشاندەر",
+    "footer.contact": "پەیوەندی",
     "home.hero.eyebrow": "دابینکەری سەرەکیی کۆنکریت لە هەرێمی کوردستانی عێراق",
     "home.hero.title": "ئایندەی عێراق دروست دەکەین لە 2002ەوە",
     "home.hero.body":
       "نەجمەدین کۆنکریت کۆنکریتی ئامادە و رێگمات و پشتگیری فنی و لۆجستی تایبەتی بۆ پڕۆژە گەورەکان دابین دەکات لە هەموو ناوچەکەدا.",
+    "home.hero.trust.primary": "ئەزمونی ٢١ ساڵ لە متمانە",
+    "home.hero.trust.secondary": "",
     "home.hero.badge1": "زیاتر لە 20 ساڵ سەرکەوتنی پشتڕاستکراو",
     "home.hero.badge2": "زیاتر لە 200 پیشەسازی ڕاهێنراو",
     "home.hero.badge3": "گەیاندن بۆ شوێنە دوورەکان",
@@ -641,6 +705,31 @@ const translations = {
       "لە ساڵی 2002ەوە، نەجمەدین کۆنکریت گەشەی کردووە بۆ ئەوەی ببێتە یەکێک لە سەرکردەکانی عێراق لە بوارەکانی کۆنکریتی ئامادە و رێگمات. ناوبانگمان لەسەر کوالێتی پشتپێبەستوو و گەیاندنی لەکاتی خۆیدا و توانای فنییە کە پشتیوانی پڕۆژەکان دەکات.",
     "home.story.quote":
       "کۆنکریت تەنها تێکەڵەیەک نییە؛ چارەسەرێکی بەهێزە کە ئێمە بە هەر کڕیارێک دەبەستێتەوە.",
+    "home.about.title": "دوو دەیە لە بنیاتنانی ژێرخانی کوردستان",
+    "home.about.body":
+      "لە ساڵی 2002ەوە، نەجمەدین کۆنکریت گەشەی کردووە و بووەتە یەکێک لە باوەڕپێکراوترین دابینکەری کۆنکریتی ئامادە و رێگمات لە ناوچەکەدا. لە تاوەرە ئینشاییەکانەوە تا کۆمەڵگە نیشتەجێبوونیە فراوانەکان، ئێمە ماددەی بنەڕەتی کەرتی بیناسازی کوردستان دابین دەکەین.",
+    "home.vision.eyebrow": "بینینمان",
+    "home.vision.title": "کوردستانێکی بەهێزتر بە کۆنکریتێک کە پشتگیریی دەکەین",
+    "home.vision.body":
+      "ئێمە کار دەکەین بۆ ئەوەی بنیاتنەران ئەو متمانەی ماددییەیان هەبێت کە پێویستیانە - لە کاتی خۆیدا، بەگوێرەی پێوەر، و لە هەر پڕۆژەیەکی گرنگدا.",
+    "home.vision.card1.title": "کوالێتی لەپێشەوە",
+    "home.vision.card1.body":
+      "هەر تێکەڵەیەک کۆنترۆڵ و تاقی دەکرێتەوە و بەگوێرەی پێوەر دەگات - لە 15 نیوتن/مم2 تا 100 نیوتن/مم2 بە چاودێری ڕێکخراوی هێزی 28 ڕۆژە.",
+    "home.vision.card2.title": "دروستکراو بۆ مانەوە",
+    "home.vision.card2.body":
+      "کۆنکریتەکەمان پشتگیری ئەو بینایانە دەکات کە شارەکانی کوردستان پێناسە دەکەن - تاوەر و کۆمەڵگە و هوتێل و دامەزراوەکانی درێژخایەن.",
+    "home.vision.card3.title": "هەمیشە پشتپێبەستوو",
+    "home.vision.card3.body":
+      "گەیاندن لە کاتی خۆیدا، وردی فنی، و تیمێک کە لە داواکارییەوە تا دانانی کۆتایی لە شوێنە پڕداواکارییەکاندا بەردەوام دەبێت.",
+    "home.action.project.title": "پڕۆژە",
+    "home.action.project.body":
+      "پڕۆژە دیارەکان ببینە کە نەجمەدین کۆنکریت لە هەرێمی کوردستاندا دابینی کردوون.",
+    "home.action.service.title": "خزمەتگوزاری",
+    "home.action.service.body":
+      "چارەسەری کۆنکریتی ئامادە و رێگمات و گەیاندن بۆ شوێنە دوورەکان بۆ هەموو پلەیەک.",
+    "home.action.partnership.title": "هاوبەشی",
+    "home.action.partnership.body":
+      "پێداویستییەکانت پێمان بڵێ، تیمەکەمان لە دیزاینی تێکەڵەوە تا گەیاندن هەموو هەنگاوێک ڕێنماییت دەکات.",
     "home.services.eyebrow": "خزمەتگوزارییە هەڵبژێردراوەکان",
     "home.services.title": "چی دابین دەکەین",
     "home.services.body":
