@@ -1230,42 +1230,6 @@ const setupHomeMotion = () => {
     return;
   }
 
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-  const preloader = document.querySelector("[data-home-preloader]");
-  const dismissPreloader = () => {
-    document.body.classList.add("is-ready");
-
-    if (!preloader || preloader.classList.contains("is-dismissed")) {
-      return;
-    }
-
-    preloader.classList.add("is-dismissed");
-    window.setTimeout(() => {
-      preloader.setAttribute("aria-hidden", "true");
-    }, 900);
-  };
-
-  if (preloader) {
-    if (reducedMotion) {
-      window.requestAnimationFrame(dismissPreloader);
-    } else if (document.readyState === "complete") {
-      window.setTimeout(dismissPreloader, 220);
-    } else {
-      window.addEventListener(
-        "load",
-        () => {
-          window.setTimeout(dismissPreloader, 260);
-        },
-        { once: true },
-      );
-      window.setTimeout(dismissPreloader, 1400);
-    }
-  } else {
-    document.body.classList.add("is-ready");
-  }
-
   const serviceItems = document.querySelectorAll("[data-service-target]");
   const servicePanels = document.querySelectorAll("[data-service-image]");
   if (serviceItems.length && servicePanels.length) {

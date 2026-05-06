@@ -315,47 +315,6 @@ html[dir="rtl"] .brand-copy strong, html[dir="rtl"] .brand-copy span { letter-sp
 
 .page-main { padding-top: 72px; }
 
-/* ── BODY READY STATE (home only — other pages never get .is-ready) ── */
-body.page-home:not(.is-ready) .site-shell { opacity: 0; }
-body.page-home.is-ready .site-shell { opacity: 1; transition: opacity 0.4s ease; }
-
-/* ── PRELOADER ────────────────────────────────────────────────────── */
-.home-preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: var(--bg-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-preloader__sheet { text-align: center; color: var(--white); }
-
-.home-preloader__title {
-  font-family: var(--display-font);
-  font-size: clamp(3rem, 10vw, 7rem);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  line-height: 0.9;
-  display: flex;
-  flex-direction: column;
-}
-
-.home-preloader__eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
-}
-
-.home-preloader.is-dismissed {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.7s ease;
-}
-
 /* ── BUTTONS ─────────────────────────────────────────────────────── */
 .button, .btn {
   display: inline-flex;
@@ -1501,9 +1460,6 @@ details.faq-item p { margin-top: 0.75rem; }
 /* Home trust CTA eyebrow */
 .home-trust-cta .eyebrow { color: rgba(255,255,255,0.75); }
 .home-trust-cta .eyebrow::before { background: rgba(255,255,255,0.5); }
-
-/* Preloader eyebrow */
-.home-preloader__eyebrow { color: rgba(255,255,255,0.65); }
 
 /* ── SECTION SCROLL TRANSITIONS (color-change feel) ─────────────── */
 .section { transition: background-color 0.6s ease; }
