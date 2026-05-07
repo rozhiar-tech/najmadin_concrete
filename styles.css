@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap");
 
 @font-face {
   font-family: "K24 Kurdish";
@@ -451,7 +451,7 @@ html[dir="rtl"] .brand-copy strong, html[dir="rtl"] .brand-copy span { letter-sp
 .home-entrance-message {
   max-width: min(64rem, 90vw);
   margin: 0;
-  line-height: 0.88;
+  line-height: 1.02;
   color: var(--white);
   text-align: left;
   text-shadow: 0 3px 20px rgba(0,0,0,0.5);
@@ -460,18 +460,34 @@ html[dir="rtl"] .brand-copy strong, html[dir="rtl"] .brand-copy span { letter-sp
 .home-entrance-message span { display: block; }
 .home-entrance-message span:empty { display: none; }
 
+.home-entrance-message span:not(:empty)::before,
+.home-entrance-message span:not(:empty)::after {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.home-entrance-message span:not(:empty)::before { content: '"'; }
+.home-entrance-message span:not(:empty)::after { content: '"'; }
+
 .home-entrance-message__primary {
-  font-family: var(--body-font);
-  font-size: clamp(1.55rem, 3vw, 3.4rem);
-  font-weight: 800;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 3.75rem;
+  font-weight: 600;
   letter-spacing: 0;
   text-wrap: balance;
+}
+
+html[dir="rtl"] .home-entrance-message__primary {
+  font-family: "K24 Kurdish", "Tajawal", sans-serif;
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .home-entrance-message__secondary {
   margin-top: 0.6rem;
   font-family: "K24 Kurdish", sans-serif;
-  font-size: clamp(1.35rem, 2.8vw, 3.1rem);
+  font-size: 2.8rem;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.2;
@@ -1307,6 +1323,9 @@ details.faq-item p { margin-top: 0.75rem; }
 }
 
 @media (max-width: 900px) {
+  .home-entrance-message__primary { font-size: 3rem; }
+  html[dir="rtl"] .home-entrance-message__primary { font-size: 2.7rem; }
+  .home-entrance-message__secondary { font-size: 2.35rem; }
   .action-cards { grid-template-columns: 1fr; }
   .action-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 2.5rem 2rem; }
   .action-card:last-child { border-bottom: none; }
@@ -1364,8 +1383,9 @@ details.faq-item p { margin-top: 0.75rem; }
   .home-entrance { min-height: 520px; }
   .home-entrance-shell { padding-bottom: 2.5rem; }
   .home-entrance-message { max-width: min(21rem, 88vw); }
-  .home-entrance-message__primary { font-size: clamp(1.45rem, 8vw, 2.8rem); }
-  .home-entrance-message__secondary { font-size: clamp(1.25rem, 6.5vw, 2.3rem); }
+  .home-entrance-message__primary { font-size: 2.25rem; }
+  html[dir="rtl"] .home-entrance-message__primary { font-size: 2rem; }
+  .home-entrance-message__secondary { font-size: 1.85rem; }
   .action-card { padding: 2rem 1.5rem; }
   .action-card-title { font-size: 2rem; }
 }
