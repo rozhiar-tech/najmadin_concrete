@@ -4,677 +4,440 @@
     <meta charset="UTF-8" />
     <meta name="google" content="notranslate" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Najmadin Concrete | Building Iraq's Future Since 2002</title>
+    <title>Najmadin Concrete — Coming Soon</title>
     <meta
       name="description"
-      content="Najmadin Concrete is a leading ready-mix concrete and aggregate supplier in the Kurdistan Region of Iraq, delivering durable solutions since 2002."
+      content="Najmadin Concrete. Ready-mix concrete and aggregates. Launching soon."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
-    <script src="animations.js" defer></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --bg: #111111;
+        --line: rgba(255, 255, 255, 0.08);
+        --white: #ffffff;
+        --muted: rgba(255, 255, 255, 0.45);
+        --accent: #ffffff;
+        --display: "Bebas Neue", sans-serif;
+        --body: "Inter", sans-serif;
+      }
+
+      html[lang="ar"],
+      html[lang="ku"] {
+        font-family: "Tajawal", sans-serif;
+        direction: rtl;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--white);
+        font-family: var(--body);
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+      }
+
+      /* ── background grid ── */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 80px 80px;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* ── subtle noise ── */
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+        background-size: 200px 200px;
+        opacity: 0.6;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .shell {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 100svh;
+      }
+
+      /* ── header ── */
+      .cs-header {
+        padding: 2rem clamp(1.5rem, 5vw, 4rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .brand-logo-clip {
+        width: 62px;
+        height: 46px;
+        overflow: hidden;
+        position: relative;
+        display: block;
+      }
+
+      .brand-logo-clip img {
+        position: absolute;
+        right: 0;
+        height: 46px;
+        width: auto;
+        max-width: none;
+        filter: invert(1);
+      }
+
+      /* ── language switcher ── */
+      .lang-sw {
+        display: flex;
+        gap: 0.25rem;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 0.25rem;
+      }
+
+      .lang-sw button {
+        background: transparent;
+        border: none;
+        color: var(--muted);
+        font-family: var(--body);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        padding: 0.35rem 0.6rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+
+      .lang-sw button[aria-pressed="true"],
+      .lang-sw button:hover {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--white);
+      }
+
+      /* ── main content ── */
+      .cs-main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+      }
+
+      .cs-content {
+        max-width: 780px;
+        text-align: center;
+      }
+
+      .cs-eyebrow {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        border: 1px solid var(--line);
+        padding: 0.45rem 1rem;
+        border-radius: 100px;
+        margin-bottom: 2.5rem;
+        animation: fadeUp 0.8s ease both;
+      }
+
+      .cs-headline {
+        font-family: var(--display);
+        font-size: clamp(4.5rem, 14vw, 10rem);
+        line-height: 0.92;
+        letter-spacing: 0.01em;
+        color: var(--white);
+        margin-bottom: 2rem;
+        animation: fadeUp 0.8s 0.12s ease both;
+      }
+
+      .cs-headline span {
+        display: block;
+        color: var(--muted);
+      }
+
+      .cs-body {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: var(--muted);
+        line-height: 1.7;
+        max-width: 520px;
+        margin: 0 auto 3rem;
+        animation: fadeUp 0.8s 0.22s ease both;
+      }
+
+      .cs-divider {
+        width: 40px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 2.5rem auto;
+        animation: fadeUp 0.8s 0.3s ease both;
+      }
+
+      .cs-contact {
+        animation: fadeUp 0.8s 0.36s ease both;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .cs-contact-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.25rem;
+      }
+
+      .cs-contact a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 2px;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+
+      .cs-contact a:hover {
+        border-color: var(--white);
+      }
+
+      /* ── bottom bar ── */
+      .cs-footer {
+        padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+        border-top: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .cs-copy {
+        font-size: 0.75rem;
+        color: var(--muted);
+        letter-spacing: 0.02em;
+      }
+
+      .cs-location {
+        font-size: 0.75rem;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .cs-location svg {
+        opacity: 0.5;
+      }
+
+      /* ── RTL overrides ── */
+      html[dir="rtl"] .cs-content {
+        direction: rtl;
+      }
+
+      html[dir="rtl"] .cs-eyebrow,
+      html[dir="rtl"] .cs-headline,
+      html[dir="rtl"] .cs-body {
+        font-family: "Tajawal", sans-serif;
+      }
+
+      html[dir="rtl"] .cs-headline {
+        font-size: clamp(3.5rem, 11vw, 8rem);
+        font-weight: 800;
+        line-height: 1.05;
+      }
+
+      /* ── animations ── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ── responsive ── */
+      @media (max-width: 480px) {
+        .cs-footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+        .cs-headline {
+          letter-spacing: 0;
+        }
+      }
+    </style>
   </head>
-  <body class="page page-home notranslate" data-page="home" translate="no">
-    <div class="site-shell">
-      <!-- HEADER -->
-      <header class="site-header" id="top">
-        <div class="container header-row">
-          <a
-            class="brand"
-            href="index.html"
-            data-i18n-aria-label="common.home_label"
-          >
-            <span class="brand-logo-clip" aria-hidden="true">
-              <img src="assets/images/logo2.png" alt="" />
-            </span>
-          </a>
-
-          <div class="header-actions">
-            <nav class="nav-panel" aria-label="Primary navigation">
-              <ul class="nav-links">
-                <li>
-                  <a
-                    class="nav-link"
-                    href="index.html"
-                    data-page-link="home"
-                    data-i18n="nav.home"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="nav-link"
-                    href="about.html"
-                    data-page-link="about"
-                    data-i18n="nav.about"
-                    >About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="nav-link"
-                    href="services.html"
-                    data-page-link="services"
-                    data-i18n="nav.services"
-                    >Services</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="nav-link"
-                    href="projects.html"
-                    data-page-link="projects"
-                    data-i18n="nav.projects"
-                    >Projects</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="nav-link"
-                    href="clients.html"
-                    data-page-link="clients"
-                    data-i18n="nav.clients"
-                    >Clients</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="nav-link"
-                    href="contact.html"
-                    data-page-link="contact"
-                    data-i18n="nav.contact"
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </nav>
-
-            <div
-              class="language-switcher"
-              role="group"
-              data-i18n-aria-label="common.language_label"
-            >
-              <button type="button" data-lang="en" aria-pressed="true">
-                EN
-              </button>
-              <button type="button" data-lang="ar" aria-pressed="false">
-                AR
-              </button>
-              <button type="button" data-lang="ku" aria-pressed="false">
-                KU
-              </button>
-            </div>
-
-            <a class="header-cta" href="contact.html" data-i18n="button.inquiry"
-              >Send Inquiry</a
-            >
-
-            <button
-              class="nav-toggle"
-              type="button"
-              aria-expanded="false"
-              data-i18n-aria-label="common.menu"
-            >
-              <span></span>
-            </button>
-          </div>
+  <body>
+    <div class="shell">
+      <header class="cs-header">
+        <a href="#" aria-label="Najmadin Concrete">
+          <span class="brand-logo-clip">
+            <img src="assets/images/logo2.png" alt="Najmadin Concrete" />
+          </span>
+        </a>
+        <div class="lang-sw" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+          <button type="button" data-lang="ku" aria-pressed="false">KU</button>
         </div>
       </header>
 
-      <main class="page-main home-page-main" style="padding-top: 0">
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- HERO: Full-viewport video background                    -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <section
-          class="section home-entrance"
-          data-home-scene
-          data-surface="dark"
-          style="padding: 0"
-        >
-          <div class="home-entrance-media" aria-hidden="true">
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-            >
-              <source
-                src="assets/videos/Najmadin%20concrete%20TV-C%20FINAL%20VERSION%20(1).mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+      <main class="cs-main">
+        <div class="cs-content">
+          <span class="cs-eyebrow" data-i18n="cs.eyebrow"
+            >New Website Launching Soon</span
+          >
 
-          <div class="home-entrance-shell container">
-            <h1 class="home-entrance-message reveal is-visible">
-              <span
-                class="home-entrance-message__primary"
-                dir="auto"
-                data-i18n="home.hero.trust.primary"
-                >21 years of experience in trust</span>
-              <span
-                class="home-entrance-message__secondary"
-                lang="ku"
-                dir="rtl"
-                data-i18n="home.hero.trust.secondary"
-              ></span>
-            </h1>
-          </div>
-        </section>
+          <h1 class="cs-headline">
+            <span data-i18n="cs.line1">Building</span>
+            <span data-i18n="cs.line2">Tomorrow,</span>
+            <span style="color: #fff" data-i18n="cs.line3">Today.</span>
+          </h1>
 
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- ABOUT: Company story & stats                            -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <section
-          class="section section-dark home-about-section"
-          id="home-about"
-          data-surface="dark"
-        >
-          <div class="container">
-            <div class="home-about-grid">
-              <article class="home-about-copy reveal">
-                <span class="eyebrow" data-i18n="about.story.eyebrow"
-                  >Our Story</span
-                >
-                <h2 class="display" data-i18n="home.about.title">
-                  Two Decades Of Building Kurdistan's Infrastructure
-                </h2>
-                <p class="body-copy" data-i18n="home.about.body">
-                  Founded in 2002, Najmadin Concrete has grown into the region's
-                  most trusted ready-mix concrete and aggregate supplier. From
-                  structural towers to sprawling residential communities, we
-                  deliver the material backbone of Kurdistan's construction
-                  sector.
-                </p>
-                <div class="home-about-stats">
-                  <div class="home-about-stat">
-                    <span class="stat-number display">20+</span>
-                    <span class="stat-label" data-i18n="common.stats.years"
-                      >Years Since 2002</span
-                    >
-                  </div>
-                  <div class="home-about-stat">
-                    <span class="stat-number display">200+</span>
-                    <span class="stat-label" data-i18n="common.stats.people"
-                      >Trained Professionals</span
-                    >
-                  </div>
-                  <div class="home-about-stat">
-                    <span class="stat-number display">15+</span>
-                    <span class="stat-label" data-i18n="common.stats.clients"
-                      >Major Clients</span
-                    >
-                  </div>
-                </div>
-                <a
-                  class="button btn-white"
-                  href="about.html"
-                  data-i18n="button.about"
-                  >Learn About Us</a
-                >
-              </article>
-              <figure
-                class="home-about-image poster-frame reveal"
-                data-delay="1"
-              >
-                <img
-                  src="assets/projects/projects_overview_1.png"
-                  alt="Najmadin Concrete operations"
-                />
-              </figure>
-            </div>
-          </div>
-        </section>
+          <p class="cs-body" data-i18n="cs.body">
+            We are putting the finishing touches on our new website. In the
+            meantime, reach out — our team is ready to support your project.
+          </p>
 
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- VISION: Values & mission                                -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <section
-          class="section section-light home-vision-section"
-          data-surface="light"
-        >
-          <div class="container">
-            <div class="home-vision-grid">
-              <div class="home-vision-intro reveal">
-                <span class="eyebrow" data-i18n="home.vision.eyebrow"
-                  >Our Vision</span
-                >
-                <h2 class="display" data-i18n="home.vision.title">
-                  A Stronger Kurdistan Built On Concrete We Stand Behind
-                </h2>
-                <p class="body-copy" data-i18n="home.vision.body">
-                  We exist to give builders the material confidence they need -
-                  on schedule, to specification, on every project that matters.
-                </p>
-              </div>
-              <div class="home-vision-cards">
-                <article class="vision-card reveal">
-                  <h3 class="display" data-i18n="home.vision.card1.title">
-                    Quality First
-                  </h3>
-                  <p data-i18n="home.vision.card1.body">
-                    Every mix is controlled, tested, and delivered to
-                    specification - from 15 N/mm2 to 100 N/mm2 with disciplined
-                    28-day strength monitoring.
-                  </p>
-                </article>
-                <article class="vision-card reveal" data-delay="1">
-                  <h3 class="display" data-i18n="home.vision.card2.title">
-                    Built To Last
-                  </h3>
-                  <p data-i18n="home.vision.card2.body">
-                    Our concrete supports the structures that define Kurdistan's
-                    cities - towers, communities, hotels, and institutions
-                    engineered to endure.
-                  </p>
-                </article>
-                <article class="vision-card reveal" data-delay="2">
-                  <h3 class="display" data-i18n="home.vision.card3.title">
-                    Always Reliable
-                  </h3>
-                  <p data-i18n="home.vision.card3.body">
-                    On-time delivery, technical precision, and a team that stays
-                    engaged from inquiry through final placement on even the
-                    most demanding sites.
-                  </p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
+          <div class="cs-divider"></div>
 
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- ACTION CARDS: Turner-style 3-column CTA                 -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <div class="action-cards" id="action-cards">
-          <a class="action-card" href="projects.html">
-            <div class="action-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </div>
-            <h2 class="action-card-title" data-i18n="home.action.project.title">
-              A Project
-            </h2>
-            <p class="action-card-body" data-i18n="home.action.project.body">
-              Explore landmark developments supplied by Najmadin Concrete across
-              the Kurdistan Region.
+          <div class="cs-contact">
+            <p class="cs-contact-label" data-i18n="cs.contact_label">
+              Get In Touch
             </p>
-          </a>
-
-          <a class="action-card" href="services.html">
-            <div class="action-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </div>
-            <h2 class="action-card-title" data-i18n="home.action.service.title">
-              A Service
-            </h2>
-            <p class="action-card-body" data-i18n="home.action.service.body">
-              Ready-mix concrete, aggregates, and remote site delivery solutions
-              for every grade.
-            </p>
-          </a>
-
-          <a class="action-card" href="contact.html">
-            <div class="action-card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
-            </div>
-            <h2
-              class="action-card-title"
-              data-i18n="home.action.partnership.title"
+            <a href="mailto:info@najmadinconcrete.com"
+              >info@najmadinconcrete.com</a
             >
-              A Partnership
-            </h2>
-            <p
-              class="action-card-body"
-              data-i18n="home.action.partnership.body"
-            >
-              Tell us your requirements and our team will guide every step from
-              mix design to delivery.
-            </p>
-          </a>
+          </div>
         </div>
-
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- SERVICES SECTION                                        -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <section class="section home-service-lab" data-surface="light">
-          <div class="container-wide home-service-lab-grid">
-            <article class="home-service-lab-copy reveal">
-              <span class="eyebrow" data-i18n="home.services.eyebrow"
-                >Featured Services</span
-              >
-              <h2 class="display" data-i18n="home.services.title">
-                What We Deliver
-              </h2>
-              <p class="body-copy" data-i18n="home.services.body">
-                From structural-grade ready-mix to aggregate supply and
-                technical guidance, our teams support performance from the plant
-                to the project site.
-              </p>
-
-              <div class="home-service-list">
-                <button
-                  class="home-service-item is-active"
-                  type="button"
-                  data-service-target="ready"
-                >
-                  <span class="home-service-index">01</span>
-                  <span>
-                    <span
-                      class="home-service-name display"
-                      data-i18n="home.services.card1.title"
-                      >Ready-Mix Concrete</span
-                    >
-                    <span
-                      class="home-service-text"
-                      data-i18n="home.services.card1.body"
-                      >All grades from 15 N/mm² to 100 N/mm² with disciplined
-                      production control.</span
-                    >
-                  </span>
-                </button>
-                <button
-                  class="home-service-item"
-                  type="button"
-                  data-service-target="aggregate"
-                >
-                  <span class="home-service-index">02</span>
-                  <span>
-                    <span
-                      class="home-service-name display"
-                      data-i18n="home.services.card2.title"
-                      >Aggregates &amp; Gravel</span
-                    >
-                    <span
-                      class="home-service-text"
-                      data-i18n="home.services.card2.body"
-                      >Stable upstream material supply that supports consistency
-                      and delivery speed.</span
-                    >
-                  </span>
-                </button>
-                <button
-                  class="home-service-item"
-                  type="button"
-                  data-service-target="remote"
-                >
-                  <span class="home-service-index">03</span>
-                  <span>
-                    <span
-                      class="home-service-name display"
-                      data-i18n="home.services.card3.title"
-                      >Remote Site Delivery</span
-                    >
-                    <span
-                      class="home-service-text"
-                      data-i18n="home.services.card3.body"
-                      >Logistics capability built for hard-to-reach locations
-                      and demanding schedules.</span
-                    >
-                  </span>
-                </button>
-              </div>
-
-              <div class="service-standard-strip reveal" data-delay="1">
-                <p class="section-note" data-i18n="services.standards">
-                  Compliant with ASTM · ACI · BS · IS · EN standards
-                </p>
-                <a
-                  class="button button-primary"
-                  href="services.html"
-                  data-i18n="button.services"
-                  >Our Services</a
-                >
-              </div>
-            </article>
-
-            <div class="home-service-visual reveal" data-delay="1">
-              <figure
-                class="home-service-panel poster-frame is-active"
-                data-service-image="ready"
-              >
-                <img src="assets/images/22.jpg" alt="Ready-Mix Concrete" />
-              </figure>
-              <figure
-                class="home-service-panel poster-frame"
-                data-service-image="aggregate"
-              >
-                <img
-                  src="assets/images/33%20(1).jpg"
-                  alt="Aggregates and Gravel"
-                />
-              </figure>
-              <figure
-                class="home-service-panel poster-frame"
-                data-service-image="remote"
-              >
-                <img
-                  src="assets/images/3%20(2).jpg"
-                  alt="Remote Site Delivery"
-                />
-              </figure>
-            </div>
-          </div>
-        </section>
-
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- FEATURED PROJECTS                                        -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <section class="section home-project-journal" data-surface="light">
-          <div class="container-wide">
-            <div class="section-head home-journal-head reveal">
-              <span class="eyebrow" data-i18n="home.projects.eyebrow"
-                >Featured Projects</span
-              >
-              <h2 class="display" data-i18n="home.projects.title">
-                Concrete Behind Landmark Development
-              </h2>
-              <p data-i18n="home.projects.body">
-                Najmadin Concrete supports major residential, hospitality, and
-                mixed-use developments across the Kurdistan Region of Iraq.
-              </p>
-            </div>
-
-            <div class="home-journal-grid">
-              <article class="home-journal-feature reveal">
-                <figure class="home-journal-feature-media poster-frame">
-                  <img
-                    src="assets/projects/kurd_tower_1.png"
-                    alt="Kurd Tower"
-                  />
-                </figure>
-                <div class="home-journal-feature-copy">
-                  <span class="kicker" data-i18n="projects.kicker.flagship"
-                    >Flagship High-Rise</span
-                  >
-                  <h3 class="display">Kurd Tower</h3>
-                  <p data-i18n="common.location_region">
-                    Kurdistan Region, Iraq
-                  </p>
-                </div>
-              </article>
-
-              <article class="home-journal-card reveal" data-delay="1">
-                <figure class="poster-frame">
-                  <img
-                    src="assets/projects/grand_boulevard_1.png"
-                    alt="Grand Boulevard"
-                  />
-                </figure>
-                <div class="home-journal-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.urban"
-                    >Urban Development</span
-                  >
-                  <h3 class="display">Grand Boulevard</h3>
-                  <p>Najm Park</p>
-                </div>
-              </article>
-
-              <article class="home-journal-card reveal" data-delay="2">
-                <figure class="poster-frame">
-                  <img
-                    src="assets/projects/shary_aram_1.png"
-                    alt="Shary Aram"
-                  />
-                </figure>
-                <div class="home-journal-card-copy">
-                  <span class="kicker" data-i18n="projects.kicker.residential"
-                    >Residential</span
-                  >
-                  <h3 class="display">Shary Aram</h3>
-                  <p data-i18n="common.location_region">
-                    Kurdistan Region, Iraq
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div class="cta-actions reveal" data-delay="1">
-              <a
-                class="button button-primary"
-                href="projects.html"
-                data-i18n="button.all_projects"
-                >See All Projects</a
-              >
-            </div>
-          </div>
-        </section>
-
-        <!-- ─────────────────────────────────────────────────────── -->
-        <!-- CLIENTS + CTA                                           -->
-        <!-- ─────────────────────────────────────────────────────── -->
-        <section class="section home-trust-band" data-surface="light">
-          <div class="container-wide home-trust-grid">
-            <figure class="home-trust-image poster-frame reveal">
-              <img
-                src="assets/images/4%20(1).jpg"
-                alt="Najmadin Concrete Operations"
-              />
-            </figure>
-
-            <article class="home-trust-copy reveal" data-delay="1">
-              <span class="eyebrow" data-i18n="home.clients.eyebrow"
-                >Selected Clients</span
-              >
-              <h2 class="display" data-i18n="home.clients.title">
-                Trusted By Leading Developers
-              </h2>
-              <p class="body-copy" data-i18n="home.clients.body">
-                Our client relationships reflect long-term trust, operational
-                consistency, and confidence in our delivery capability.
-              </p>
-              <div class="client-ribbon-grid">
-                <span>Najmadin Group</span>
-                <span>Idea Construction Chemicals</span>
-                <span>Miran City</span>
-                <span>Dania City</span>
-                <span>Qaiwan Plus Mall</span>
-                <span>Ramada Sulaymaniyah</span>
-              </div>
-            </article>
-
-            <aside class="home-trust-cta reveal" data-delay="2">
-              <span class="eyebrow" data-i18n="button.inquiry"
-                >Send Inquiry</span
-              >
-              <h2 class="display" data-i18n="home.cta.title">
-                Need A Concrete Partner For Your Next Build?
-              </h2>
-              <p data-i18n="home.cta.body">
-                Tell us about your site, required grades, timeline, and delivery
-                conditions. Our team will guide the next step.
-              </p>
-              <div class="cta-actions">
-                <a
-                  class="button button-primary"
-                  href="contact.html"
-                  data-i18n="button.inquiry"
-                  >Send Inquiry</a
-                >
-                <a
-                  class="button button-secondary"
-                  href="clients.html"
-                  data-i18n="button.all_clients"
-                  >See All Clients</a
-                >
-              </div>
-            </aside>
-          </div>
-        </section>
       </main>
 
-      <!-- FOOTER -->
-      <footer class="site-footer">
-        <div class="container footer-grid">
-          <div>
-            <a
-              class="brand"
-              href="index.html"
-              data-i18n-aria-label="common.home_label"
-            >
-              <span class="brand-logo-clip" aria-hidden="true">
-                <img src="assets/images/logo2.png" alt="" />
-              </span>
-            </a>
-            <div class="display footer-tagline" data-i18n="footer.tagline">
-              Building Tomorrow, Today.
-            </div>
-            <p class="footer-text" data-i18n="home.hero.body">
-              Najmadin Concrete delivers ready-mix concrete, aggregates,
-              technical support, and dependable site logistics for ambitious
-              developments across the region.
-            </p>
-          </div>
-
-          <nav class="footer-nav" aria-label="Footer navigation">
-            <p class="footer-nav-label" data-i18n="footer.navigation">
-              Navigation
-            </p>
-            <a href="index.html" data-i18n="nav.home">Home</a>
-            <a href="about.html" data-i18n="nav.about">About</a>
-            <a href="services.html" data-i18n="nav.services">Services</a>
-            <a href="projects.html" data-i18n="nav.projects">Projects</a>
-            <a href="clients.html" data-i18n="nav.clients">Clients</a>
-            <a href="contact.html" data-i18n="nav.contact">Contact</a>
-          </nav>
-
-          <div>
-            <p class="footer-nav-label" data-i18n="footer.contact">Contact</p>
-            <p
-              class="footer-text"
-              style="margin-bottom: 0.5rem"
-              data-i18n="common.location_city"
-            >
-              Sulaymaniyah, Kurdistan Region, Iraq
-            </p>
-            <a
-              class="button button-primary"
-              href="contact.html"
-              style="margin-top: 1.5rem; display: inline-flex"
-              data-i18n="button.inquiry"
-              >Send Inquiry</a
-            >
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="footer-copy" data-footer-year>
-            &copy; 2002–2026 Najmadin Concrete. All rights reserved.
-          </div>
-        </div>
+      <footer class="cs-footer">
+        <span class="cs-copy"
+          >&copy; 2002–2026 Najmadin Concrete. All rights reserved.</span
+        >
+        <span class="cs-location">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+            />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg>
+          <span data-i18n="cs.location"
+            >Sulaymaniyah, Kurdistan Region, Iraq</span
+          >
+        </span>
       </footer>
     </div>
-    <!-- /site-shell -->
+
+    <script>
+      const t = {
+        en: {
+          "cs.eyebrow": "New Website Launching Soon",
+          "cs.line1": "Building",
+          "cs.line2": "Tomorrow,",
+          "cs.line3": "Today.",
+          "cs.body":
+            "We are putting the finishing touches on our new website. In the meantime, reach out — our team is ready to support your project.",
+          "cs.contact_label": "Get In Touch",
+          "cs.location": "Sulaymaniyah, Kurdistan Region, Iraq",
+        },
+        ar: {
+          "cs.eyebrow": "الموقع الجديد قريباً",
+          "cs.line1": "نبني",
+          "cs.line2": "الغد،",
+          "cs.line3": "اليوم.",
+          "cs.body":
+            "نحن نضع اللمسات الأخيرة على موقعنا الجديد. في هذه الأثناء، تواصل معنا — فريقنا جاهز لدعم مشروعك.",
+          "cs.contact_label": "تواصل معنا",
+          "cs.location": "السليمانية، إقليم كردستان، العراق",
+        },
+        ku: {
+          "cs.eyebrow": "مالپەڕی نوێ بەزووی دێت",
+          "cs.line1": "دەمانبنیا",
+          "cs.line2": "سبەی،",
+          "cs.line3": "ئەمڕۆ.",
+          "cs.body":
+            "داریژەی کۆتایی مالپەڕی نوێمان دەکەین. لە ئێستادا پەیوەندیمان پێوە بکە — تیمەکەمان ئامادەیە پشتیوانی پرۆژەکەت بکات.",
+          "cs.contact_label": "پەیوەندی بکە",
+          "cs.location": "سلێمانی، هەرێمی کوردستان، عێراق",
+        },
+      };
+
+      let lang = "en";
+
+      function applyLang(l) {
+        lang = l;
+        const html = document.documentElement;
+        html.setAttribute("lang", l);
+        html.setAttribute("dir", l === "en" ? "ltr" : "rtl");
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.dataset.i18n;
+          if (t[l]?.[key]) el.textContent = t[l][key];
+        });
+
+        document.querySelectorAll(".lang-sw button").forEach((btn) => {
+          btn.setAttribute(
+            "aria-pressed",
+            btn.dataset.lang === l ? "true" : "false",
+          );
+        });
+
+        localStorage.setItem("lang", l);
+      }
+
+      document.querySelectorAll(".lang-sw button").forEach((btn) => {
+        btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+      });
+
+      const saved = localStorage.getItem("lang");
+      if (saved && t[saved]) applyLang(saved);
+    </script>
   </body>
 </html>
